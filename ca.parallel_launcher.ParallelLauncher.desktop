@@ -1,0 +1,18 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Type=Application
+Name=Parallel Launcher
+Comment=Modern N64 Emulator
+Comment[es]=Un emulador moderno de N64
+Comment[de]=Moderner N64-Emulator
+Comment[fr]=Emulateur N64 Moderne
+Comment[it]=Moderno Emulatore di N64
+Comment[pt]=Emulador Moderno do N64
+Comment[ar]=محاكي N64 حديث
+Exec=parallel-launcher %u
+Icon=ca.parallel_launcher.ParallelLauncher
+Terminal=false
+MimeType=application/x-n64-rom;application/x-bps-patch;x-scheme-handler/rhdc
+Keywords=N64;Emulator
+Categories=Game;Emulator;Qt

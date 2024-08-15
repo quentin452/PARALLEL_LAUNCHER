@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1"
+	viewBox="0 0 16 16"
+	fill="currentColor"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+	<metadata>
+		<rdf:RDF>
+			<cc:Work>
+				<cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+				<dc:creator>Matt Pharoah</dc:creator>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
+	<path d="m7.0312501 2.482422c-2.6363884 0.1054613-5.124936 0.6336628-7.0312501 1.5019531v9.0156249h2v-8h1v8h10v-8h1v8h2v-9.0195311c-1.808527-0.8220251-4.139856-1.3361683-6.6230469-1.4765626l-1.212891 3.4960938h2.7050789l-4.5781259 5.4101559 1.1875-3.4101559h-2.3476557l1.8847657-5.46875z"/>
+</svg>

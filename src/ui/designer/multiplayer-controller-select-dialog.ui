@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MultiplayerControllerSelectDialog</class>
+ <widget class="QDialog" name="MultiplayerControllerSelectDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Select Controllers</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,0">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Port 1</string>
+       </property>
+       <property name="buddy">
+        <cstring>device1</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="device1">
+       <item>
+        <property name="text">
+         <string>-- None --</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Detect Device</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Port 2</string>
+       </property>
+       <property name="buddy">
+        <cstring>device2</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="device2">
+       <item>
+        <property name="text">
+         <string>-- None --</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Detect Device</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Port 3</string>
+       </property>
+       <property name="buddy">
+        <cstring>device3</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="device3">
+       <item>
+        <property name="text">
+         <string>-- None --</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>Detect Device</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Port 4</string>
+       </property>
+       <property name="buddy">
+        <cstring>device4</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="device4">
+       <item>
+        <property name="text">
+         <string>-- None --</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>Detect Device</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="bindSavestateCheckbox">
+     <property name="text">
+      <string>Allow port 1 to save and load states</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>device1</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>device2</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>device3</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>device4</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>bindSavestateCheckbox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>MultiplayerControllerSelectDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>MultiplayerControllerSelectDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>230</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>249</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MultiplayerControllerSelectDialog</receiver>
+   <slot>detectDevice1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>339</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>397</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MultiplayerControllerSelectDialog</receiver>
+   <slot>detectDevice2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>355</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MultiplayerControllerSelectDialog</receiver>
+   <slot>detectDevice3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>368</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MultiplayerControllerSelectDialog</receiver>
+   <slot>detectDevice4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>353</x>
+     <y>153</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>145</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>detectDevice1()</slot>
+  <slot>detectDevice2()</slot>
+  <slot>detectDevice3()</slot>
+  <slot>detectDevice4()</slot>
+ </slots>
+</ui>

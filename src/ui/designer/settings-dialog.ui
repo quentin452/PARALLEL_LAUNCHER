@@ -1,0 +1,2092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>456</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QListWidget" name="optionsList">
+       <property name="minimumSize">
+        <size>
+         <width>140</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>User Interface</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Emulation</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>BPS Patches</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>GFX Plugins</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Updaters</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Romhacking.com</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Developer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>System Clock</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QStackedWidget" name="optionPages">
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <widget class="QWidget" name="uiOptions">
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="themePanel">
+           <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,1">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_6">
+              <property name="text">
+               <string>Theme (Requires Restart)</string>
+              </property>
+              <property name="buddy">
+               <cstring>themeSelect</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="themeSelect"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="darkModeCheckbox">
+           <property name="text">
+            <string>Dark Mode (Requires Restart)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>Language (Requires Restart)</string>
+             </property>
+             <property name="buddy">
+              <cstring>languageSelect</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="languageSelect"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="hideLauncherCheckbox">
+           <property name="text">
+            <string>Hide launcher while playing ROM</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="updateCheckbox">
+           <property name="text">
+            <string>Check for updates on startup</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="discordIntegrationCheckbox">
+           <property name="text">
+            <string>Discord &quot;Now Playing&quot; Integration</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="advancedSettingsCheckbox">
+           <property name="toolTip">
+            <string>Show additional rom settings meant for advanced users</string>
+           </property>
+           <property name="text">
+            <string>Show advanced ROM options</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="showFileNameCheckbox">
+           <property name="title">
+            <string>Visible Columns</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="showFilePathCheckbox">
+              <property name="toolTip">
+               <string>The full path to the file</string>
+              </property>
+              <property name="text">
+               <string>File Path</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="checkBox">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="toolTip">
+               <string>The filename without the extension</string>
+              </property>
+              <property name="text">
+               <string>Name</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="showInternalNameCheckbox">
+              <property name="toolTip">
+               <string>The name stored in the ROM itself</string>
+              </property>
+              <property name="text">
+               <string>Internal Name</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="showLastPlayedCheckbox">
+              <property name="toolTip">
+               <string>The date you last played the ROM</string>
+              </property>
+              <property name="text">
+               <string>Last Played</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="showPlayTimeCheckbox">
+              <property name="toolTip">
+               <string>The total time spent playing the ROM</string>
+              </property>
+              <property name="text">
+               <string>Total Play Time</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="emulationOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+           <item row="0" column="1">
+            <widget class="QComboBox" name="windowScaleSelect">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string notr="true">320x240 (x1)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">640x480 (x2)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">960x720 (x3)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">1280x960 (x4)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">1600x1200 (x5)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">1920x1440 (x6)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">2240x1680 (x7)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">2560x1920 (x8)</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">2880x2160 (x9)</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QComboBox" name="parallelPluginSelect">
+             <item>
+              <property name="text">
+               <string notr="true">ParaLLEl</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">Glide64</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">Angrylion</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">Rice</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">gln64</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">GLideN64</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">OGRE</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>Default Emulator Core</string>
+             </property>
+             <property name="buddy">
+              <cstring>emulatorCoreSelect</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="emulatorCoreSelect">
+             <item>
+              <property name="text">
+               <string notr="true">ParallelN64</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">Mupen64plus-next</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Default ParallelN64 Plugin</string>
+             </property>
+             <property name="buddy">
+              <cstring>parallelPluginSelect</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QComboBox" name="mupenPluginSelect">
+             <item>
+              <property name="text">
+               <string notr="true">ParaLLEl</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">Angrylion</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">GLideN64</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Window Scale</string>
+             </property>
+             <property name="buddy">
+              <cstring>windowScaleSelect</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>Default Mupen Plugin</string>
+             </property>
+             <property name="buddy">
+              <cstring>mupenPluginSelect</cstring>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="audioDriverLabel">
+             <property name="text">
+              <string>Audio Driver</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QComboBox" name="audioDriverSelect">
+             <item>
+              <property name="text">
+               <string notr="true">XAudio2</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">DirectSound</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">WASAPI</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="fullscreenCheckbox">
+           <property name="text">
+            <string>Fullscreen</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="vsyncCheckbox">
+           <property name="text">
+            <string>Vsync</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="pauseOnBlurCheckbox">
+           <property name="text">
+            <string>Pause when emulator loses focus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="hideNotificationsCheckbox">
+           <property name="toolTip">
+            <string>Do not show RetroArch notifications such as &quot;Saved state to slot #0&quot; or &quot;Device disconnected from port #1&quot;</string>
+           </property>
+           <property name="text">
+            <string>Hide notifications</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="forceX86Checkbox">
+           <property name="toolTip">
+            <string notr="true">Use the x86 emulator core instead of the ARM core. You should only enable this option if you are experiencing issues with the ARM core.</string>
+           </property>
+           <property name="text">
+            <string notr="true">Use x86 emulator core (Not Recommended)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="emulateSdCardCheckbox">
+           <property name="text">
+            <string>Emulate SummerCart64 SD card interface</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QPushButton" name="resetConfigButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Reset RetroArch Config</string>
+             </property>
+             <property name="icon">
+              <iconset theme="edit-undo">
+               <normaloff>../../../../../.designer/backup</normaloff>../../../../../.designer/backup</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="bpsOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>When loading a BPS patch, save the patched ROM...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="bpsRelativeRadio">
+           <property name="text">
+            <string>To the same folder as the patch</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">bpsButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="bpsFixedRadio">
+           <property name="text">
+            <string>To this folder:</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">bpsButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="bpsSavePathPanel">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,1,0">
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>32</width>
+                <height>8</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="bpsPath">
+              <property name="text">
+               <string notr="true">~/Documents/N64 Roms</string>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="bpsBrowseButton">
+              <property name="text">
+               <string>Browse</string>
+              </property>
+              <property name="icon">
+               <iconset theme="document-open">
+                <normaloff>../../../../../.designer/backup</normaloff>../../../../../.designer/backup</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>109</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="pluginOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab">
+            <attribute name="title">
+             <string>Global Settings</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="toolTip">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string notr="true">ParaLLEl</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QLabel" name="label_10">
+                 <property name="text">
+                  <string>Upscaling</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>upscalingSelect</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="upscalingSelect">
+                 <item>
+                  <property name="text">
+                   <string notr="true">Auto (x4 - 1280x960)</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Native (x1 - 320x240)</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string notr="true">x2 - 640x480</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string notr="true">x4 - 1280x960</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string notr="true">x8 - 2560x1920</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="parallelAntiAliasingCheckbox">
+               <property name="text">
+                <string>Anti-Aliasing</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="Line" name="line_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="toolTip">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string notr="true">Angrylion</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Filtering</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>angrylionFilteringSelect</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="angrylionFilteringSelect">
+                 <item>
+                  <property name="text">
+                   <string>None</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Anti-Alias</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Anti-Alias + Dedither</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Anti-Alias + Blur</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Filtered</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="Line" name="line_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QLabel" name="label_13">
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="toolTip">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string notr="true">GLideN64 / OGRE</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="glidenAntiAliasingCheckbox">
+               <property name="text">
+                <string>Anti-Aliasing</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="glidenPointFilteringCheckbox">
+               <property name="text">
+                <string>Use N64 3-Point Filtering</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>5</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>Default ROM Settings</string>
+            </attribute>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="toolTip">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string notr="true">ParaLLEl</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_7">
+               <item>
+                <widget class="QCheckBox" name="upscaleTexRectsCheckbox">
+                 <property name="toolTip">
+                  <string>Upscale textures drawn using the TEX_RECT command. This can cause visual artifacts in some games.</string>
+                 </property>
+                 <property name="text">
+                  <string>Upscale TEXRECTs</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="applyAll1">
+                 <property name="toolTip">
+                  <string>Apply to all existing ROMs</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-save-all">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_18">
+               <item>
+                <widget class="QCheckBox" name="removeBordersCheckbox">
+                 <property name="toolTip">
+                  <string>Removes the black borders on the left and right sides of the video. Since these pixels are never rendered on real hardware, results will vary depending on the game.</string>
+                 </property>
+                 <property name="text">
+                  <string>Remove Black Borders</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_14">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="applyAll4">
+                 <property name="text">
+                  <string notr="true"/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-save-all">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="Line" name="line">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_13">
+               <item>
+                <widget class="QLabel" name="label_15">
+                 <property name="font">
+                  <font>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="toolTip">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string notr="true">GLideN64</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_10">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_14">
+               <item>
+                <widget class="QCheckBox" name="emulateFramebufferCheckbox">
+                 <property name="toolTip">
+                  <string>Emulate the native framebuffer. This is required for some visual effects to work, but may cause lag on lower end GPUs</string>
+                 </property>
+                 <property name="text">
+                  <string>Emulate Framebuffer</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="applyAll2">
+                 <property name="toolTip">
+                  <string>Apply to all existing ROMs</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-save-all">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_15">
+               <item>
+                <widget class="QCheckBox" name="glidenDepthBufferCheckbox">
+                 <property name="toolTip">
+                  <string>Greatly increases accuracy by rendering decals correctly, but may cause a loss in performance</string>
+                 </property>
+                 <property name="text">
+                  <string>Emulate N64 Depth Compare</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_12">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="applyAll3">
+                 <property name="toolTip">
+                  <string>Apply to all existing ROMs</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-save-all">
+                   <normaloff>.</normaloff>.</iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>103</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="coreOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QCheckBox" name="updateRetroarchCheckbox">
+           <property name="text">
+            <string>Enable RetroArch Automatic Updates</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="updateMupenCheckbox">
+           <property name="text">
+            <string>Enable Mupen64Plus-Next Automatic Updates</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>32</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="useDevBranchCheckbox">
+             <property name="text">
+              <string>Use development branch</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>Update Interval</string>
+             </property>
+             <property name="buddy">
+              <cstring>updateIntervalSelect</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="updateIntervalSelect">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Every Launch</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Daily</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Weekly</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Monthly</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_10">
+           <item>
+            <widget class="QPushButton" name="coreUpdateButton">
+             <property name="text">
+              <string>Check for Updates</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_9">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>127</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="rhdcOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Download Directory</string>
+           </property>
+           <property name="buddy">
+            <cstring>rhdcPathInput</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLineEdit" name="rhdcPathInput">
+             <property name="toolTip">
+              <string>Sets the directory that hacks downloaded from romhacking.com will be saved to. If you change this setting later, your roms will automatically be moved to the new directory.</string>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="rhdcBrowseButton">
+             <property name="text">
+              <string>Browse</string>
+             </property>
+             <property name="icon">
+              <iconset theme="document-open">
+               <normaloff>../../../../../.designer/backup</normaloff>../../../../../.designer/backup</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="enableStarDisplayCheckbox">
+           <property name="text">
+            <string>Enable Star Display</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="starDisplaySubsection">
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>30</width>
+                <height>1</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="enableDefaultLayoutsCheckbox">
+              <property name="toolTip">
+               <string>If checked, Parallel Launcher will still show a star display with a default layout if the hack author did not provide one.</string>
+              </property>
+              <property name="text">
+               <string>Show star display for hacks without a
+star layout</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="allSlotsCheckbox">
+           <property name="toolTip">
+            <string>If checked, Parallel Launcher will submit your highest star count across all save slots to romhacking.com; otherwise, it will only submit your star count in slot A.</string>
+           </property>
+           <property name="text">
+            <string>Check all save slots</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="preferHleCheckbox">
+           <property name="toolTip">
+            <string>If checked, Parallel Launcher will use the GLideN64 plugin instead of the ParaLLEl plugin when it guesses that ParrLLEl is probably the best plugin to use. Only check this if your computer has an old GPU with poor Vulkan support. If you still experience lag even with GlideN64, you may need to disable 'Emulate Framebuffer' and/or 'Emulate N64 Depth Compare' in the GFX Plugins section of your Parallel Launcher settings.</string>
+           </property>
+           <property name="text">
+            <string>Prefer HLE plugins</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="ignoreWidescreenCheckbox">
+           <property name="toolTip">
+            <string>If checked, Parallel Launcher will always default to using 4:3 resolution, even if the recommended settings indicate that widescreen is supported</string>
+           </property>
+           <property name="text">
+            <string>Ignore widescreen hint</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>131</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="developerOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QCheckBox" name="isViewerCheckbox">
+           <property name="toolTip">
+            <string>Emulate IS Viewer hardware and display any messages sent from the ROM in a separate window</string>
+           </property>
+           <property name="text">
+            <string>Enable IS Viewer (ParallelN64 only)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_19">
+           <item>
+            <spacer name="horizontalSpacer_15">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>5</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="historySizeLabel">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>History Size</string>
+             </property>
+             <property name="buddy">
+              <cstring>historySizeSpinner</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="historySizeSpinner">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>100</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="minimum">
+              <number>100</number>
+             </property>
+             <property name="maximum">
+              <number>1050</number>
+             </property>
+             <property name="singleStep">
+              <number>50</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_16">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>291</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="rtcOptions">
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_19">
+           <property name="font">
+            <font>
+             <italic>true</italic>
+            </font>
+           </property>
+           <property name="text">
+            <string>The following options only apply to the ParallelN64 emulator core. The mupen64plus core will always sync to the system clock.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="font">
+            <font>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>N64 Real Time Clock</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="systemClockRadio">
+           <property name="text">
+            <string>Sync to system clock</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">rtcButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="manualTimeRadio">
+           <property name="text">
+            <string>Use this time:</string>
+           </property>
+           <attribute name="buttonGroup">
+            <string notr="true">rtcButtonGroup</string>
+           </attribute>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_20">
+           <item>
+            <spacer name="horizontalSpacer_17">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>15</width>
+               <height>5</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="DateTimeOffsetEdit" name="rtcInput">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="calendarPopup">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="rtcSavestateCheckbox">
+           <property name="text">
+            <string>Rollback clock when loading a savestate</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>179</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DateTimeOffsetEdit</class>
+   <extends>QDateTimeEdit</extends>
+   <header>src/ui/date-time-offset-edit.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>optionsList</tabstop>
+  <tabstop>themeSelect</tabstop>
+  <tabstop>darkModeCheckbox</tabstop>
+  <tabstop>languageSelect</tabstop>
+  <tabstop>hideLauncherCheckbox</tabstop>
+  <tabstop>updateCheckbox</tabstop>
+  <tabstop>discordIntegrationCheckbox</tabstop>
+  <tabstop>advancedSettingsCheckbox</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>showInternalNameCheckbox</tabstop>
+  <tabstop>showFilePathCheckbox</tabstop>
+  <tabstop>showLastPlayedCheckbox</tabstop>
+  <tabstop>showPlayTimeCheckbox</tabstop>
+  <tabstop>windowScaleSelect</tabstop>
+  <tabstop>emulatorCoreSelect</tabstop>
+  <tabstop>parallelPluginSelect</tabstop>
+  <tabstop>mupenPluginSelect</tabstop>
+  <tabstop>fullscreenCheckbox</tabstop>
+  <tabstop>vsyncCheckbox</tabstop>
+  <tabstop>pauseOnBlurCheckbox</tabstop>
+  <tabstop>hideNotificationsCheckbox</tabstop>
+  <tabstop>resetConfigButton</tabstop>
+  <tabstop>bpsRelativeRadio</tabstop>
+  <tabstop>bpsFixedRadio</tabstop>
+  <tabstop>bpsPath</tabstop>
+  <tabstop>bpsBrowseButton</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>upscalingSelect</tabstop>
+  <tabstop>parallelAntiAliasingCheckbox</tabstop>
+  <tabstop>angrylionFilteringSelect</tabstop>
+  <tabstop>glidenAntiAliasingCheckbox</tabstop>
+  <tabstop>glidenPointFilteringCheckbox</tabstop>
+  <tabstop>upscaleTexRectsCheckbox</tabstop>
+  <tabstop>applyAll1</tabstop>
+  <tabstop>removeBordersCheckbox</tabstop>
+  <tabstop>applyAll4</tabstop>
+  <tabstop>emulateFramebufferCheckbox</tabstop>
+  <tabstop>applyAll2</tabstop>
+  <tabstop>glidenDepthBufferCheckbox</tabstop>
+  <tabstop>applyAll3</tabstop>
+  <tabstop>updateRetroarchCheckbox</tabstop>
+  <tabstop>updateMupenCheckbox</tabstop>
+  <tabstop>useDevBranchCheckbox</tabstop>
+  <tabstop>updateIntervalSelect</tabstop>
+  <tabstop>coreUpdateButton</tabstop>
+  <tabstop>rhdcPathInput</tabstop>
+  <tabstop>rhdcBrowseButton</tabstop>
+  <tabstop>enableStarDisplayCheckbox</tabstop>
+  <tabstop>enableDefaultLayoutsCheckbox</tabstop>
+  <tabstop>allSlotsCheckbox</tabstop>
+  <tabstop>preferHleCheckbox</tabstop>
+  <tabstop>ignoreWidescreenCheckbox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>356</x>
+     <y>449</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>349</x>
+     <y>287</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>resetConfigButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>resetConfig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>480</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpsBrowseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>browseForBpsPath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>windowScaleSelect</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>windowScaleChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>347</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>coreUpdateButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>updateCores()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>254</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>optionsList</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>optionPages</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>213</x>
+     <y>8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bpsFixedRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>bpsSavePathPanel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rhdcBrowseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>browseForRhdcDir()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>334</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>applyAll1</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>applyAll_upscaleTexRects()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>applyAll2</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>applyAll_emulateFramebuffer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>166</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>applyAll3</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>applyAll_accurateDepthCompare()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>emulateFramebufferCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>fbEmulationToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>59</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>482</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>enableStarDisplayCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>starDisplaySubsection</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>applyAll4</sender>
+   <signal>clicked()</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>applyAll_removeBorders()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>isViewerCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>historySizeLabel</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>28</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>isViewerCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>historySizeSpinner</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>historySizeSpinner</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>historySizeChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>483</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>systemClockRadio</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>SettingsDialog</receiver>
+   <slot>rtcSyncToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>113</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>492</x>
+     <y>452</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>save()</slot>
+  <slot>windowScaleChanged(int)</slot>
+  <slot>requirePrimaryColumn()</slot>
+  <slot>browseForBpsPath()</slot>
+  <slot>resetConfig()</slot>
+  <slot>updateCores()</slot>
+  <slot>browseForRhdcDir()</slot>
+  <slot>applyAll_emulateFramebuffer()</slot>
+  <slot>applyAll_upscaleTexRects()</slot>
+  <slot>applyAll_accurateDepthCompare()</slot>
+  <slot>fbEmulationToggled(bool)</slot>
+  <slot>applyAll_removeBorders()</slot>
+  <slot>historySizeChanged(int)</slot>
+  <slot>rtcSyncToggled(bool)</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bpsButtonGroup"/>
+  <buttongroup name="rtcButtonGroup"/>
+ </buttongroups>
+</ui>

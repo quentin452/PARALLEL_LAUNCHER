@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RomSettingsWidget</class>
+ <widget class="QWidget" name="RomSettingsWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>438</width>
+    <height>826</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QCheckBox" name="syncSavesCheckbox">
+     <property name="text">
+      <string>Sync save files between hack versions</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Input Mode</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="InputModeSelect" name="inputModeSelect">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QFrame" name="sdCardPanel">
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,100,0,1">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>SD Card</string>
+        </property>
+        <property name="buddy">
+         <cstring>sdCardSelect</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="sdCardSelect">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>275</width>
+          <height>16777215</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="manageCardsButton">
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="icon">
+         <iconset theme="configure">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="checkboxContainer">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <widget class="QCheckBox" name="overclockCpuCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>6</x>
+        <y>6</y>
+        <width>221</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Unlocks the CPU to run at full speed, removing CPU-based lag you would encounter on console. This is almost always safe, but can rarely cause issues on certain ROMs.</string>
+      </property>
+      <property name="text">
+       <string>Overclock CPU (Recommended)</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="overclockViCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>10</y>
+        <width>104</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Alters the vertical interrupt timing. In most cases this either gives a slight performance boost or has no effect, but in some cases it can cause the game to run at the wrong framerate.</string>
+      </property>
+      <property name="text">
+       <string>Overclock VI</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="bigEepromCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Overrides save type autodetection, and forces the use of 16kB EEPROM for save data. This breaks roms that use 4kB EEPROM, so only enable this for romhacks that require it.</string>
+      </property>
+      <property name="text">
+       <string>Force 16kB EEPROM</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="useInterpreterCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>154</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Use the interpreter core instead of the dynamic recompiler. Slower, but can be useful for debugging.</string>
+      </property>
+      <property name="text">
+       <string>Use Interpreter Core</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="widescreenCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>10</y>
+        <width>99</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Enable widescreen mode by stretching the video. Some ROMs have a widescreen mode that will allow the video to no longer be stretched when it is enabled.</string>
+      </property>
+      <property name="text">
+       <string>Widescreen (Stretched)</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="trueWidescreenCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>198</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Enable widescreen mode by forcing the game to use a widescreen viewport. You will experience visual artifacts on the sides of the screen unless you are playing a romhack specifically designed for this widescreen mode.</string>
+      </property>
+      <property name="text">
+       <string>Widescreen (Viewport Hack)</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="upscaleTexRectsCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>138</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Upscale textures drawn using the TEX_RECT command. This can cause visual artifacts in some games.</string>
+      </property>
+      <property name="text">
+       <string>Upscale TEXRECTs</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="removeBordersCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>165</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Removes the black borders on the left and right sides of the video. Since these pixels are never rendered on real hardware, results will vary depending on the game.</string>
+      </property>
+      <property name="text">
+       <string>Remove Black Borders</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="emulateFramebufferCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>40</y>
+        <width>159</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Emulate the native framebuffer. This is required for some visual effects to work, but may cause lag on lower end GPUs</string>
+      </property>
+      <property name="text">
+       <string>Emulate Framebuffer</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="accurateDepthCompareCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>207</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Greatly increases accuracy by rendering decals correctly, but may cause a loss in performance</string>
+      </property>
+      <property name="text">
+       <string>Emulate N64 Depth Compare</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="rspEmulationCheckbox">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>40</y>
+        <width>207</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Allows roms with custom RSP microcode to be played, but causes visible seams in models due to plugin inaccuracies.</string>
+      </property>
+      <property name="text">
+       <string notr="true">LLE RSP</string>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="performanceWarningLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: yellow;
+border-radius: 8px;
+padding: 4px;
+color: #232627;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning: &lt;/span&gt;Not enabling CPU overclocking is likely to result in a laggy experience. This option should only be used for speedruns or testing where you want to approximate console CPU lag.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::NoTextInteraction</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="macDepthWarning">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: yellow;
+border-radius: 8px;
+padding: 4px;
+color: #232627;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning:&lt;/span&gt; The &lt;span style=&quot; font-style:italic;&quot;&gt;Emulate N64 Depth Compare&lt;/span&gt; option does not work on MacOS. Some things may not render correctly.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="mouseGrabHotkeyWarning">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: yellow;
+border-radius: 8px;
+padding: 4px;
+color: #232627;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning:&lt;/span&gt; This ROM supports mouse input, but you do not have a hotkey assigned to &lt;span style=&quot; font-style:italic;&quot;&gt;Grab Mouse&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="mouseHintLabel">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: #3daee9;
+border-radius: 8px;
+padding: 4px;
+color: #ffffff;</string>
+     </property>
+     <property name="text">
+      <string notr="true">This ROM supports mouse input. After launching the emulator, your mouse will be captured by the emulator. Press %1 if you need to free the mouse cursor.</string>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="emulatorTabs">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::tab-bar {
+min-width: 10000;
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="parallelTab">
+      <attribute name="title">
+       <string notr="true">ParallelN64</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="pluginGroup">
+         <property name="title">
+          <string>Graphics Plugin</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QRadioButton" name="pluginParallelRadio">
+            <property name="text">
+             <string>ParaLLEl (Recommended - very accurate to console)</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginGLideN64Radio">
+            <property name="text">
+             <string>GLideN64 (Recommended for lower end computers)</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginOgreRadio">
+            <property name="text">
+             <string>OGRE (Needed by some older romhacks)</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="showMorePluginsLinks">
+            <property name="text">
+             <string notr="true">&lt;a href=&quot;#&quot;&gt;Show More Plugins&lt;/a&gt;</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::RichText</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginGlideRadio">
+            <property name="text">
+             <string notr="true">Glide64</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginAngrylionRadio">
+            <property name="text">
+             <string notr="true">Angrylion</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginRiceRadio">
+            <property name="text">
+             <string notr="true">Rice</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginGlnRadio">
+            <property name="text">
+             <string>gln64 (Obsolete)</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">parallelPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="mupenTab">
+      <attribute name="title">
+       <string notr="true">Mupen64plus-next</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QGroupBox" name="mupenPluginGroup">
+         <property name="title">
+          <string>Graphics Plugin</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QRadioButton" name="pluginParallelRadio2">
+            <property name="text">
+             <string>ParaLLEl (Recommended)</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mupenPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginAngrylionRadio2">
+            <property name="text">
+             <string notr="true">Angrylion</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mupenPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="pluginGlidenRadio2">
+            <property name="text">
+             <string notr="true">GLideN64</string>
+            </property>
+            <attribute name="buttonGroup">
+             <string notr="true">mupenPluginRadioGroup</string>
+            </attribute>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>InputModeSelect</class>
+   <extends>QComboBox</extends>
+   <header>src/ui/input-mode-select.hpp</header>
+   <slots>
+    <signal>valueChanged()</signal>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>syncSavesCheckbox</tabstop>
+  <tabstop>inputModeSelect</tabstop>
+  <tabstop>overclockCpuCheckbox</tabstop>
+  <tabstop>overclockViCheckbox</tabstop>
+  <tabstop>bigEepromCheckbox</tabstop>
+  <tabstop>useInterpreterCheckbox</tabstop>
+  <tabstop>widescreenCheckbox</tabstop>
+  <tabstop>trueWidescreenCheckbox</tabstop>
+  <tabstop>removeBordersCheckbox</tabstop>
+  <tabstop>upscaleTexRectsCheckbox</tabstop>
+  <tabstop>emulateFramebufferCheckbox</tabstop>
+  <tabstop>accurateDepthCompareCheckbox</tabstop>
+  <tabstop>emulatorTabs</tabstop>
+  <tabstop>pluginParallelRadio</tabstop>
+  <tabstop>pluginGLideN64Radio</tabstop>
+  <tabstop>pluginOgreRadio</tabstop>
+  <tabstop>pluginGlideRadio</tabstop>
+  <tabstop>pluginAngrylionRadio</tabstop>
+  <tabstop>pluginRiceRadio</tabstop>
+  <tabstop>pluginGlnRadio</tabstop>
+  <tabstop>pluginParallelRadio2</tabstop>
+  <tabstop>pluginGlidenRadio2</tabstop>
+  <tabstop>pluginAngrylionRadio2</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>showMorePluginsLinks</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>morePluginsToggled()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>695</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>327</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>overclockCpuCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>overclockCpuToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>116</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>overclockViCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>overclockViToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>312</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>121</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>widescreenCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>widescreenToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>425</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>emulateFramebufferCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>emulateFramebufferToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>upscaleTexRectsCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>upscaleTexRectsToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>removeBordersCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>removeBordersToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>accurateDepthCompareCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>accurateDepthCompareToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>483</x>
+     <y>236</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>emulatorTabs</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>emulatorChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>111</x>
+     <y>530</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>387</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>inputModeSelect</sender>
+   <signal>valueChanged()</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>inputModeSelectionChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>221</x>
+     <y>62</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>435</x>
+     <y>21</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>trueWidescreenCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>trueWidescreenToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>218</x>
+     <y>273</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>bigEepromCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>bigEepromToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>94</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>218</x>
+     <y>271</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>useInterpreterCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>useInterpreterToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>38</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>syncSavesCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>saveSyncingToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>437</x>
+     <y>654</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sdCardSelect</sender>
+   <signal>activated(int)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>sdCardChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>439</x>
+     <y>367</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manageCardsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>manageSdCards()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>372</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>54</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rspEmulationCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>RomSettingsWidget</receiver>
+   <slot>rspEmulationToggled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>225</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>218</x>
+     <y>412</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>inputModeSelectionChanged()</slot>
+  <slot>morePluginsToggled()</slot>
+  <slot>emulatorChanged()</slot>
+  <slot>overclockCpuToggled(bool)</slot>
+  <slot>overclockViToggled(bool)</slot>
+  <slot>widescreenToggled(bool)</slot>
+  <slot>emulateFramebufferToggled(bool)</slot>
+  <slot>upscaleTexRectsToggled(bool)</slot>
+  <slot>removeBordersToggled</slot>
+  <slot>accurateDepthCompareToggled(bool)</slot>
+  <slot>trueWidescreenToggled(bool)</slot>
+  <slot>bigEepromToggled(bool)</slot>
+  <slot>useInterpreterToggled</slot>
+  <slot>saveSyncingToggled(bool)</slot>
+  <slot>sdCardChanged(int)</slot>
+  <slot>manageSdCards()</slot>
+  <slot>rspEmulationToggled(bool)</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="mupenPluginRadioGroup"/>
+  <buttongroup name="parallelPluginRadioGroup"/>
+ </buttongroups>
+</ui>

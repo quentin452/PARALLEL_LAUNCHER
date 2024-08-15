@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg version="1.1"
+	viewBox="0 0 256 256"
+	width="256" height="256"
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:cc="http://creativecommons.org/ns#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+	<metadata>
+		<rdf:RDF>
+			<cc:Work>
+				<cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+				<dc:creator>Matt Pharoah</dc:creator>
+			</cc:Work>
+		</rdf:RDF>
+	</metadata>
+	<path style="fill:#069330" d="M 91.078561,218.54345 91.242292,68.72923 128.24559,82.810122 128.08186,234.09795 Z" />
+	<path style="fill:#011da9" d="m 128.08186,234.09795 0.16373,-151.287828 37.0033,-14.080899 -0.16373,149.814227 z" />
+	<path style="fill:#ffc001" d="m 91.242292,68.729223 37.003298,-14.0809 37.0033,14.080907 -37.0033,14.080892 z" />
+	<path style="fill:#069330" d="M 181.29457,182.19508 181.4583,35.328014 216.33309,48.753997 V 196.93092 Z" />
+	<path style="fill:#011da9" d="M 251.20787,182.19508 V 35.328017 l -34.87478,13.42598 V 196.93092 Z" />
+	<path style="fill:#ffc001" d="m 181.4583,35.328017 34.87479,-13.425975 34.87478,13.425975 -34.87478,13.42598 z" />
+	<path style="fill:#069330" d="M 39.830631,196.93092 V 48.754 L 4.9558434,35.328017 4.792112,182.19508 Z" />
+	<path style="fill:#011da9" d="M 74.70542,182.19508 V 35.328017 L 39.830631,48.754 v 148.17692 z" />
+	<path style="fill:#ffc001" d="M 4.9558434,35.328017 39.830631,21.902042 74.70542,35.32802 39.830631,48.753999 Z" />
+</svg>

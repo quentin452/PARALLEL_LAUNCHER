@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManageSdCardsDialog</class>
+ <widget class="QDialog" name="ManageSdCardsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>356</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage Virtual SD Cards</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
+       <item>
+        <widget class="QListWidget" name="cardSelector"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,0">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="createButton">
+           <property name="text">
+            <string>Create New</string>
+           </property>
+           <property name="icon">
+            <iconset theme="list-add">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="importButton">
+           <property name="text">
+            <string>Import</string>
+           </property>
+           <property name="icon">
+            <iconset theme="document-import">
+             <normaloff>.</normaloff>.</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="editor">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>200</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string notr="true"/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QFrame" name="cardOptions">
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="sizeSpinner">
+             <property name="correctionMode">
+              <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+             </property>
+             <property name="suffix">
+              <string notr="true"> MiB</string>
+             </property>
+             <property name="minimum">
+              <number>32</number>
+             </property>
+             <property name="maximum">
+              <number>2048</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+             <property name="value">
+              <number>64</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Size</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Format</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="filesystemSelect">
+             <property name="currentText">
+              <string notr="true">FAT16</string>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <item>
+              <property name="text">
+               <string notr="true">FAT12</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">FAT16</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string notr="true">FAT32</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>None</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="nameInput">
+             <property name="inputMethodHints">
+              <set>Qt::ImhLatinOnly|Qt::ImhNoAutoUppercase|Qt::ImhPreferLatin|Qt::ImhPreferUppercase</set>
+             </property>
+             <property name="text">
+              <string notr="true">SDCARD0</string>
+             </property>
+             <property name="maxLength">
+              <number>11</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="editButtonTray">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="reformatButton">
+               <property name="text">
+                <string>Reformat</string>
+               </property>
+               <property name="icon">
+                <iconset theme="application-x-trash">
+                 <normaloff>.</normaloff>.</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="deleteButton">
+               <property name="text">
+                <string>Delete</string>
+               </property>
+               <property name="icon">
+                <iconset theme="delete">
+                 <normaloff>.</normaloff>.</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QFrame" name="linuxOptions">
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="cloneButton">
+                <property name="text">
+                 <string>Clone</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="edit-copy">
+                  <normaloff>.</normaloff>.</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="browseFilesButton">
+                <property name="text">
+                 <string>Browse Files</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="media-mount">
+                  <normaloff>.</normaloff>.</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="createButtonTray">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="saveButton">
+             <property name="text">
+              <string>Create</string>
+             </property>
+             <property name="icon">
+              <iconset theme="document-save">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="cancelButton">
+             <property name="text">
+              <string>Cancel</string>
+             </property>
+             <property name="icon">
+              <iconset theme="dialog-cancel">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>32</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QProgressBar" name="loadingBar">
+          <property name="font">
+           <font>
+            <pointsize>1</pointsize>
+           </font>
+          </property>
+          <property name="maximum">
+           <number>0</number>
+          </property>
+          <property name="value">
+           <number>-1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="dialogButtonTray">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>dialogButtonTray</sender>
+   <signal>accepted()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>426</x>
+     <y>349</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>createButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>beginCreate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>451</x>
+     <y>196</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cardSelector</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>cardSelected(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>deleteCard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>483</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>446</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>reformatButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>reformat()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>393</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>183</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>createCard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>388</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>141</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>discard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>478</x>
+     <y>271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>450</x>
+     <y>232</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>nameInput</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>nameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>30</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>filesystemSelect</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>formatChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>126</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>importButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>importCard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>498</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browseFilesButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>browseFiles()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>453</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>500</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cloneButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageSdCardsDialog</receiver>
+   <slot>cloneCard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>341</x>
+     <y>206</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>499</x>
+     <y>214</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>formatChanged(int)</slot>
+  <slot>createCard()</slot>
+  <slot>discard()</slot>
+  <slot>nameChanged(QString)</slot>
+  <slot>beginCreate()</slot>
+  <slot>deleteCard()</slot>
+  <slot>cardSelected(int)</slot>
+  <slot>reformat()</slot>
+  <slot>importCard()</slot>
+  <slot>browseFiles()</slot>
+  <slot>cloneCard()</slot>
+ </slots>
+</ui>

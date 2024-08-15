@@ -1,0 +1,73 @@
+stages: 
+  - package
+
+package-fedora:
+  image: opensuse/leap
+  stage: package
+  script:
+    - zypper --non-interactive install tar rpm-build rpm-devel rpmlint rpmdevtools make gcc12-c++ libqt5-qtbase-common-devel libQt5DBus-devel libqt5-qtdeclarative-devel libSDL2-devel flatpak-devel sqlite3-devel libgcrypt-devel libqt5-linguist libqt5-qtsvg-devel findutils xdg-utils polkit libgcrypt20 dosfstools coreutils
+    - useradd -g users -m -N packager
+    - PKG_VERSION="${CI_COMMIT_TAG%\-*}.${CI_COMMIT_TAG##*\-}"
+    - PKG_VERSION="${PKG_VERSION:1}"
+    - sed -i "s/GITLAB_CI_TAG/${CI_COMMIT_TAG}/g" pkg/rpm/parallel-launcher.spec
+    - sed -i "s/GITLAB_CI_VERSION/${PKG_VERSION}/g" pkg/rpm/parallel-launcher.spec
+    - export PKG_NAME="parallel-launcher-${PKG_VERSION}"
+    - export BUILD_DIR="$(pwd)"
+    - chown -R packager .
+    - chgrp -R users .
+    - |
+      su -l -w PKG_NAME,CI_COMMIT_TAG,BUILD_DIR packager <<EOS
+      cd $BUILD_DIR
+      rpmdev-setuptree
+      mkdir $PKG_NAME
+      cp -r src lang data app.pro bps-mime.xml ca.parallel_launcher.ParallelLauncher.desktop ca.parallel_launcher.ParallelLauncher.metainfo.xml *.c $PKG_NAME
+      tar -cjSf ~/rpmbuild/SOURCES/parallel-launcher-${CI_COMMIT_TAG}.tar.bz2 $PKG_NAME
+      cp pkg/rpm/parallel-launcher.spec ~/rpmbuild/SPECS/
+      ls ~/rpmbuild/SOURCES/
+      rpmbuild -bb ~/rpmbuild/SPECS/parallel-launcher.spec
+      rpmbuild -bs ~/rpmbuild/SPECS/parallel-launcher.spec
+      mkdir output
+      cp ~/rpmbuild/SRPMS/* output/
+      cp ~/rpmbuild/RPMS/x86_64/* output/
+      EOS
+  artifacts:
+    paths:
+      - output/
+    expire_in: 4 hours
+  rules:
+    - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v/
+
+package-arch:
+  image: archlinux
+  stage: package
+  script:
+    - pacman -Syu --noconfirm base-devel fakeroot gcc qt5-declarative make qt5-tools glibc gcc-libs qt5-base qt5-svg findutils xdg-utils flatpak polkit sqlite libgcrypt dosfstools coreutils libxcb sdl2 p7zip
+    - useradd -M packager
+    - PKG_VERSION="${CI_COMMIT_TAG%\-*}.${CI_COMMIT_TAG##*\-}"
+    - PKG_VERSION="${PKG_VERSION:1}"
+    - export PKG_NAME="parallel-launcher-${PKG_VERSION}"
+    - sed -i "s/GITLAB_CI_VERSION/${PKG_VERSION}/g" pkg/arch/PKGBUILD
+    - mkdir build-arch
+    - tar -czf ${PKG_NAME}.tar.gz src lang data app.pro bps-mime.xml ca.parallel_launcher.ParallelLauncher.desktop ca.parallel_launcher.ParallelLauncher.metainfo.xml *.c
+    - mv ${PKG_NAME}.tar.gz build-arch/
+    - cp -r pkg/arch/* build-arch/
+    - PKG_CHECKSUM=`cat build-arch/${PKG_NAME}.tar.gz | sha256sum | awk '{print $1}'`
+    - sed -i "s/GITLAB_CI_SHA256/${PKG_CHECKSUM}/g" build-arch/PKGBUILD
+    - chown -R packager build-arch
+    - chgrp -R packager build-arch
+    - cd build-arch
+    - |
+      su -w PKG_NAME packager <<EOS
+      makepkg
+      mkdir output
+      mv ${PKG_NAME}-0-x86_64.pkg.tar.zst output/
+      makepkg --printsrcinfo > output/.SRCINFO
+      mv ${PKG_NAME}.tar.gz output/
+      mv PKGBUILD output/
+      EOS
+  artifacts:
+    paths:
+      - build-arch/output/
+    expire_in: 4 hours
+  rules:
+    - if: $CI_COMMIT_TAG && $CI_COMMIT_TAG =~ /^v/

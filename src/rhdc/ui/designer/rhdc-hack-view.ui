@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RhdcHackView</class>
+ <widget class="QWidget" name="RhdcHackView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>809</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="2,0,1">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>2</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>4</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Hack List:</string>
+         </property>
+         <property name="buddy">
+          <cstring>playlistSelect</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="playlistSelect">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Sort By:</string>
+         </property>
+         <property name="buddy">
+          <cstring>sortSelect</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="sortSelect">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <item>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Popularity</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Rating</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Difficulty</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Last Played</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Play Time</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Stars</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string extracomment="&quot;Fixed Shuffle&quot; means that the order of the roms is arbitrary, but will be consistent every time, as opposed to the &quot;Random Shuffle&quot; option which is randomized every time">Fixed Shuffle</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Random Shuffle</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="sortOrderButton">
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset theme="view-sort-descending">
+           <normaloff>.</normaloff>.</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="searchBar">
+       <property name="placeholderText">
+        <string>Search...</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="RhdcHackListView" name="hackList">
+       <property name="minimumSize">
+        <size>
+         <width>600</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="verticalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOn</enum>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::CurrentChanged</set>
+       </property>
+       <property name="verticalScrollMode">
+        <enum>QAbstractItemView::ScrollPerPixel</enum>
+       </property>
+       <property name="layoutMode">
+        <enum>QListView::Batched</enum>
+       </property>
+       <property name="uniformItemSizes">
+        <bool>true</bool>
+       </property>
+       <property name="batchSize">
+        <number>10</number>
+       </property>
+       <property name="itemAlignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0,1,0">
+     <item>
+      <widget class="QLabel" name="hackTitleLabel">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">--</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="hackInfoPane">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="authorsLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string notr="true">Author: </string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::PlainText</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="authorsList">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string notr="true">Unknown</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::PlainText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Version</string>
+            </property>
+            <property name="buddy">
+             <cstring>versionSelect</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="versionSelect">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="actionButton">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset theme="application-menu">
+              <normaloff>.</normaloff>.</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPlainTextEdit" name="hackDescription">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="horizontalScrollBarPolicy">
+        <enum>Qt::ScrollBarAlwaysOff</enum>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextSelectableByMouse</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="RomSettingsWidgetSlot" name="settingsSlot">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RhdcHackListView</class>
+   <extends>QListView</extends>
+   <header>src/rhdc/ui/rhdc-hack-list-view.hpp</header>
+   <slots>
+    <signal>selectedHackChanged(const RhdcHackExt*)</signal>
+    <slot>searchChanged(QString)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>RomSettingsWidgetSlot</class>
+   <extends>QFrame</extends>
+   <header>src/ui/rom-settings-widget.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>playlistSelect</tabstop>
+  <tabstop>sortSelect</tabstop>
+  <tabstop>sortOrderButton</tabstop>
+  <tabstop>hackList</tabstop>
+  <tabstop>versionSelect</tabstop>
+  <tabstop>actionButton</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../../../../data/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>hackList</sender>
+   <signal>selectedHackChanged(const RhdcHackExt*)</signal>
+   <receiver>RhdcHackView</receiver>
+   <slot>hackSelected(const RhdcHackExt*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>391</x>
+     <y>196</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>607</x>
+     <y>530</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sortSelect</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>RhdcHackView</receiver>
+   <slot>sortingChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>501</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>462</x>
+     <y>40</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sortOrderButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RhdcHackView</receiver>
+   <slot>changeSortOrder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>595</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>versionSelect</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>RhdcHackView</receiver>
+   <slot>versionSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>763</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>302</x>
+     <y>521</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playlistSelect</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>RhdcHackView</receiver>
+   <slot>playlistChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>180</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>264</x>
+     <y>2</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RhdcHackView</receiver>
+   <slot>actionButtonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>608</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchBar</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>hackList</receiver>
+   <slot>searchChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>168</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>hackSelected(const RhdcHackExt*)</slot>
+  <slot>sortingChanged()</slot>
+  <slot>changeSortOrder()</slot>
+  <slot>versionSelected()</slot>
+  <slot>playlistChanged()</slot>
+  <slot>actionButtonClicked()</slot>
+ </slots>
+</ui>

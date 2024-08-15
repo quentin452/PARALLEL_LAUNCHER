@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ControllerConfigDialog</class>
+ <widget class="QDialog" name="ControllerConfigDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>675</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Configure Controller</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>Configuring Controller:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="controllerNameLabel">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string notr="true">MY CONTROLLER NAME</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QPushButton" name="quickConfigureButton">
+       <property name="text">
+        <string>Quick Configure</string>
+       </property>
+       <property name="icon">
+        <iconset theme="media-seek-forward">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="rumbleCheckbox">
+       <property name="text">
+        <string>Enable Rumble</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0,1,0,1">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Analog Up</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>0</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Analog Down</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_2</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>1</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Analog Left</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_3</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>2</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="text">
+          <string>Analog Right</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_4</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>3</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>A Button</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_5</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>12</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>B Button</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_6</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>13</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>C Up</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_7</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>4</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>C Down</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_8</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>5</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>C Left</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_9</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_9">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>6</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>C Right</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_10</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_10">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>7</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Z Trigger</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_11</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>15</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>R Trigger</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_12</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>16</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_13">
+         <property name="text">
+          <string>D-Pad Up</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_13</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>8</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_14">
+         <property name="text">
+          <string>D-Pad Down</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_14</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_14">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>9</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_15">
+         <property name="text">
+          <string>D-Pad Left</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_15</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_15">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>10</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_16">
+         <property name="text">
+          <string>D-Pad Right</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_16</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="pushButton_16">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>11</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_17">
+         <property name="text">
+          <string>Start Button</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_17</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="pushButton_17">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>17</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="label_18">
+         <property name="text">
+          <string>L Trigger</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_18</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QPushButton" name="pushButton_18">
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>14</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line_4">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_34">
+     <property name="text">
+      <string>The following inputs are only used by games that support Gamecube Controllers:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <layout class="QGridLayout" name="gridLayout_9">
+       <property name="horizontalSpacing">
+        <number>7</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_32">
+         <property name="text">
+          <string>X Button</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_29">
+         <property name="text">
+          <string>Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>18</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line_5">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_30">
+         <property name="text">
+          <string>Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>19</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_33">
+         <property name="text">
+          <string>Y Button</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="Line" name="line_7">
+       <property name="lineWidth">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_11">
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_35">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_36">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="Line" name="line_6">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_21">
+         <property name="text">
+          <string>Sensitivity</string>
+         </property>
+         <property name="buddy">
+          <cstring>sensitivitySpinner</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="sensitivitySpinner">
+         <property name="minimum">
+          <double>0.500000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>2.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_22">
+         <property name="text">
+          <string>Deadzone</string>
+         </property>
+         <property name="buddy">
+          <cstring>deadzoneSpinner</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="deadzoneSpinner">
+         <property name="maximum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.150000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="4">
+        <widget class="QPushButton" name="pushButton_21">
+         <property name="minimumSize">
+          <size>
+           <width>125</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>22</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>Save State</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_19</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_19">
+         <property name="minimumSize">
+          <size>
+           <width>125</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>20</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string>Load State</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_20</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_20">
+         <property name="minimumSize">
+          <size>
+           <width>125</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>21</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="4">
+        <widget class="QPushButton" name="pushButton_22">
+         <property name="minimumSize">
+          <size>
+           <width>125</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true">Not Bound</string>
+         </property>
+         <property name="controllerBinding" stdset="0">
+          <number>23</number>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">bindingButtonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="label_25">
+         <property name="text">
+          <string>Toggle Slow Motion</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_22</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string>Toggle Fast Forward</string>
+         </property>
+         <property name="buddy">
+          <cstring>pushButton_21</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>16</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QLabel" name="label_26">
+       <property name="toolTip">
+        <string>How far you need to press down a trigger or tilt a control stick that is bound to an N64 button before it is considered a button press</string>
+       </property>
+       <property name="text">
+        <string>Analog to Digital Button Press Threshold</string>
+       </property>
+       <property name="buddy">
+        <cstring>axisThresholdSpinner</cstring>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="axisThresholdSpinner">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="suffix">
+        <string notr="true">%</string>
+       </property>
+       <property name="minimum">
+        <number>10</number>
+       </property>
+       <property name="maximum">
+        <number>99</number>
+       </property>
+       <property name="value">
+        <number>70</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_6">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="Line" name="line_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveAsButton">
+       <property name="text">
+        <string>Save As</string>
+       </property>
+       <property name="icon">
+        <iconset theme="document-save-as">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+       <property name="icon">
+        <iconset theme="document-save">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="icon">
+        <iconset theme="dialog-cancel">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+       <attribute name="buttonGroup">
+        <string notr="true">buttonGroup</string>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>quickConfigureButton</tabstop>
+  <tabstop>rumbleCheckbox</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>pushButton_3</tabstop>
+  <tabstop>pushButton_4</tabstop>
+  <tabstop>pushButton_5</tabstop>
+  <tabstop>pushButton_6</tabstop>
+  <tabstop>pushButton_7</tabstop>
+  <tabstop>pushButton_8</tabstop>
+  <tabstop>pushButton_9</tabstop>
+  <tabstop>pushButton_10</tabstop>
+  <tabstop>pushButton_11</tabstop>
+  <tabstop>pushButton_12</tabstop>
+  <tabstop>pushButton_13</tabstop>
+  <tabstop>pushButton_14</tabstop>
+  <tabstop>pushButton_15</tabstop>
+  <tabstop>pushButton_16</tabstop>
+  <tabstop>pushButton_17</tabstop>
+  <tabstop>pushButton_18</tabstop>
+  <tabstop>pushButton_29</tabstop>
+  <tabstop>pushButton_30</tabstop>
+  <tabstop>sensitivitySpinner</tabstop>
+  <tabstop>deadzoneSpinner</tabstop>
+  <tabstop>pushButton_19</tabstop>
+  <tabstop>pushButton_20</tabstop>
+  <tabstop>pushButton_21</tabstop>
+  <tabstop>pushButton_22</tabstop>
+  <tabstop>axisThresholdSpinner</tabstop>
+  <tabstop>saveAsButton</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>cancelButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>quickConfigureButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ControllerConfigDialog</receiver>
+   <slot>bindAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>83</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>574</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cancelButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ControllerConfigDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>667</x>
+     <y>582</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>368</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ControllerConfigDialog</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>577</x>
+     <y>582</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>335</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveAsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ControllerConfigDialog</receiver>
+   <slot>saveAs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>487</x>
+     <y>582</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>673</x>
+     <y>312</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>save()</slot>
+  <slot>bindAll()</slot>
+  <slot>saveAs()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="bindingButtonGroup">
+   <property name="exclusive">
+    <bool>false</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
+</ui>

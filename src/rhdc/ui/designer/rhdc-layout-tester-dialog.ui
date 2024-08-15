@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RhdcLayoutTesterDialog</class>
+ <widget class="QDialog" name="RhdcLayoutTesterDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>736</width>
+    <height>496</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Romhacking.com Star Layout Tester</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,0">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
+     <item>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="minimumSize">
+        <size>
+         <width>325</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="title">
+        <string notr="true">Star Layout</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1,0">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string notr="true">Copy-paste your layout into this textbox to validate it. You can find documentation on how to create layouts here:</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://parallel-launcher.ca/layout/docs&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;https://parallel-launcher.ca/layout/docs&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::LinksAccessibleByKeyboard|Qt::LinksAccessibleByMouse</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPlainTextEdit" name="layoutTextArea">
+          <property name="font">
+           <font>
+            <family>Noto Mono</family>
+           </font>
+          </property>
+          <property name="inputMethodHints">
+           <set>Qt::ImhMultiLine|Qt::ImhNoAutoUppercase|Qt::ImhPreferLatin</set>
+          </property>
+          <property name="lineWrapMode">
+           <enum>QPlainTextEdit::NoWrap</enum>
+          </property>
+          <property name="tabStopDistance">
+           <double>31.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="validationStatusLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-style: italic;</string>
+          </property>
+          <property name="text">
+           <string notr="true">(Validation Status)</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="title">
+        <string notr="true">Save File</string>
+       </property>
+       <layout class="QVBoxLayout" name="saveFileLayout" stretch="0,0,1,0">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string notr="true">Here is a preview of what your star layout will look like for your current save file. You can click on stars to set/unset them in your save file. All save file changes will be reverted once you close this dialog.</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::PlainText</enum>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+          <property name="textInteractionFlags">
+           <set>Qt::NoTextInteraction</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QWidget" name="starDisplayPlaceholder" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="closeButton">
+       <property name="text">
+        <string notr="true">Close</string>
+       </property>
+       <property name="icon">
+        <iconset theme="dialog-close">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="revertButton">
+       <property name="text">
+        <string notr="true">Revert Save File</string>
+       </property>
+       <property name="icon">
+        <iconset theme="edit-undo">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="testButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string notr="true">Test Layout</string>
+       </property>
+       <property name="icon">
+        <iconset theme="media-playback-start">
+         <normaloff>.</normaloff>.</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>layoutTextArea</tabstop>
+  <tabstop>revertButton</tabstop>
+  <tabstop>testButton</tabstop>
+  <tabstop>closeButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RhdcLayoutTesterDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>57</x>
+     <y>468</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>734</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>revertButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RhdcLayoutTesterDialog</receiver>
+   <slot>revertSave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>473</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>733</x>
+     <y>244</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>testButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RhdcLayoutTesterDialog</receiver>
+   <slot>playtest()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>686</x>
+     <y>471</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>733</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>layoutTextArea</sender>
+   <signal>modificationChanged(bool)</signal>
+   <receiver>RhdcLayoutTesterDialog</receiver>
+   <slot>layoutModificationStatusChanged(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>276</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>732</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>revertSave()</slot>
+  <slot>playtest()</slot>
+  <slot>layoutModificationStatusChanged(bool)</slot>
+ </slots>
+</ui>

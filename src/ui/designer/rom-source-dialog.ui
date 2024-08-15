@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RomSourceDialog</class>
+ <widget class="QDialog" name="RomSourceDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>750</width>
+    <height>551</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Manage ROM Sources</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="searchFoldersTab">
+      <attribute name="title">
+       <string>ROM Search Folders</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5" stretch="2,3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2" stretch="1,0">
+           <item>
+            <widget class="QListWidget" name="romSourceList">
+             <property name="textElideMode">
+              <enum>Qt::ElideLeft</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="deleteSourceButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Delete</string>
+               </property>
+               <property name="icon">
+                <iconset theme="delete">
+                 <normaloff>.</normaloff>.</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addSourceButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>New Source</string>
+               </property>
+               <property name="icon">
+                <iconset theme="list-add">
+                 <normaloff>.</normaloff>.</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="title">
+            <string>ROM Source</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QLineEdit" name="sourcePath">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+                <property name="placeholderText">
+                 <string>Browse for a folder</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="browseButton">
+                <property name="text">
+                 <string>Browse</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="document-open">
+                  <normaloff>.</normaloff>.</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="recursiveCheckbox">
+              <property name="toolTip">
+               <string>Also scan all subfolders</string>
+              </property>
+              <property name="text">
+               <string>Recursive</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Fixed</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>32</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QFrame" name="recursiveSearchOptions">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <item>
+                  <widget class="QCheckBox" name="ignoreHiddenCheckbox">
+                   <property name="toolTip">
+                    <string>Ignore directories that begin with a period character</string>
+                   </property>
+                   <property name="text">
+                    <string>Ignore hidden directories</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <item>
+                    <widget class="QLabel" name="label">
+                     <property name="text">
+                      <string>Max Depth</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QSpinBox" name="maxDepthSpinner">
+                     <property name="minimum">
+                      <number>2</number>
+                     </property>
+                     <property name="maximum">
+                      <number>9</number>
+                     </property>
+                     <property name="value">
+                      <number>5</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="followSymlinksCheckbox">
+              <property name="toolTip">
+               <string>Follow symbolic links to folders and ROMs</string>
+              </property>
+              <property name="text">
+               <string>Follow Symlinks</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Automatically add to groups</string>
+              </property>
+              <property name="buddy">
+               <cstring>groupListContainer</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QScrollArea" name="groupListContainer">
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="groupList">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>411</width>
+                 <height>148</height>
+                </rect>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_5"/>
+              </widget>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QPushButton" name="manageGroupsButton">
+                <property name="text">
+                 <string>Manage Groups</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="individualRomsTab">
+      <attribute name="title">
+       <string>Individual ROMs</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>2</number>
+       </property>
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QListWidget" name="additionalRomsList"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="1,1">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QPushButton" name="forgetRomButton">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Forget Selected ROM</string>
+             </property>
+             <property name="icon">
+              <iconset theme="delete">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="addRomButton">
+             <property name="text">
+              <string>Add New ROM(s)</string>
+             </property>
+             <property name="icon">
+              <iconset theme="list-add">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="bpsPatchTab">
+      <attribute name="title">
+       <string>BPS Patches</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <property name="leftMargin">
+        <number>2</number>
+       </property>
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="verticalFrame">
+         <property name="minimumSize">
+          <size>
+           <width>500</width>
+           <height>0</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>Patch File</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="patchFilePath">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="patchFileBrowseButton">
+              <property name="text">
+               <string>Browse</string>
+              </property>
+              <property name="icon">
+               <iconset theme="document-open">
+                <normaloff>.</normaloff>.</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>Base ROM</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QRadioButton" name="autoBaseRomRadio">
+               <property name="text">
+                <string>Automatic (Search Existing ROMs)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">baseRomRadioGroup</string>
+               </attribute>
+              </widget>
+             </item>
+             <item>
+              <widget class="QRadioButton" name="manualBaseRomRadio">
+               <property name="text">
+                <string>Provided ROM:</string>
+               </property>
+               <attribute name="buttonGroup">
+                <string notr="true">baseRomRadioGroup</string>
+               </attribute>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="baseRomGroup">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,1,0">
+                <item>
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>32</width>
+                    <height>1</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="baseRomPath">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="baseRomBrowseButton">
+                  <property name="text">
+                   <string>Browse</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="document-open">
+                    <normaloff>.</normaloff>.</iconset>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QPushButton" name="applyPatchButton">
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>16</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>Apply Patch</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>217</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>romSourceList</tabstop>
+  <tabstop>deleteSourceButton</tabstop>
+  <tabstop>addSourceButton</tabstop>
+  <tabstop>sourcePath</tabstop>
+  <tabstop>browseButton</tabstop>
+  <tabstop>recursiveCheckbox</tabstop>
+  <tabstop>ignoreHiddenCheckbox</tabstop>
+  <tabstop>maxDepthSpinner</tabstop>
+  <tabstop>followSymlinksCheckbox</tabstop>
+  <tabstop>groupListContainer</tabstop>
+  <tabstop>manageGroupsButton</tabstop>
+  <tabstop>additionalRomsList</tabstop>
+  <tabstop>forgetRomButton</tabstop>
+  <tabstop>addRomButton</tabstop>
+  <tabstop>patchFilePath</tabstop>
+  <tabstop>patchFileBrowseButton</tabstop>
+  <tabstop>autoBaseRomRadio</tabstop>
+  <tabstop>manualBaseRomRadio</tabstop>
+  <tabstop>baseRomPath</tabstop>
+  <tabstop>baseRomBrowseButton</tabstop>
+  <tabstop>applyPatchButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>544</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>328</x>
+     <y>544</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>recursiveCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>recursiveSearchOptions</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>693</x>
+     <y>137</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>547</x>
+     <y>218</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>browseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>browse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>727</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addSourceButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>addSource()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>297</x>
+     <y>486</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>430</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteSourceButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>deleteSource()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>486</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>4</x>
+     <y>409</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>romSourceList</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>sourceSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>166</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>manageGroupsButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>manageGroups()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>428</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>749</x>
+     <y>379</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>706</x>
+     <y>544</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>419</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>forgetRomButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>forgetRom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>474</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>487</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addRomButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>addRom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>370</x>
+     <y>496</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>3</x>
+     <y>458</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>additionalRomsList</sender>
+   <signal>itemSelectionChanged()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>romSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>126</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>745</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>patchFileBrowseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>browseForPatch()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>446</x>
+     <y>69</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>747</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>baseRomBrowseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>browseForBaseRom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>473</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>applyPatchButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RomSourceDialog</receiver>
+   <slot>applyPatch()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>253</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>746</x>
+     <y>282</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>browse()</slot>
+  <slot>addSource()</slot>
+  <slot>deleteSource()</slot>
+  <slot>sourceSelected()</slot>
+  <slot>manageGroups()</slot>
+  <slot>save()</slot>
+  <slot>addRom()</slot>
+  <slot>forgetRom()</slot>
+  <slot>romSelected()</slot>
+  <slot>browseForPatch()</slot>
+  <slot>browseForBaseRom()</slot>
+  <slot>applyPatch()</slot>
+ </slots>
+ <buttongroups>
+  <buttongroup name="baseRomRadioGroup"/>
+ </buttongroups>
+</ui>

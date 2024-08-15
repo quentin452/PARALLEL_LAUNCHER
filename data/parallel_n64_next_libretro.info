@@ -1,0 +1,32 @@
+# Software Information
+display_name = "Nintendo - Nintendo 64 (ParaLLEl N64 Next)"
+authors = "Hacktarux|Mupen64Plus Team|TinyTiger|Libretro"
+supported_extensions = "n64|v64|z64|bin|u1|ndd"
+corename = "ParaLLEl N64 (Parallel Launcher Edition)"
+license = "GPLv2"
+permissions = "dynarec_optional"
+display_version = "2.14.8"
+categories = "Emulator"
+
+# Hardware Information
+manufacturer = "Nintendo"
+systemname = "Nintendo 64"
+systemid = "nintendo_64"
+
+# Libretro Features
+supports_no_game = "false"
+hw_render = "true"
+required_hw_api = "OpenGL >= 3.0 | OpenGL ES >= 2.0 | Vulkan >= 1.0"
+database = "Nintendo - Nintendo 64|Nintendo - Nintendo 64DD"
+is_experimental = "false"
+savestate = "true"
+savestate_features = "serialized"
+
+# Firmware / BIOS
+firmware_count = 1
+firmware0_desc = "64DD_IPL.bin (64DD IPL ROM)"
+firmware0_path = "64DD_IPL.bin"
+firmware0_opt = "true"
+notes = "(!) 64DD_IPL.bin (md5): 8d3d9f294b6e174bc7b1d2fd1c727530"
+
+description = "A fork of ParallelN64 that adds the GLideN64 graphics plugin and some additional settings and features. Designed to be used with Parallel Launcher."

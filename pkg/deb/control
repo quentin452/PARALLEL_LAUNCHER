@@ -1,0 +1,62 @@
+Source: parallel-launcher
+Section: games
+Priority: optional
+Maintainer: Matt Pharoah <mtpharoah@gmail.com>
+Build-Depends: debhelper-compat (= 12), build-essential (>= 12), qt5-qmake (>= 5.12), qtdeclarative5-dev (>= 5.12), libqt5svg5-dev (>= 5.12), libsdl2-dev (>= 2), libsqlite3-dev (>= 3.24), libgcrypt20-dev, qttools5-dev-tools, dh-exec
+Standards-Version: 4.4.1
+Homepage: https://parallel-launcher.ca
+Vcs-Browser: https://gitlab.com/parallel-launcher/parallel-launcher
+Vcs-Git: https://gitlab.com/parallel-launcher/parallel-launcher.git
+
+Package: parallel-launcher
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5a (>= 5.12), libqt5gui5 (>= 5.12), libqt5widgets5 (>= 5.12), libqt5network5 (>= 5.12), libqt5svg5 (>= 5.12), libqt5dbus5 (>= 5.12), libsdl2-2.0-0, libsqlite3-0 (>= 3.24), libgcrypt20, findutils, xdg-utils, policykit-1, dosfstools, coreutils, p7zip
+Recommends: fonts-noto-core, fonts-noto-mono, udisks2
+Description: Modern N64 Emulator
+ Parallel Launcher is an emulator launcher that aims to make playing N64 games,
+ both retail and homebrew, as simple and as accessible as possible. Parallel
+ Launcher uses the RetroArch emulator, but replaces its confusing menus and
+ controller setup with a much simpler user interface. It also features optional
+ integration with romhacking.com.
+Description-es: Un emulador moderno de N64
+ Parallel Launcher es un lanzador para un emulador hecho para jugar a juegos de
+ N64, tanto comerciales como homebrew, de la forma más simple y accesible
+ posible. Parallel Launcher usa el emulador RetroArch, pero reemplaza sus menús
+ confusos y su configuración de mandos con una interfaz de usuario mucho más
+ simple. También tiene integración opcional con romhacking.com.
+Description-de: Moderner N64-Emulator
+ Parallel Launcher ist ein Emulator-Launcher der es einfach macht, N64-Spiele
+ (sowohl Original als auch Mods) zu spielen. Parallel Launcher benutzt den
+ RetroArch-Emulator, jedoch sind dessen verwirrende Menüs mit einem wesentlich
+ einfacheren Interface ersetzt. Außerdem ist eine Integration mit romhacking.com
+ möglich.
+Description-fr: Emulateur N64 Moderne
+ Parallel Launcher est un gestionnaire d'émulateur qui vise à rendre le
+ lancement de jeux N64, en version de base ou en homebrew, de la manière la plus
+ simple et accessible possible. Parallel Launcher utilise l'émulateur RetroArch,
+ mais remplace ses menus et son gestionnaire de manettes par une interface
+ utilisateur plus simple à utiliser. Contient une intégration optionnelle à
+ Romhacking.com.
+Description-fr_CA: Emulateur N64 Moderne
+ Parallel Launcher est un émulateur qui vise à faire les jeux de N64, autant les
+ officiels que les homebrew, aussi simple et accessible que possible. Parallel
+ Launcher utilise l'émulateur RetroArch, mais il remplace ses menus et la
+ configuration de manette qui peuvent porter à confusion avec une interface
+ d'utilisation bien plus simple. Il y a aussi une connexion avec romhacking.com
+ optionnel.
+Description-it: Moderno Emulatore di N64
+ Parallel Launcher è un applicazione che ha lo scopo di emulare e quindi
+ permettere di giocare ai giochi di N64, sia commerciali che homebrew, nella
+ maniera piú semplice e accessibile. Parallel Launcher usa l'emulatore
+ Retroarch, ma rimpiazza i  suoi confusi menú e la configurazione dei controller
+ con un'interfaccia utente piú intuitiva. Include anche un'integrazione
+ facoltativa con romhacking.com.
+Description-pt: Emulador Moderno do N64
+ O Parallel Launcher é um inicializador de emuladores que tem como objetivo
+ tornar a jogabilidade de jogos N64, sejam comerciais ou homebrew, o mais
+ simples e acessível possível. O Parallel Launcher usa o emulador RetroArch, mas
+ substitui os seus menus confusos e as suas configurações de comandos por uma
+ interface de usuário muito mais simples. Também possui integração opcional com
+ o romhacking.com
+Description-ar: محاكي N64 حديث
+ برنامج Parallel Launcher عبارة عن مشغل محاكي يهدف إلى جعل ممارسة ألعاب N64، سواء التجزئة أو إلصناعة إلمنزلية، أمرًا بسيطًا وسهل المنال إلي قدر الإمكان. يستخدم Parallel Launcher محاكي RetroArch، ولكنه يستبدل إلقوائم وإعدادات وحدة التحكم الخاصة به المربكة، بواجهة مستخدم أبسط بكثير. كما يتميز أيضًا بالتكامل الاختياري مع romhacking.com.

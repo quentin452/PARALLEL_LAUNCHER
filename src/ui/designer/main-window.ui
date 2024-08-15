@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>459</width>
+    <height>649</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Parallel Launcher</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,1,0,0">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="titleLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string notr="true">Parallel Launcher ${version}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="rhdcViewToggleButton">
+        <property name="text">
+         <string notr="true"/>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="refreshButton">
+        <property name="toolTip">
+         <string>Refresh ROM List</string>
+        </property>
+        <property name="icon">
+         <iconset theme="view-refresh">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="controllerConfigButton">
+        <property name="toolTip">
+         <string>Configure Controller</string>
+        </property>
+        <property name="icon">
+         <iconset theme="input-gamepad">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="menuButton">
+        <property name="toolTip">
+         <string>Options</string>
+        </property>
+        <property name="icon">
+         <iconset theme="application-menu">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>24</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="popupMode">
+         <enum>QToolButton::InstantPopup</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QFrame" name="searchIndicator">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>Searching for ROMs...</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="maximum">
+          <number>0</number>
+         </property>
+         <property name="value">
+          <number>-1</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="romView">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="noRomSourcesPages">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>52</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>No ROMS have been found</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="text">
+               <string>Manage ROM Sources</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>52</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="romListPage">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>2</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="searchBar">
+          <property name="placeholderText">
+           <string>Search...</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="RomListView" name="romList">
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="RhdcHackView" name="rhdcPage"/>
+     </widget>
+    </item>
+    <item>
+     <widget class="RomSettingsWidgetSlot" name="settingsSlot">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="downloadButton">
+        <property name="text">
+         <string>Download</string>
+        </property>
+        <property name="icon">
+         <iconset theme="download">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+        <property name="default">
+         <bool>true</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="playMultiplayerButton">
+        <property name="text">
+         <string>Play Multiplayer</string>
+        </property>
+        <property name="icon">
+         <iconset theme="group">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="playSingleplayerButton">
+        <property name="text">
+         <string>Play Singleplayer</string>
+        </property>
+        <property name="icon">
+         <iconset theme="media-playback-start">
+          <normaloff>.</normaloff>.</iconset>
+        </property>
+        <property name="autoDefault">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionManageSources">
+   <property name="text">
+    <string>Manage ROM Sources</string>
+   </property>
+  </action>
+  <action name="actionConfigureControllers">
+   <property name="text">
+    <string>Configure Controllers</string>
+   </property>
+  </action>
+  <action name="actionConfigureKeyboard">
+   <property name="text">
+    <string>Keyboard Controls and Hotkeys</string>
+   </property>
+   <property name="toolTip">
+    <string>Configure keyboard controls and hotkeys</string>
+   </property>
+  </action>
+  <action name="rhdcLoginAction">
+   <property name="text">
+    <string>Login to romhacking.com</string>
+   </property>
+  </action>
+  <action name="rhdcLogoutAction">
+   <property name="text">
+    <string>Logout of romhacking.com</string>
+   </property>
+  </action>
+  <action name="rhdcDisableAction">
+   <property name="text">
+    <string>Disable romhacking.com integration</string>
+   </property>
+  </action>
+  <action name="actionAddRom">
+   <property name="text">
+    <string>Add Single ROM</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset theme="system-shutdown">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="text">
+    <string>Quit Parallel Launcher</string>
+   </property>
+  </action>
+  <action name="actionOpenSaveDir">
+   <property name="text">
+    <string>Open save file directory</string>
+   </property>
+  </action>
+  <action name="actionOpenSavestateDir">
+   <property name="text">
+    <string>Open savestate directory</string>
+   </property>
+  </action>
+  <action name="actionOpenSdCardDir">
+   <property name="text">
+    <string>Open SD card directory</string>
+   </property>
+  </action>
+  <action name="actionOpenDataDir">
+   <property name="text">
+    <string>Open app data directory</string>
+   </property>
+  </action>
+  <action name="actionOpenConfigDir">
+   <property name="text">
+    <string>Open app config directory</string>
+   </property>
+  </action>
+  <action name="actionOpenCacheDir">
+   <property name="text">
+    <string>Open app cache directory</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>RomListView</class>
+   <extends>QTreeView</extends>
+   <header>src/ui/rom-list-view.hpp</header>
+   <slots>
+    <slot>search(QString)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>RhdcHackView</class>
+   <extends>QWidget</extends>
+   <header>src/rhdc/ui/rhdc-hack-view.hpp</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RomSettingsWidgetSlot</class>
+   <extends>QFrame</extends>
+   <header>src/ui/rom-settings-widget.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manageRomSources()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>370</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>72</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>controllerConfigButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>configureController()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>396</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>446</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionManageSources</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>manageRomSources()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionConfigureControllers</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>configureController()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSettings</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>editSettings()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playSingleplayerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>playSingleplayer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>442</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>579</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>playMultiplayerButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>playMultiplayer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>641</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>141</x>
+     <y>599</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionConfigureKeyboard</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>configureKeyboard()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rhdcLoginAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rhdcLogin()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rhdcLogoutAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rhdcLogout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rhdcDisableAction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rhdcDisable()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downloadButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>download()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>447</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rhdcViewToggleButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>rhdcViewToggled()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>291</x>
+     <y>33</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>448</x>
+     <y>154</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAddRom</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>addRom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>224</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpenSaveDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openSaveFileDirectory()</slot>
+  </connection>
+  <connection>
+   <sender>actionOpenSavestateDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openSavestateDirectory()</slot>
+  </connection>
+  <connection>
+   <sender>actionOpenSdCardDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openSdCardDirectory()</slot>
+  </connection>
+  <connection>
+   <sender>actionOpenDataDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openDataDirectory()</slot>
+  </connection>
+  <connection>
+   <sender>actionOpenConfigDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openConfigDirectory()</slot>
+  </connection>
+  <connection>
+   <sender>actionOpenCacheDir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>openCacheDirectory()</slot>
+  </connection>
+  <connection>
+   <sender>searchBar</sender>
+   <signal>textEdited(QString)</signal>
+   <receiver>romList</receiver>
+   <slot>search(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>154</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>manageRomSources()</slot>
+  <slot>configureController()</slot>
+  <slot>editSettings()</slot>
+  <slot>playSingleplayer()</slot>
+  <slot>playMultiplayer()</slot>
+  <slot>configureKeyboard()</slot>
+  <slot>inputModeChanged()</slot>
+  <slot>emulatorChanged()</slot>
+  <slot>parallelPluginChanged()</slot>
+  <slot>mupenPluginChanged()</slot>
+  <slot>overclockCpuChanged(bool)</slot>
+  <slot>overclockViChanged(bool)</slot>
+  <slot>widescreenChanged(unsigned char)</slot>
+  <slot>widescreenChanged(bool)</slot>
+  <slot>bigEepromChanged(bool)</slot>
+  <slot>useInterpreterChanged(bool)</slot>
+  <slot>upscaleTexRectsChanged(bool)</slot>
+  <slot>removeBordersChanged(bool)</slot>
+  <slot>emulateFramebufferChanged(bool)</slot>
+  <slot>accurateDepthCompareChanged(bool)</slot>
+  <slot>showMorePluginsChanged(bool)</slot>
+  <slot>download()</slot>
+  <slot>rhdcViewToggled()</slot>
+  <slot>addRom()</slot>
+ </slots>
+</ui>

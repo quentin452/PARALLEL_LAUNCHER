@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	
+	<key>CFBundleExecutable</key>
+	<string>parallel-launcher</string>
+	
+	<key>CFBundleDisplayName</key>
+	<string>Parallel Launcher</string>
+	
+	<key>CFBundleVersion</key>
+	<string>@FULL_VERSION@</string>
+	
+	<key>CFBundleShortVersionString</key>
+	<string>@FULL_VERSION@</string>
+	
+	<key>CFBundleIconFile</key>
+	<string>@ICON@</string>
+	
+	<key>CFBundleIdentifier</key>
+	<string>ca.mpharoah.parallel-launcher</string>
+	
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en-CA</string>
+	
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>it</string>
+		<string>es</string>
+		<string>de</string>
+		<string>fr</string>
+		<string>ar</string>
+		<string>pt</string>
+	</array>
+	
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	
+	<key>CFBundleSignature</key>
+	<string>PRLL</string>
+	
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.RHDC.romhack</string>
+			
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rhdc</string>
+			</array>
+		</dict>
+	</array>
+	
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>z64</string>
+				<string>n64</string>
+				<string>v64</string>
+			</array>
+			
+			<key>CFBundleTypeIconFile</key>
+			<string>@ICON@</string>
+			
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-n64-rom</string>
+			</array>
+			
+			<key>CFBundleTypeName</key>
+			<string>Nintendo64 ROM</string>
+			
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>bps</string>
+			</array>
+			
+			<key>CFBundleTypeIconFile</key>
+			<string>@ICON@</string>
+			
+			<key>CFBundleTypeMIMETypes</key>
+			<array>
+				<string>application/x-bps-patch</string>
+			</array>
+			
+			<key>CFBundleTypeName</key>
+			<string>ROM Binary Patch</string>
+			
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			
+			<key>LSHandlerRank</key>
+			<string>Default</string>
+		</dict>
+	</array>
+	
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2020-2024, Matt Pharoah</string>
+	
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.games</string>
+	
+	<key>LSMultipleInstancesProhibited</key>
+	<false/>
+</dict>
+</plist>

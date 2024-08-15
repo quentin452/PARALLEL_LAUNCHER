@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LogViewerDialog</class>
+ <widget class="QDialog" name="LogViewerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>626</width>
+    <height>522</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Log Viewer</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,1,0">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QCheckBox" name="sessionCheckbox">
+       <property name="text">
+        <string>Only show logs from this session</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="timestampCheckbox">
+       <property name="text">
+        <string>Show timestamps</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Visible Logs</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1,1,1,1">
+      <item>
+       <widget class="QCheckBox" name="debugCheckbox">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="infoCheckbox">
+        <property name="text">
+         <string>Info</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="warnCheckbox">
+        <property name="text">
+         <string>Warn</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="errorCheckbox">
+        <property name="text">
+         <string>Error</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="fatalCheckbox">
+        <property name="text">
+         <string>Fatal</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="logContainer">
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>589</width>
+        <height>366</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>sessionCheckbox</tabstop>
+  <tabstop>timestampCheckbox</tabstop>
+  <tabstop>debugCheckbox</tabstop>
+  <tabstop>infoCheckbox</tabstop>
+  <tabstop>warnCheckbox</tabstop>
+  <tabstop>errorCheckbox</tabstop>
+  <tabstop>fatalCheckbox</tabstop>
+  <tabstop>logContainer</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>224</x>
+     <y>496</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>502</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sessionCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>158</x>
+     <y>18</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>timestampCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>522</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>445</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>debugCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>82</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>59</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>infoCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>178</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>warnCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>313</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>309</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>errorCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>422</x>
+     <y>90</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>419</x>
+     <y>105</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fatalCheckbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>LogViewerDialog</receiver>
+   <slot>updateLogVisibility()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>538</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>updateLogVisibility()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,25 @@
+/Makefile
+/qrc_resources.cpp
+/.qmake.stash
+/.project
+/.cproject
+/.settings
+/.vscode
+/parallel-launcher
+/parallel-launcher-lsjs
+/parallel-launcher-sdl-relay
+/build
+/debug
+/release
+/Debug
+/Release
+/win32
+/win64
+/System Volume Information
+/doc
+/lang/*.qm
+/qmake-rhdc-staging.sh
+
+# Qt Creator
+/*.pro.user
+/*.pro.user*

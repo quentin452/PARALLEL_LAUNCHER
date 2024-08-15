@@ -1,0 +1,17 @@
+#!/usr/bin/dh-exec
+parallel-launcher => /usr/bin/parallel-launcher
+ca.parallel_launcher.ParallelLauncher.desktop => /usr/share/applications/ca.parallel_launcher.ParallelLauncher.desktop
+ca.parallel_launcher.ParallelLauncher.metainfo.xml => /usr/share/metainfo/ca.parallel_launcher.ParallelLauncher.metainfo.xml
+data/appicon.svg => /usr/share/icons/hicolor/scalable/apps/ca.parallel_launcher.ParallelLauncher.svg
+bps-mime.xml => /usr/share/mime/packages/bps-mime.xml
+lang/parallel-launcher_en_us.qm => /usr/share/parallel-launcher/translations/parallel-launcher_en_us.qm
+lang/parallel-launcher_en_gb.qm => /usr/share/parallel-launcher/translations/parallel-launcher_en_gb.qm
+lang/parallel-launcher_it.qm => /usr/share/parallel-launcher/translations/parallel-launcher_it.qm
+lang/parallel-launcher_es.qm => /usr/share/parallel-launcher/translations/parallel-launcher_es.qm
+lang/parallel-launcher_fr_ca.qm => /usr/share/parallel-launcher/translations/parallel-launcher_fr_ca.qm
+lang/parallel-launcher_fr.qm => /usr/share/parallel-launcher/translations/parallel-launcher_fr.qm
+lang/parallel-launcher_de.qm => /usr/share/parallel-launcher/translations/parallel-launcher_de.qm
+lang/parallel-launcher_ar.qm => /usr/share/parallel-launcher/translations/parallel-launcher_ar.qm
+lang/parallel-launcher_pt.qm => /usr/share/parallel-launcher/translations/parallel-launcher_pt.qm
+parallel-launcher-sdl-relay => /usr/share/parallel-launcher/parallel-launcher-sdl-relay
+parallel-launcher-lsjs => /usr/share/parallel-launcher/parallel-launcher-lsjs

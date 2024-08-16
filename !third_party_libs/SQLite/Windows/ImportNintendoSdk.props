@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import
+    Project="$(NintendoSdkRoot)\Build\Vc\NintendoSdkVcProjectSettings.props"
+    Condition="('$(NintendoSdkRoot)' != '') and Exists('$(NintendoSdkRoot)\Build\Vc\NintendoSdkVcProjectSettings.props')" />
+  <Target Name="NintendoSdkFailIfNintendoSdkIsMissing" BeforeTargets="PrepareForBuild">
+    <Error
+        Text="The required property 'NintendoSdkRoot' is not set"
+        Condition="'$(NintendoSdkRoot)' == ''" />
+    <Error
+        Text="NintendoSDK cannot be found at '$(NintendoSdkRoot)'"
+        Condition="!Exists('$(NintendoSdkRoot)\Build\Vc\NintendoSdkVcProjectSettings.props')" />
+  </Target>
+</Project>

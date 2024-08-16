@@ -26,14 +26,6 @@ namespace boost::filesystem {
 #else
 namespace fs = std::filesystem;
 
-#if !defined(__GNUC__) || __GNUC__ < 11 || (__GNUC__ == 11 && __GNUC_MINOR__ < 3) || (__GNUC__ == 11 && __GNUC_MINOR__ == 3 && __GNUC_PATCHLEVEL__ < 1) || (__GNUC__ == 12 && __GNUC_MINOR__ == 0 && __GNUC_PATCHLEVEL__ < 1)
-template<> struct std::hash<fs::path> {
-	inline size_t operator()(const fs::path &path) const noexcept {
-		return hash_value( path );
-	}
-};
-#endif
-
 namespace std::filesystem {
 #endif
 

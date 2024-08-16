@@ -70,9 +70,9 @@ static int CALLBACK onDeviceConnected( const DIDEVICEINSTANCE *device, void *eve
 		return DIENUM_CONTINUE;
 	}
 
-	string name = Unicode::toUtf8( device->tszInstanceName );
-	if( name.empty() ) {
-		name = Unicode::toUtf8( device->tszProductName );
+	string name = Unicode::toUtf8(device->tszInstanceName);
+	if (name.empty()) {
+		name = Unicode::toUtf8(device->tszProductName);
 	}
 
 	const ushort vendorId = (ushort)(device->guidProduct.Data1 & 0xFFFF);

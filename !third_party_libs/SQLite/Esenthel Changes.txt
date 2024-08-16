@@ -1,0 +1,68 @@
+add to "sqlite3.c":
+
+at the beginning:
+
+// ESENTHEL
+#ifdef __APPLE__
+   #include "TargetConditionals.h"
+   #if TARGET_IPHONE_SIMULATOR
+      #define SQLITE_HOMEGROWN_RECURSIVE_MUTEX 1
+   #endif
+#elif defined EMSCRIPTEN
+   #define SQLITE_MAX_WORKER_THREADS 0
+#endif
+
+#ifndef __NINTENDO__ // ESENTHEL CHANGED
+#define HAVE_FCHOWN 1
+#define HAVE_READLINK 1
+#define HAVE_LSTAT 1
+#endif
+
+#ifdef HAVE_UTIME
+    utime(zLockFile, NULL);
+#elif !defined __NINTENDO__ // ESENTHEL CHANGED
+    utimes(zLockFile, NULL);
+#endif
+
+#ifndef __NINTENDO__ // ESENTHEL CHANGED
+    if( m!=0 ){
+      struct stat statbuf;
+      if( osFstat(fd, &statbuf)==0 
+       && statbuf.st_size==0
+       && (statbuf.st_mode&0777)!=m 
+      ){
+        osFchmod(fd, m);
+      }
+    }
+#endif
+
+#ifdef __NINTENDO__
+  { "fchmod",       (sqlite3_syscall_ptr)0,               0  },
+#else
+  { "fchmod",       (sqlite3_syscall_ptr)fchmod,          0  },
+#endif
+
+// ESENTHEL CHANGED
+static inline Bool DriveChar(char c) {return (c>='a' && c<='z') || (c>='A' && c<='Z');}
+static        Bool HasDrive(const char *path)
+{
+   if(path)
+   {
+      if(DriveChar(*path))for(;;) // C: Windows style, http: Internet, rom: NintendoSwitch
+      {
+         char c=*++path;
+         if(c==':')return 1;
+         if(!DriveChar(c))break;
+      }else
+      if(*path=='/')return 1; // / Unix style
+   }
+   return 0;
+}
+static int mkFullPathname(
+  const char *zPath,              /* Input path */
+  char *zOut,                     /* Output buffer */
+  int nOut                        /* Allocated size of buffer zOut */
+){
+  int nPath = sqlite3Strlen30(zPath);
+  int iOff = 0;
+  if(!HasDrive(zPath)){

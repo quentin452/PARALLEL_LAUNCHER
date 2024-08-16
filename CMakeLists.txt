@@ -1,6 +1,11 @@
+# SUPPORT OFFICIALLY WINDOWS 11 X64
 cmake_minimum_required(VERSION 3.5.0)
 project(parallel-launcher VERSION 0.1.0 LANGUAGES C CXX)
 
+# Set default build type if not set
+#if(NOT CMAKE_BUILD_TYPE)
+#    set(CMAKE_BUILD_TYPE Release)
+#endif()
 # Rechercher Qt 5
 find_package(Qt5 COMPONENTS Widgets Network REQUIRED)
 
@@ -14,10 +19,27 @@ file(GLOB_RECURSE SOURCES
     ${PROJECT_SOURCE_DIR}/src/*.c
     ${PROJECT_SOURCE_DIR}/src/*.hpp
 )
+
+# Find all .ui files
+file(GLOB UI_FILES 
+    ${PROJECT_SOURCE_DIR}/src/ui/designer/*.ui 
+    ${PROJECT_SOURCE_DIR}/src/rhdc/ui/designer/*.ui
+    ${PROJECT_SOURCE_DIR}/src/updaters/*.ui
+)
+
+# Set the output directory for the generated UI headers
+set(CMAKE_AUTOUIC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/ui)
+
+# Generate headers from .ui files
+qt5_wrap_ui(UI_HEADERS ${UI_FILES} OPTIONS -o ${CMAKE_AUTOUIC_OUTPUT_DIRECTORY})
+
+# Add the generated headers to the list of sources
+set(SOURCES ${SOURCES} ${UI_HEADERS})
+
 add_executable(parallel-launcher lsjs.c sdl-proxy.c ${SOURCES})
 
 # Inclure les répertoires d'en-têtes Qt et SQLite3
-target_include_directories(parallel-launcher PUBLIC ${Qt5Widgets_INCLUDE_DIRS} ${Qt5Network_INCLUDE_DIRS} ${SQLITE3_INCLUDE_DIR})
+target_include_directories(parallel-launcher PUBLIC ${Qt5Widgets_INCLUDE_DIRS} ${Qt5Network_INCLUDE_DIRS} ${SQLITE3_INCLUDE_DIR} ${CMAKE_AUTOUIC_OUTPUT_DIRECTORY})
 
 # Lier les bibliothèques Qt et SQLite3
 target_link_libraries(parallel-launcher Qt5::Widgets Qt5::Network ${SQLITE3_LIBRARY})
@@ -29,6 +51,7 @@ endif()
 
 set(ALL_INCLUDE_DIR
     "${CMAKE_SOURCE_DIR}/"
+    "${CMAKE_SOURCE_DIR}/build/"
 )
 include_directories("${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/include")
 target_include_directories(${PROJECT_NAME} PUBLIC

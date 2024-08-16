@@ -1,5 +1,5 @@
 #include "src/rhdc/ui/rhdc-download-dialog.hpp"
-#include "ui_rhdc-download-dialog.h"
+#include <ui_rhdc-download-dialog.h>
 
 #include <QTimer>
 #include <QUrl>
@@ -7,7 +7,7 @@
 #include <cctype>
 #include "src/ui/toast.hpp"
 #include "src/ui/icons.hpp"
-#include "src/polyfill/base-directory.hpp"
+#include <src/polyfill/base-directory.hpp>
 #include "src/polyfill/sha1.hpp"
 #include "src/rhdc/core/plugin-detect.hpp"
 #include "src/rhdc/core/layout.hpp"

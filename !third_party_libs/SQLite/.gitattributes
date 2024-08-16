@@ -1,3 +1,0 @@
-# Force binary mode for sqlite because otherwise it's super slow
-*.h binary
-*.c binary

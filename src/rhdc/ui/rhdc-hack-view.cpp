@@ -1,5 +1,5 @@
 #include "src/rhdc/ui/rhdc-hack-view.hpp"
-#include "ui_rhdc-hack-view.h"
+#include <ui_rhdc-hack-view.h>
 
 #include <QInputDialog>
 #include <QMessageBox>

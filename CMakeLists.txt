@@ -10,9 +10,9 @@ set(SQLITE3_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/!third_party_libs/SQLite")
 set(SQLITE3_SOURCE "${CMAKE_SOURCE_DIR}/!third_party_libs/SQLite/sqlite3.c")
 
 file(GLOB_RECURSE SOURCES
-    ${PROJECT_SOURCE_DIR}/src/**/*.cpp
-    ${PROJECT_SOURCE_DIR}/src/**/*.hpp
-    ${PROJECT_SOURCE_DIR}/src/**/*.c
+    ${PROJECT_SOURCE_DIR}/src/*.cpp
+    ${PROJECT_SOURCE_DIR}/src/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/*.c
     ${SQLITE3_SOURCE}  # Add the SQLite source file here
 )
 
@@ -45,7 +45,7 @@ add_executable(parallel-launcher ${SOURCES} ${MOC_SOURCES})
 target_include_directories(parallel-launcher PUBLIC ${Qt5Widgets_INCLUDE_DIRS} ${Qt5Core_INCLUDE_DIRS} ${Qt5Network_INCLUDE_DIRS} ${SQLITE3_INCLUDE_DIR} ${CMAKE_AUTOUIC_OUTPUT_DIRECTORY})
 
 # Lier les bibliothèques Qt
-target_link_libraries(parallel-launcher Qt5::Widgets Qt5::Network Qt5::Core)
+target_link_libraries(parallel-launcher Qt5::Widgets Qt5::Network Qt5::Core bcrypt)
 
 # Ajouter l'option /FS pour éviter les conflits de fichiers .PDB
 if (MSVC)

@@ -15,10 +15,9 @@ namespace Unicode {
 		return toUtf16( u8str.c_str() );
 	}
 
-    std::string toUtf8(const wchar_t* wstr) {
-        std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
-        return converter.to_bytes(wstr);
-    }
+	inline std::string toUtf8( const std::wstring &u16str ) {
+		return toUtf8( u16str.c_str() );
+	}
 
 	extern std::vector<std::string> argvUtf8();
 

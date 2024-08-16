@@ -65,6 +65,15 @@ target_include_directories(parallel-launcher PUBLIC ${ALL_INCLUDE_DIR})
 file(GLOB LIBS "${CMAKE_SOURCE_DIR}/!dlls_and_libs/windows_x64/libs/*.lib")
 target_link_libraries(parallel-launcher ${LIBS} "${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/build/Release/SDL2.lib" "${CMAKE_SOURCE_DIR}/!third_party_libs/discord-rpc/win64-static/lib/*.lib")
 
+# Custom command to copy Qt DLLs
+add_custom_command(TARGET parallel-launcher POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${Qt5Widgets_DIR}/../../../bin/Qt5Widgets.dll"
+        "${Qt5Core_DIR}/../../../bin/Qt5Core.dll"
+        "${Qt5Network_DIR}/../../../bin/Qt5Network.dll"
+        "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/"
+)
+
 include(CTest)
 enable_testing()
 

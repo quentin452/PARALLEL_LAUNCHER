@@ -1,0 +1,1610 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+      La g├®n├®ration a d├®marr├® 16/08/2024 15:33:37.
+      
+      Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdC\\CompilerIdC.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+      PrepareForBuild:
+        Cr├®ation du r├®pertoire "Debug\\".
+        La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+        Cr├®ation du r├®pertoire "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Cr├®ation de "Debug\\CompilerIdC.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+        Mise ├á jour de l'horodatage "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Suppression du fichier "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Mise ├á jour de l'horodatage "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdC\\CompilerIdC.vcxproj" termin├®e (cibles par d├®faut).
+      
+      La g├®n├®ration a r├®ussi.
+          0 Avertissement(s)
+          0 Erreur(s)
+      
+      Temps ├®coul├® 00:00:00.48
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/3.29.5-msvc4/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+      La g├®n├®ration a d├®marr├® 16/08/2024 15:33:38.
+      
+      Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+      PrepareForBuild:
+        Cr├®ation du r├®pertoire "Debug\\".
+        La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+        Cr├®ation du r├®pertoire "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Cr├®ation de "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+        Mise ├á jour de l'horodatage "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Suppression du fichier "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Mise ├á jour de l'horodatage "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\3.29.5-msvc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" termin├®e (cibles par d├®faut).
+      
+      La g├®n├®ration a r├®ussi.
+          0 Avertissement(s)
+          0 Erreur(s)
+      
+      Temps ├®coul├® 00:00:00.49
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/3.29.5-msvc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-kptq4l"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-kptq4l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-kptq4l'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_64b5f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:38.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kptq4l\\cmTC_64b5f.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_64b5f.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kptq4l\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_64b5f.dir\\Debug\\cmTC_64b5f.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_64b5f.dir\\Debug\\cmTC_64b5f.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_64b5f.dir\\Debug\\cmTC_64b5f.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_64b5f.dir\\Debug\\\\" /Fd"cmTC_64b5f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_64b5f.dir\\Debug\\\\" /Fd"cmTC_64b5f.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kptq4l\\Debug\\cmTC_64b5f.exe" /INCREMENTAL /ILK:"cmTC_64b5f.dir\\Debug\\cmTC_64b5f.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-kptq4l/Debug/cmTC_64b5f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-kptq4l/Debug/cmTC_64b5f.lib" /MACHINE:X64  /machine:x64 cmTC_64b5f.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_64b5f.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kptq4l\\Debug\\cmTC_64b5f.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_64b5f.dir\\Debug\\cmTC_64b5f.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_64b5f.dir\\Debug\\cmTC_64b5f.tlog\\cmTC_64b5f.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-kptq4l\\cmTC_64b5f.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.43
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-9j68p8"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-9j68p8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-9j68p8'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_54f9d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:39.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9j68p8\\cmTC_54f9d.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_54f9d.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9j68p8\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_54f9d.dir\\Debug\\cmTC_54f9d.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_54f9d.dir\\Debug\\cmTC_54f9d.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_54f9d.dir\\Debug\\cmTC_54f9d.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_54f9d.dir\\Debug\\\\" /Fd"cmTC_54f9d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_54f9d.dir\\Debug\\\\" /Fd"cmTC_54f9d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9j68p8\\Debug\\cmTC_54f9d.exe" /INCREMENTAL /ILK:"cmTC_54f9d.dir\\Debug\\cmTC_54f9d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-9j68p8/Debug/cmTC_54f9d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-9j68p8/Debug/cmTC_54f9d.lib" /MACHINE:X64  /machine:x64 cmTC_54f9d.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_54f9d.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9j68p8\\Debug\\cmTC_54f9d.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_54f9d.dir\\Debug\\cmTC_54f9d.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_54f9d.dir\\Debug\\cmTC_54f9d.tlog\\cmTC_54f9d.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9j68p8\\cmTC_54f9d.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.45
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:82 (check_symbol_exists)"
+    checks:
+      - "Looking for __GLIBC__"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-3hlo56"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-3hlo56"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "LIBC_IS_GLIBC"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-3hlo56'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8c51b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:40.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\cmTC_8c51b.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_8c51b.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_8c51b.dir\\Debug\\cmTC_8c51b.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_8c51b.dir\\Debug\\cmTC_8c51b.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_8c51b.dir\\Debug\\cmTC_8c51b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8c51b.dir\\Debug\\\\" /Fd"cmTC_8c51b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\CheckSymbolExists.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8c51b.dir\\Debug\\\\" /Fd"cmTC_8c51b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\CheckSymbolExists.c"
+          CheckSymbolExists.c
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\CheckSymbolExists.c(8,19): error C2065: '__GLIBC__'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\cmTC_8c51b.vcxproj]
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\cmTC_8c51b.vcxproj" termin├®e (cibles par d├®faut) -- ├ëCHEC.
+        
+        ├ëCHEC de la build.
+        
+        "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\cmTC_8c51b.vcxproj" (cible par d├®faut) (1) ->
+        (ClCompile cible) -> 
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\CheckSymbolExists.c(8,19): error C2065: '__GLIBC__'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3hlo56\\cmTC_8c51b.vcxproj]
+        
+            0 Avertissement(s)
+            1 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.31
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:28 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:139 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X86"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-q4yrbc"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-q4yrbc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X86"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-q4yrbc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a1e10.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:40.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_a1e10.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_a1e10.dir\\Debug\\cmTC_a1e10.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_a1e10.dir\\Debug\\cmTC_a1e10.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_a1e10.dir\\Debug\\cmTC_a1e10.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X86 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1e10.dir\\Debug\\\\" /Fd"cmTC_a1e10.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X86 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1e10.dir\\Debug\\\\" /Fd"cmTC_a1e10.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\src.c"
+          src.c
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj]
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj]
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj" termin├®e (cibles par d├®faut) -- ├ëCHEC.
+        
+        ├ëCHEC de la build.
+        
+        "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj" (cible par d├®faut) (1) ->
+        (ClCompile cible) -> 
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj]
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q4yrbc\\cmTC_a1e10.vcxproj]
+        
+            0 Avertissement(s)
+            2 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.33
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:30 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:140 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X64"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7tj5vy"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7tj5vy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X64"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7tj5vy'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_674bf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:40.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\cmTC_674bf.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_674bf.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_674bf.dir\\Debug\\cmTC_674bf.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_674bf.dir\\Debug\\cmTC_674bf.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_674bf.dir\\Debug\\cmTC_674bf.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_674bf.dir\\Debug\\\\" /Fd"cmTC_674bf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_674bf.dir\\Debug\\\\" /Fd"cmTC_674bf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\Debug\\cmTC_674bf.exe" /INCREMENTAL /ILK:"cmTC_674bf.dir\\Debug\\cmTC_674bf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7tj5vy/Debug/cmTC_674bf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7tj5vy/Debug/cmTC_674bf.lib" /MACHINE:X64  /machine:x64 cmTC_674bf.dir\\Debug\\src.obj
+          cmTC_674bf.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\Debug\\cmTC_674bf.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_674bf.dir\\Debug\\cmTC_674bf.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_674bf.dir\\Debug\\cmTC_674bf.tlog\\cmTC_674bf.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7tj5vy\\cmTC_674bf.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.43
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:32 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:141 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM32"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-doan67"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-doan67"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM32"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-doan67'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_691a8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:41.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_691a8.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_691a8.dir\\Debug\\cmTC_691a8.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_691a8.dir\\Debug\\cmTC_691a8.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_691a8.dir\\Debug\\cmTC_691a8.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_691a8.dir\\Debug\\\\" /Fd"cmTC_691a8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\src.c"
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_691a8.dir\\Debug\\\\" /Fd"cmTC_691a8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\src.c"
+          src.c
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj]
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj]
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj" termin├®e (cibles par d├®faut) -- ├ëCHEC.
+        
+        ├ëCHEC de la build.
+        
+        "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj" (cible par d├®faut) (1) ->
+        (ClCompile cible) -> 
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj]
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-doan67\\cmTC_691a8.vcxproj]
+        
+            0 Avertissement(s)
+            2 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.32
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:34 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:142 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM64"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-jo7ogk"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-jo7ogk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM64"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-jo7ogk'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_654ed.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:41.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_654ed.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_654ed.dir\\Debug\\cmTC_654ed.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_654ed.dir\\Debug\\cmTC_654ed.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_654ed.dir\\Debug\\cmTC_654ed.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_654ed.dir\\Debug\\\\" /Fd"cmTC_654ed.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_654ed.dir\\Debug\\\\" /Fd"cmTC_654ed.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\src.c"
+          src.c
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj]
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj]
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj" termin├®e (cibles par d├®faut) -- ├ëCHEC.
+        
+        ├ëCHEC de la build.
+        
+        "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj" (cible par d├®faut) (1) ->
+        (ClCompile cible) -> 
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj]
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jo7ogk\\cmTC_654ed.vcxproj]
+        
+            0 Avertissement(s)
+            2 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.29
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:36 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:143 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-a7yrj0"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-a7yrj0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-a7yrj0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e6154.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:42.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_e6154.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_e6154.dir\\Debug\\cmTC_e6154.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_e6154.dir\\Debug\\cmTC_e6154.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_e6154.dir\\Debug\\cmTC_e6154.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_LOONGARCH64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e6154.dir\\Debug\\\\" /Fd"cmTC_e6154.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_LOONGARCH64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e6154.dir\\Debug\\\\" /Fd"cmTC_e6154.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\src.c"
+          src.c
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj]
+        D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj]
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj" termin├®e (cibles par d├®faut) -- ├ëCHEC.
+        
+        ├ëCHEC de la build.
+        
+        "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj" (cible par d├®faut) (1) ->
+        (ClCompile cible) -> 
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\src.c(6,3): error C2065: 'choke'┬á: identificateur non d├®clar├® [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj]
+          D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\src.c(8,1): error C2143: erreur de syntaxe┬á: absence de ';' avant '}' [D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-a7yrj0\\cmTC_e6154.vcxproj]
+        
+            0 Avertissement(s)
+            2 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.32
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1003 (check_include_file)"
+    checks:
+      - "Looking for immintrin.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7hu6in"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7hu6in"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_IMMINTRIN_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7hu6in'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_fd803.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:42.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\cmTC_fd803.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_fd803.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_fd803.dir\\Debug\\cmTC_fd803.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_fd803.dir\\Debug\\cmTC_fd803.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_fd803.dir\\Debug\\cmTC_fd803.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fd803.dir\\Debug\\\\" /Fd"cmTC_fd803.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fd803.dir\\Debug\\\\" /Fd"cmTC_fd803.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\Debug\\cmTC_fd803.exe" /INCREMENTAL /ILK:"cmTC_fd803.dir\\Debug\\cmTC_fd803.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7hu6in/Debug/cmTC_fd803.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7hu6in/Debug/cmTC_fd803.lib" /MACHINE:X64  /machine:x64 cmTC_fd803.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_fd803.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\Debug\\cmTC_fd803.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_fd803.dir\\Debug\\cmTC_fd803.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_fd803.dir\\Debug\\cmTC_fd803.tlog\\cmTC_fd803.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7hu6in\\cmTC_fd803.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.45
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1166 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ag7heq"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ag7heq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ag7heq'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e8353.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:43.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\cmTC_e8353.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_e8353.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_e8353.dir\\Debug\\cmTC_e8353.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_e8353.dir\\Debug\\cmTC_e8353.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_e8353.dir\\Debug\\cmTC_e8353.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e8353.dir\\Debug\\\\" /Fd"cmTC_e8353.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e8353.dir\\Debug\\\\" /Fd"cmTC_e8353.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\Debug\\cmTC_e8353.exe" /INCREMENTAL /ILK:"cmTC_e8353.dir\\Debug\\cmTC_e8353.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ag7heq/Debug/cmTC_e8353.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ag7heq/Debug/cmTC_e8353.lib" /MACHINE:X64  /machine:x64 cmTC_e8353.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_e8353.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\Debug\\cmTC_e8353.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_e8353.dir\\Debug\\cmTC_e8353.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_e8353.dir\\Debug\\cmTC_e8353.tlog\\cmTC_e8353.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ag7heq\\cmTC_e8353.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.43
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1768 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WIN32_CC"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7xvnr9"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7xvnr9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_CC"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7xvnr9'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2d8db.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:43.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\cmTC_2d8db.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_2d8db.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_2d8db.dir\\Debug\\cmTC_2d8db.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_2d8db.dir\\Debug\\cmTC_2d8db.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_2d8db.dir\\Debug\\cmTC_2d8db.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WIN32_CC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2d8db.dir\\Debug\\\\" /Fd"cmTC_2d8db.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WIN32_CC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2d8db.dir\\Debug\\\\" /Fd"cmTC_2d8db.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\Debug\\cmTC_2d8db.exe" /INCREMENTAL /ILK:"cmTC_2d8db.dir\\Debug\\cmTC_2d8db.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7xvnr9/Debug/cmTC_2d8db.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-7xvnr9/Debug/cmTC_2d8db.lib" /MACHINE:X64  /machine:x64 cmTC_2d8db.dir\\Debug\\src.obj
+          cmTC_2d8db.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\Debug\\cmTC_2d8db.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_2d8db.dir\\Debug\\cmTC_2d8db.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_2d8db.dir\\Debug\\cmTC_2d8db.tlog\\cmTC_2d8db.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7xvnr9\\cmTC_2d8db.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.67
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1802 (check_include_file)"
+    checks:
+      - "Looking for d3d9.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-axi6gl"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-axi6gl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_D3D_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-axi6gl'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8e181.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:44.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\cmTC_8e181.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_8e181.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_8e181.dir\\Debug\\cmTC_8e181.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_8e181.dir\\Debug\\cmTC_8e181.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_8e181.dir\\Debug\\cmTC_8e181.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8e181.dir\\Debug\\\\" /Fd"cmTC_8e181.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8e181.dir\\Debug\\\\" /Fd"cmTC_8e181.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\Debug\\cmTC_8e181.exe" /INCREMENTAL /ILK:"cmTC_8e181.dir\\Debug\\cmTC_8e181.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-axi6gl/Debug/cmTC_8e181.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-axi6gl/Debug/cmTC_8e181.lib" /MACHINE:X64  /machine:x64 cmTC_8e181.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_8e181.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\Debug\\cmTC_8e181.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_8e181.dir\\Debug\\cmTC_8e181.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_8e181.dir\\Debug\\cmTC_8e181.tlog\\cmTC_8e181.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-axi6gl\\cmTC_8e181.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.72
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1803 (check_include_file)"
+    checks:
+      - "Looking for d3d11_1.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-95ge0u"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-95ge0u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_D3D11_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-95ge0u'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_25fcf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:45.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\cmTC_25fcf.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_25fcf.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_25fcf.dir\\Debug\\cmTC_25fcf.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_25fcf.dir\\Debug\\cmTC_25fcf.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_25fcf.dir\\Debug\\cmTC_25fcf.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25fcf.dir\\Debug\\\\" /Fd"cmTC_25fcf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25fcf.dir\\Debug\\\\" /Fd"cmTC_25fcf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\Debug\\cmTC_25fcf.exe" /INCREMENTAL /ILK:"cmTC_25fcf.dir\\Debug\\cmTC_25fcf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-95ge0u/Debug/cmTC_25fcf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-95ge0u/Debug/cmTC_25fcf.lib" /MACHINE:X64  /machine:x64 cmTC_25fcf.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_25fcf.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\Debug\\cmTC_25fcf.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_25fcf.dir\\Debug\\cmTC_25fcf.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_25fcf.dir\\Debug\\cmTC_25fcf.tlog\\cmTC_25fcf.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-95ge0u\\cmTC_25fcf.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.75
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1804 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_D3D12_H"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-bhdwmw"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-bhdwmw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_D3D12_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-bhdwmw'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_84cea.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:46.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\cmTC_84cea.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_84cea.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_84cea.dir\\Debug\\cmTC_84cea.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_84cea.dir\\Debug\\cmTC_84cea.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_84cea.dir\\Debug\\cmTC_84cea.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_D3D12_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84cea.dir\\Debug\\\\" /Fd"cmTC_84cea.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_D3D12_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84cea.dir\\Debug\\\\" /Fd"cmTC_84cea.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\Debug\\cmTC_84cea.exe" /INCREMENTAL /ILK:"cmTC_84cea.dir\\Debug\\cmTC_84cea.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-bhdwmw/Debug/cmTC_84cea.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-bhdwmw/Debug/cmTC_84cea.lib" /MACHINE:X64  /machine:x64 cmTC_84cea.dir\\Debug\\src.obj
+          cmTC_84cea.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\Debug\\cmTC_84cea.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_84cea.dir\\Debug\\cmTC_84cea.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_84cea.dir\\Debug\\cmTC_84cea.tlog\\cmTC_84cea.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bhdwmw\\cmTC_84cea.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.71
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1810 (check_include_file)"
+    checks:
+      - "Looking for ddraw.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-dr2w7p"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-dr2w7p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_DDRAW_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-dr2w7p'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_45511.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:47.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\cmTC_45511.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_45511.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_45511.dir\\Debug\\cmTC_45511.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_45511.dir\\Debug\\cmTC_45511.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_45511.dir\\Debug\\cmTC_45511.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45511.dir\\Debug\\\\" /Fd"cmTC_45511.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45511.dir\\Debug\\\\" /Fd"cmTC_45511.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\Debug\\cmTC_45511.exe" /INCREMENTAL /ILK:"cmTC_45511.dir\\Debug\\cmTC_45511.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-dr2w7p/Debug/cmTC_45511.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-dr2w7p/Debug/cmTC_45511.lib" /MACHINE:X64  /machine:x64 cmTC_45511.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_45511.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\Debug\\cmTC_45511.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_45511.dir\\Debug\\cmTC_45511.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_45511.dir\\Debug\\cmTC_45511.tlog\\cmTC_45511.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dr2w7p\\cmTC_45511.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.71
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1811 (check_include_file)"
+    checks:
+      - "Looking for dsound.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-4asyl0"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-4asyl0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_DSOUND_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-4asyl0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a0a05.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:48.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\cmTC_a0a05.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_a0a05.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_a0a05.dir\\Debug\\cmTC_a0a05.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_a0a05.dir\\Debug\\cmTC_a0a05.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_a0a05.dir\\Debug\\cmTC_a0a05.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a0a05.dir\\Debug\\\\" /Fd"cmTC_a0a05.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a0a05.dir\\Debug\\\\" /Fd"cmTC_a0a05.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\Debug\\cmTC_a0a05.exe" /INCREMENTAL /ILK:"cmTC_a0a05.dir\\Debug\\cmTC_a0a05.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-4asyl0/Debug/cmTC_a0a05.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-4asyl0/Debug/cmTC_a0a05.lib" /MACHINE:X64  /machine:x64 cmTC_a0a05.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_a0a05.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\Debug\\cmTC_a0a05.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_a0a05.dir\\Debug\\cmTC_a0a05.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_a0a05.dir\\Debug\\cmTC_a0a05.tlog\\cmTC_a0a05.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-4asyl0\\cmTC_a0a05.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.72
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1812 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-6jjl6j"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-6jjl6j"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_DINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-6jjl6j'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d9764.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:48.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\cmTC_d9764.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_d9764.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_d9764.dir\\Debug\\cmTC_d9764.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_d9764.dir\\Debug\\cmTC_d9764.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_d9764.dir\\Debug\\cmTC_d9764.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d9764.dir\\Debug\\\\" /Fd"cmTC_d9764.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d9764.dir\\Debug\\\\" /Fd"cmTC_d9764.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+          C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\Debug\\cmTC_d9764.exe" /INCREMENTAL /ILK:"cmTC_d9764.dir\\Debug\\cmTC_d9764.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-6jjl6j/Debug/cmTC_d9764.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-6jjl6j/Debug/cmTC_d9764.lib" /MACHINE:X64  /machine:x64 cmTC_d9764.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_d9764.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\Debug\\cmTC_d9764.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_d9764.dir\\Debug\\cmTC_d9764.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_d9764.dir\\Debug\\cmTC_d9764.tlog\\cmTC_d9764.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6jjl6j\\cmTC_d9764.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.66
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1816 (check_include_file)"
+    checks:
+      - "Looking for dxgi.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-40bjae"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-40bjae"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_DXGI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-40bjae'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_02bb4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:49.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\cmTC_02bb4.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_02bb4.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_02bb4.dir\\Debug\\cmTC_02bb4.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_02bb4.dir\\Debug\\cmTC_02bb4.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_02bb4.dir\\Debug\\cmTC_02bb4.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_02bb4.dir\\Debug\\\\" /Fd"cmTC_02bb4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_02bb4.dir\\Debug\\\\" /Fd"cmTC_02bb4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\Debug\\cmTC_02bb4.exe" /INCREMENTAL /ILK:"cmTC_02bb4.dir\\Debug\\cmTC_02bb4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-40bjae/Debug/cmTC_02bb4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-40bjae/Debug/cmTC_02bb4.lib" /MACHINE:X64  /machine:x64 cmTC_02bb4.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_02bb4.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\Debug\\cmTC_02bb4.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_02bb4.dir\\Debug\\cmTC_02bb4.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_02bb4.dir\\Debug\\cmTC_02bb4.tlog\\cmTC_02bb4.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-40bjae\\cmTC_02bb4.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.69
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1830 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_XINPUT_H"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-y084qz"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-y084qz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_XINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-y084qz'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_dce85.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:50.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\cmTC_dce85.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_dce85.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_dce85.dir\\Debug\\cmTC_dce85.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_dce85.dir\\Debug\\cmTC_dce85.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_dce85.dir\\Debug\\cmTC_dce85.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_XINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dce85.dir\\Debug\\\\" /Fd"cmTC_dce85.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_XINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_dce85.dir\\Debug\\\\" /Fd"cmTC_dce85.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\Debug\\cmTC_dce85.exe" /INCREMENTAL /ILK:"cmTC_dce85.dir\\Debug\\cmTC_dce85.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-y084qz/Debug/cmTC_dce85.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-y084qz/Debug/cmTC_dce85.lib" /MACHINE:X64  /machine:x64 cmTC_dce85.dir\\Debug\\src.obj
+          cmTC_dce85.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\Debug\\cmTC_dce85.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_dce85.dir\\Debug\\cmTC_dce85.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_dce85.dir\\Debug\\cmTC_dce85.tlog\\cmTC_dce85.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-y084qz\\cmTC_dce85.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.67
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1834 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WINDOWS_GAMING_INPUT_H"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-b8tvr4"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-b8tvr4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_WINDOWS_GAMING_INPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-b8tvr4'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_83d37.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:51.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\cmTC_83d37.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_83d37.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_83d37.dir\\Debug\\cmTC_83d37.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_83d37.dir\\Debug\\cmTC_83d37.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_83d37.dir\\Debug\\cmTC_83d37.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WINDOWS_GAMING_INPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83d37.dir\\Debug\\\\" /Fd"cmTC_83d37.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\src.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WINDOWS_GAMING_INPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_83d37.dir\\Debug\\\\" /Fd"cmTC_83d37.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\Debug\\cmTC_83d37.exe" /INCREMENTAL /ILK:"cmTC_83d37.dir\\Debug\\cmTC_83d37.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-b8tvr4/Debug/cmTC_83d37.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-b8tvr4/Debug/cmTC_83d37.lib" /MACHINE:X64  /machine:x64 cmTC_83d37.dir\\Debug\\src.obj
+          cmTC_83d37.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\Debug\\cmTC_83d37.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_83d37.dir\\Debug\\cmTC_83d37.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_83d37.dir\\Debug\\cmTC_83d37.tlog\\cmTC_83d37.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b8tvr4\\cmTC_83d37.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:01.48
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1842 (check_include_file)"
+    checks:
+      - "Looking for tpcshrd.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-keyf2q"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-keyf2q"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_TPCSHRD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-keyf2q'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e6a2c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:52.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\cmTC_e6a2c.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_e6a2c.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_e6a2c.dir\\Debug\\cmTC_e6a2c.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_e6a2c.dir\\Debug\\cmTC_e6a2c.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_e6a2c.dir\\Debug\\cmTC_e6a2c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e6a2c.dir\\Debug\\\\" /Fd"cmTC_e6a2c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e6a2c.dir\\Debug\\\\" /Fd"cmTC_e6a2c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\Debug\\cmTC_e6a2c.exe" /INCREMENTAL /ILK:"cmTC_e6a2c.dir\\Debug\\cmTC_e6a2c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-keyf2q/Debug/cmTC_e6a2c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-keyf2q/Debug/cmTC_e6a2c.lib" /MACHINE:X64  /machine:x64 cmTC_e6a2c.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_e6a2c.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\Debug\\cmTC_e6a2c.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_e6a2c.dir\\Debug\\cmTC_e6a2c.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_e6a2c.dir\\Debug\\cmTC_e6a2c.tlog\\cmTC_e6a2c.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-keyf2q\\cmTC_e6a2c.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.64
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1843 (check_include_file)"
+    checks:
+      - "Looking for roapi.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-8uf8ja"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-8uf8ja"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_ROAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-8uf8ja'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_feeff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:53.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\cmTC_feeff.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_feeff.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_feeff.dir\\Debug\\cmTC_feeff.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_feeff.dir\\Debug\\cmTC_feeff.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_feeff.dir\\Debug\\cmTC_feeff.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_feeff.dir\\Debug\\\\" /Fd"cmTC_feeff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_feeff.dir\\Debug\\\\" /Fd"cmTC_feeff.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\Debug\\cmTC_feeff.exe" /INCREMENTAL /ILK:"cmTC_feeff.dir\\Debug\\cmTC_feeff.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-8uf8ja/Debug/cmTC_feeff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-8uf8ja/Debug/cmTC_feeff.lib" /MACHINE:X64  /machine:x64 cmTC_feeff.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_feeff.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\Debug\\cmTC_feeff.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_feeff.dir\\Debug\\cmTC_feeff.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_feeff.dir\\Debug\\cmTC_feeff.tlog\\cmTC_feeff.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-8uf8ja\\cmTC_feeff.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.68
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1844 (check_include_file)"
+    checks:
+      - "Looking for mmdeviceapi.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-qpzjey"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-qpzjey"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_MMDEVICEAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-qpzjey'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ce411.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:54.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\cmTC_ce411.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_ce411.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_ce411.dir\\Debug\\cmTC_ce411.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_ce411.dir\\Debug\\cmTC_ce411.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_ce411.dir\\Debug\\cmTC_ce411.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce411.dir\\Debug\\\\" /Fd"cmTC_ce411.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ce411.dir\\Debug\\\\" /Fd"cmTC_ce411.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\Debug\\cmTC_ce411.exe" /INCREMENTAL /ILK:"cmTC_ce411.dir\\Debug\\cmTC_ce411.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-qpzjey/Debug/cmTC_ce411.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-qpzjey/Debug/cmTC_ce411.lib" /MACHINE:X64  /machine:x64 cmTC_ce411.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_ce411.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\Debug\\cmTC_ce411.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_ce411.dir\\Debug\\cmTC_ce411.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_ce411.dir\\Debug\\cmTC_ce411.tlog\\cmTC_ce411.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-qpzjey\\cmTC_ce411.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.67
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1845 (check_include_file)"
+    checks:
+      - "Looking for audioclient.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ub017u"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ub017u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_AUDIOCLIENT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ub017u'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0433c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:55.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\cmTC_0433c.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_0433c.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_0433c.dir\\Debug\\cmTC_0433c.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_0433c.dir\\Debug\\cmTC_0433c.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_0433c.dir\\Debug\\cmTC_0433c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0433c.dir\\Debug\\\\" /Fd"cmTC_0433c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0433c.dir\\Debug\\\\" /Fd"cmTC_0433c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\Debug\\cmTC_0433c.exe" /INCREMENTAL /ILK:"cmTC_0433c.dir\\Debug\\cmTC_0433c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ub017u/Debug/cmTC_0433c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-ub017u/Debug/cmTC_0433c.lib" /MACHINE:X64  /machine:x64 cmTC_0433c.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_0433c.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\Debug\\cmTC_0433c.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_0433c.dir\\Debug\\cmTC_0433c.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_0433c.dir\\Debug\\cmTC_0433c.tlog\\cmTC_0433c.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ub017u\\cmTC_0433c.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.68
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1846 (check_include_file)"
+    checks:
+      - "Looking for sensorsapi.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-xh4eja"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-xh4eja"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_SENSORSAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-xh4eja'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f7d66.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:55.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\cmTC_f7d66.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_f7d66.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_f7d66.dir\\Debug\\cmTC_f7d66.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_f7d66.dir\\Debug\\cmTC_f7d66.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_f7d66.dir\\Debug\\cmTC_f7d66.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f7d66.dir\\Debug\\\\" /Fd"cmTC_f7d66.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f7d66.dir\\Debug\\\\" /Fd"cmTC_f7d66.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\Debug\\cmTC_f7d66.exe" /INCREMENTAL /ILK:"cmTC_f7d66.dir\\Debug\\cmTC_f7d66.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-xh4eja/Debug/cmTC_f7d66.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-xh4eja/Debug/cmTC_f7d66.lib" /MACHINE:X64  /machine:x64 cmTC_f7d66.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_f7d66.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\Debug\\cmTC_f7d66.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_f7d66.dir\\Debug\\cmTC_f7d66.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_f7d66.dir\\Debug\\cmTC_f7d66.tlog\\cmTC_f7d66.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xh4eja\\cmTC_f7d66.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.66
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1847 (check_include_file)"
+    checks:
+      - "Looking for shellscalingapi.h"
+    directories:
+      source: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-tv063p"
+      binary: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-tv063p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/cmake"
+    buildResult:
+      variable: "HAVE_SHELLSCALINGAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-tv063p'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a43c0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Version MSBuild 17.11.2+c078802d4 pour .NET Framework
+        La g├®n├®ration a d├®marr├® 16/08/2024 15:33:56.
+        
+        Projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\cmTC_a43c0.vcxproj" sur le n┼ôud 1 (cibles par d├®faut).
+        PrepareForBuild:
+          Cr├®ation du r├®pertoire "cmTC_a43c0.dir\\Debug\\".
+          La sortie structur├®e est activ├®e. La mise en forme du compilateur diagnostics refl├¿te la hi├®rarchie des erreurs. Pour plus dÔÇÖinformations, consultez https://aka.ms/cpp/structured-output.
+          Cr├®ation du r├®pertoire "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\Debug\\".
+          Cr├®ation du r├®pertoire "cmTC_a43c0.dir\\Debug\\cmTC_a43c0.tlog\\".
+        InitializeBuildStatus:
+          Cr├®ation de "cmTC_a43c0.dir\\Debug\\cmTC_a43c0.tlog\\unsuccessfulbuild", car "AlwaysCreate" a ├®t├® sp├®cifi├®.
+          Mise ├á jour de l'horodatage "cmTC_a43c0.dir\\Debug\\cmTC_a43c0.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a43c0.dir\\Debug\\\\" /Fd"cmTC_a43c0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\CheckIncludeFile.c"
+          Compilateur d'optimisation Microsoft (R) C/C++ version┬á19.41.34120 pour x64
+          Copyright (C) Microsoft Corporation. Tous droits r├®serv├®s.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a43c0.dir\\Debug\\\\" /Fd"cmTC_a43c0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\Debug\\cmTC_a43c0.exe" /INCREMENTAL /ILK:"cmTC_a43c0.dir\\Debug\\cmTC_a43c0.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-tv063p/Debug/cmTC_a43c0.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/CMakeScratch/TryCompile-tv063p/Debug/cmTC_a43c0.lib" /MACHINE:X64  /machine:x64 cmTC_a43c0.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_a43c0.vcxproj -> D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\Debug\\cmTC_a43c0.exe
+        FinalizeBuildStatus:
+          Suppression du fichier "cmTC_a43c0.dir\\Debug\\cmTC_a43c0.tlog\\unsuccessfulbuild".
+          Mise ├á jour de l'horodatage "cmTC_a43c0.dir\\Debug\\cmTC_a43c0.tlog\\cmTC_a43c0.lastbuildstate".
+        G├®n├®ration du projet "D:\\github-intellidea\\PARALLEL_LAUNCHER\\!third_party_libs\\SDL2-2.30.6\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tv063p\\cmTC_a43c0.vcxproj" termin├®e (cibles par d├®faut).
+        
+        La g├®n├®ration a r├®ussi.
+            0 Avertissement(s)
+            0 Erreur(s)
+        
+        Temps ├®coul├® 00:00:00.67
+        
+      exitCode: 0
+...

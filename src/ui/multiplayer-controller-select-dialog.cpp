@@ -1,7 +1,6 @@
 #include "src/ui/multiplayer-controller-select-dialog.hpp"
 #include "ui_multiplayer-controller-select-dialog.h"
 
-#include "src/ui/get-controller-port-dialog.hpp"
 #include "src/ui/icons.hpp"
 #include "src/ui/util.hpp"
 

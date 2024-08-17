@@ -63,13 +63,22 @@ file(GLOB_RECURSE MOC_HEADERS
 qt5_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
 add_executable(parallel-launcher WIN32 ${SOURCES} ${MOC_SOURCES})
 
+# Créer une liste de fichiers .qma
 file(GLOB QM_FILES "${CMAKE_BINARY_DIR}/parallel-launcher_*.qm")
+
+# Créer le répertoire de sortie s'il n'existe pas
+add_custom_command(
+    TARGET parallel-launcher POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${QM_OUTPUT_DIR}
+    COMMENT "Creating output directory if it doesn't exist"
+)
+
+# Copier les fichiers .qm
 foreach(QM_FILE ${QM_FILES})
     add_custom_command(
         TARGET parallel-launcher POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E echo "Copying ${QM_FILE} to ${QM_OUTPUT_DIR}"
         COMMAND ${CMAKE_COMMAND} -E copy_if_different ${QM_FILE} ${QM_OUTPUT_DIR}
-        COMMENT "Moving .qm files"
+        COMMENT "Copying ${QM_FILE} to ${QM_OUTPUT_DIR}"
     )
 endforeach()
 

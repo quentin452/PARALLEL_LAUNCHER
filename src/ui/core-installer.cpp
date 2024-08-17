@@ -8,7 +8,6 @@
 #include "src/polyfill/base-directory.hpp"
 #include "src/polyfill/crash.hpp"
 #include "src/polyfill/sha1.hpp"
-#include "src/ui/core-finder-dialog.hpp"
 #include "src/ui/download-dialog.hpp"
 #include <QCoreApplication>
 #include <QDateTime>
@@ -255,25 +254,6 @@ void CoreInstaller::checkForUpdatesSync(InstalledVersionsInfo &versions) {
   while (!done) {
     QCoreApplication::processEvents(QEventLoop::ExcludeUserInputEvents);
     std::this_thread::yield();
-  }
-}
-
-void CoreInstaller::updateParallelSync() {
-  if (!RetroArch::isEmulatorCoreInstalled(EmulatorCore::ParallelN64)) {
-    return;
-  }
-
-  ParallelCoreFinderDialog coreFinder;
-  coreFinder.exec();
-
-  const std::optional<ParallelCoreVersion> &coreBuild = coreFinder.coreBuild();
-  if (coreBuild.has_value()) {
-    const string currentHash =
-        Sha1::compute(RetroArch::getCorePath() /
-                      (_NFS("parallel_n64_next_libretro") LIBRARY_EXT));
-    if (currentHash == coreBuild.value().sha1)
-      return;
-    installParallelCoreSync(coreBuild.value());
   }
 }
 

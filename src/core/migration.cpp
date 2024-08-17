@@ -1249,8 +1249,6 @@ ROM_PATHS INNER JOIN ROMS USING( sha1 )
 #ifdef __APPLE__
     avoidParallelOnMacOS();
 #endif
-    CoreInstaller::updateParallelSync();
-
 #ifdef __APPLE__
     uninstallRetroArchMacOS();
 #endif

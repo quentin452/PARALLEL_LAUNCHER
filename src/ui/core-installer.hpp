@@ -6,7 +6,6 @@
 
 namespace CoreInstaller {
 
-extern void updateParallelSync();
 extern void checkForUpdatesAsync();
 extern void checkForUpdatesSync(InstalledVersionsInfo &versions);
 

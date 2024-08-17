@@ -39,8 +39,6 @@ private slots:
   void reloadSettings();
   void refreshRomList();
 
-  void romSelectionChanged();
-
   void editSave(fs::path saveFilePath);
   void playSingleplayer();
   void playMultiplayer();
@@ -48,26 +46,6 @@ private slots:
   void manageRomSources();
   void addRom();
   void editSettings();
-  void download();
-
-  void inputModeChanged();
-  void emulatorChanged();
-  void parallelPluginChanged();
-  void mupenPluginChanged();
-  void overclockCpuChanged(bool);
-  void overclockViChanged(bool);
-  void widescreenChanged(unsigned char);
-  void bigEepromChanged(bool);
-  void useInterpreterChanged(bool);
-  void upscaleTexRectsChanged(bool);
-  void removeBordersChanged(bool);
-  void emulateFramebufferChanged(bool);
-  void accurateDepthCompareChanged(bool);
-  void rspEmulationChanged(bool);
-  void sdCardChanged(std::string);
-  void showMorePluginsChanged(bool);
-  void saveSyncingChanged(bool);
-  void rhdcViewToggled();
 
   void rhdcLogin();
   void rhdcLogout();

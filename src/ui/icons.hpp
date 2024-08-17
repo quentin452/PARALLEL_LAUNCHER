@@ -37,7 +37,6 @@ extern const QIcon &plugin();
 extern const QIcon &rhdcLight();
 extern const QIcon &rhdcDark();
 extern const QIcon &rhdcLink();
-extern const QIcon &download();
 extern const QIcon &sortAsc();
 extern const QIcon &sortDsc();
 extern const QIcon &recycle();

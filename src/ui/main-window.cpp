@@ -52,42 +52,6 @@ MainWindow::MainWindow()
   m_ui->setupUi(this);
   setWindowIcon(Icon::appIcon());
   ToastMessageManager::setWindow(this);
-
-  connect(m_romSettingsWidget, &RomSettingsWidget::rspEmulationChanged, this,
-          &MainWindow::rspEmulationChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::accurateDepthCompareChanged,
-          this, &MainWindow::accurateDepthCompareChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::emulateFramebufferChanged,
-          this, &MainWindow::emulateFramebufferChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::emulatorCoreChanged, this,
-          &MainWindow::emulatorChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::inputModeChanged, this,
-          &MainWindow::inputModeChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::mupenPluginChanged, this,
-          &MainWindow::mupenPluginChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::overclockCpuChanged, this,
-          &MainWindow::overclockCpuChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::overclockViChanged, this,
-          &MainWindow::overclockViChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::parallelPluginChanged, this,
-          &MainWindow::parallelPluginChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::showMorePluginsChanged, this,
-          &MainWindow::showMorePluginsChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::upscaleTexRectsChanged, this,
-          &MainWindow::upscaleTexRectsChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::removeBordersChanged, this,
-          &MainWindow::removeBordersChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::widescreenChanged, this,
-          &MainWindow::widescreenChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::bigEepromChanged, this,
-          &MainWindow::bigEepromChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::useInterpreterChanged, this,
-          &MainWindow::useInterpreterChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::saveSyncingChanged, this,
-          &MainWindow::saveSyncingChanged);
-  connect(m_romSettingsWidget, &RomSettingsWidget::activeSdCardChanged, this,
-          &MainWindow::sdCardChanged);
-
 #ifdef __APPLE__
   UiUtil::fixFontSizeOnMac(m_ui->titleLabel);
   if (m_settings.theme == "macintosh") {
@@ -126,7 +90,6 @@ margin-bottom: 2px;
   m_ui->refreshButton->setIcon(Icon::refresh());
   m_ui->playSingleplayerButton->setIcon(Icon::play());
   m_ui->playMultiplayerButton->setIcon(Icon::group());
-  m_ui->downloadButton->setIcon(Icon::download());
 
   UiUtil::setIconSize(m_ui->rhdcViewToggleButton, 24);
   UiUtil::setIconSize(m_ui->controllerConfigButton, 24);
@@ -184,22 +147,13 @@ margin-bottom: 2px;
   m_romSettingsWidget->setShowAllPlugins(m_showAllPlugins);
 
   connect(m_ui->refreshButton, SIGNAL(clicked()), this, SLOT(refreshRomList()));
-  connect(m_ui->romList->selectionModel(),
-          SIGNAL(currentChanged(const QModelIndex &, const QModelIndex &)),
-          this, SLOT(romSelectionChanged()));
-  connect(m_ui->romList, SIGNAL(selectionFilteredOut()), this,
-          SLOT(romSelectionChanged()));
   connect(m_ui->romList, SIGNAL(editSave(fs::path)), this,
           SLOT(editSave(fs::path)));
   connect(m_ui->rhdcPage, SIGNAL(editSave(fs::path)), this,
           SLOT(editSave(fs::path)));
   connect(m_ui->romList, SIGNAL(launchRom()), this, SLOT(playSingleplayer()));
-  connect(m_ui->romList, SIGNAL(downloadPatch()), this, SLOT(download()));
-  connect(m_ui->rhdcPage, SIGNAL(romSelected()), this,
-          SLOT(romSelectionChanged()));
 
   reloadSettings();
-  romSelectionChanged();
 
   refreshRomList();
   updateRhdcActions();
@@ -309,277 +263,6 @@ void MainWindow::refreshRomList() {
       });
 }
 
-void MainWindow::romSelectionChanged() {
-  if (m_ui->romView->currentIndex() == VIEW_RHDC) {
-    const string sha1 = m_ui->rhdcPage->getSelectedVersion();
-
-    RomInfo romInfo;
-    if (sha1.empty() ||
-        !DataProvider::tryFetchRomByHash(sha1, false, &romInfo)) {
-      m_romSettingsWidget->setEnabled(false);
-      m_ui->downloadButton->setVisible(false);
-      m_ui->playSingleplayerButton->setVisible(false);
-      m_ui->playMultiplayerButton->setVisible(false);
-      return;
-    }
-
-    if (romInfo.inputTypes == UNCHECKED_INPUT_TYPES) {
-      fs::path filePath;
-      if (DataProvider::tryFetchRomPathWithSha1(sha1, filePath)) {
-        romInfo.inputTypes = RomUtil::readControllerTypes(filePath);
-        DataProvider::updateRomHeaderInfo(sha1, romInfo.internalName,
-                                          romInfo.crc32, romInfo.inputTypes);
-      }
-    }
-
-    const string hackId = m_ui->rhdcPage->getSelectedHackId();
-    const RhdcSettingHints hints = DataProvider::getRhdcHints(sha1);
-    m_romSettingsWidget->setEnabled(true);
-    m_romSettingsWidget->setSettings(
-        romInfo.inputModeId, romInfo.emulator, romInfo.parallelPlugin,
-        romInfo.mupenPlugin, romInfo.overclockCPU, romInfo.overclockVI,
-        romInfo.widescreen, romInfo.bigEEPROM, romInfo.useInterpreter,
-        romInfo.parallelTexRectUpscaling, romInfo.parallelRemoveBorders,
-        romInfo.glidenFramebufferEmulation, romInfo.glidenCorrectDepthCompare,
-        romInfo.glidenParallelRsp, hints.recommendedPlugin,
-        !Flags::has(hints.hackFlags, RhdcHackFlag::NoOverclock),
-        romInfo.inputTypes,
-        hackId.empty()
-            ? std::nullopt
-            : std::optional<bool>(DataProvider::groupSaveEnabled(hackId)),
-        (Flags::has(hints.hackFlags, RhdcHackFlag::SupportsSD) &&
-         romInfo.sdCard.empty())
-            ? "?"s
-            : romInfo.sdCard);
-
-    const bool isDownloaded = DataProvider::romWithSha1Exists(sha1);
-    m_ui->downloadButton->setVisible(!isDownloaded);
-    m_ui->playSingleplayerButton->setVisible(isDownloaded);
-    m_ui->playMultiplayerButton->setVisible(isDownloaded);
-  } else {
-    RomReference rom = m_ui->romList->tryGetSelectedRom();
-    const bool romSelected = (rom.info != nullptr);
-
-    m_romSettingsWidget->setEnabled(romSelected);
-    if (romSelected) {
-      if (rom.info->inputTypes == UNCHECKED_INPUT_TYPES &&
-          rom.file != nullptr && rom.file->local) {
-        rom.info->inputTypes = RomUtil::readControllerTypes(rom.file->path);
-        m_ui->romList->updateRomInfo(*rom.info, false, false);
-
-        DataProvider::updateRomHeaderInfo(
-            rom.info->sha1, rom.info->internalName, rom.info->crc32,
-            rom.info->inputTypes);
-      }
-
-      const RhdcSettingHints hints = DataProvider::getRhdcHints(rom.info->sha1);
-      m_romSettingsWidget->setSettings(
-          rom.info->inputModeId, rom.info->emulator, rom.info->parallelPlugin,
-          rom.info->mupenPlugin, rom.info->overclockCPU, rom.info->overclockVI,
-          rom.info->widescreen, rom.info->bigEEPROM, rom.info->useInterpreter,
-          rom.info->parallelTexRectUpscaling, rom.info->parallelRemoveBorders,
-          rom.info->glidenFramebufferEmulation,
-          rom.info->glidenCorrectDepthCompare, rom.info->glidenParallelRsp,
-          hints.recommendedPlugin,
-          !Flags::has(hints.hackFlags, RhdcHackFlag::NoOverclock),
-          rom.info->inputTypes,
-          (rom.rhdc != nullptr)
-              ? std::optional<bool>(
-                    DataProvider::groupSaveEnabled(rom.rhdc->info.hackId))
-              : std::nullopt,
-          (Flags::has(hints.hackFlags, RhdcHackFlag::SupportsSD) &&
-           rom.info->sdCard.empty())
-              ? "?"s
-              : rom.info->sdCard);
-    }
-
-    const bool showDownloadButton = rom.file != nullptr && !rom.file->local;
-    m_ui->downloadButton->setVisible(showDownloadButton);
-    m_ui->playSingleplayerButton->setVisible(!showDownloadButton &&
-                                             rom.file != nullptr);
-    m_ui->playMultiplayerButton->setVisible(!showDownloadButton &&
-                                            rom.file != nullptr);
-  }
-}
-
-void MainWindow::overclockCpuChanged(bool overclock) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->overclockCPU = overclock;
-  DataProvider::updateRomCpuOverclocking(romInfo->sha1, overclock);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::overclockViChanged(bool overclock) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->overclockVI = overclock;
-  DataProvider::updateRomViOverclocking(romInfo->sha1, overclock);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::widescreenChanged(ubyte wide) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->widescreen = (WidescreenMode)wide;
-  DataProvider::updateRomWidescreen(romInfo->sha1, (WidescreenMode)wide);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::bigEepromChanged(bool bigEeprom) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->bigEEPROM = bigEeprom;
-  DataProvider::updateRomBigEeprom(romInfo->sha1, bigEeprom);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::useInterpreterChanged(bool useInterpreter) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->useInterpreter = useInterpreter;
-  DataProvider::updateRomUseInterpreter(romInfo->sha1, useInterpreter);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::parallelPluginChanged() {
-  const GfxPlugin plugin = m_romSettingsWidget->getParallelPlugin();
-
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr || romInfo->parallelPlugin == plugin)
-    return;
-
-  romInfo->parallelPlugin = plugin;
-  DataProvider::updateRomParallelPlugin(romInfo->sha1, plugin);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::mupenPluginChanged() {
-  const GfxPlugin plugin = m_romSettingsWidget->getMupenPlugin();
-
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr || romInfo->mupenPlugin == plugin)
-    return;
-
-  romInfo->mupenPlugin = plugin;
-  DataProvider::updateRomMupenPlugin(romInfo->sha1, plugin);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::inputModeChanged() {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->inputModeId = m_romSettingsWidget->getInputMode();
-  DataProvider::updateRomInputMode(romInfo->sha1, romInfo->inputModeId);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::emulatorChanged() {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->emulator = m_romSettingsWidget->getEmulatorCore();
-  DataProvider::updateRomEmulator(romInfo->sha1, romInfo->emulator);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::upscaleTexRectsChanged(bool upscale) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->parallelTexRectUpscaling = upscale;
-  DataProvider::setRomParallelTexRectUpscaling(romInfo->sha1, upscale);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::removeBordersChanged(bool removeBorders) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->parallelRemoveBorders = removeBorders;
-  DataProvider::setRomParallelRemoveBorders(romInfo->sha1, removeBorders);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::emulateFramebufferChanged(bool emulate) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->glidenFramebufferEmulation = emulate;
-  DataProvider::setRomGlidenFrameBufferEmulation(romInfo->sha1, emulate);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::accurateDepthCompareChanged(bool accurate) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->glidenCorrectDepthCompare = accurate;
-  DataProvider::setRomGlidenAccurateDepthCompare(romInfo->sha1, accurate);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::rspEmulationChanged(bool emulate) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  romInfo->glidenParallelRsp = emulate;
-  DataProvider::setRomGlidenRspEmulation(romInfo->sha1, emulate);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::sdCardChanged(std::string sdCard) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  if (sdCard.empty() && romInfo->sdCard == "?")
-    return;
-  if (sdCard == romInfo->sdCard)
-    return;
-
-  romInfo->sdCard = sdCard;
-  DataProvider::updateSdCard(romInfo->sha1, sdCard);
-  m_ui->romList->updateRomInfo(*romInfo, false, false);
-}
-
-void MainWindow::showMorePluginsChanged(bool showAll) {
-  m_showAllPlugins = showAll;
-}
-
-void MainWindow::saveSyncingChanged(bool sync) {
-  RomInfo *romInfo = getSelectedRomInfo();
-  if (romInfo == nullptr)
-    return;
-
-  string hackId;
-  if (DataProvider::tryFetchHackIdByChecksum(romInfo->sha1, hackId)) {
-    if (sync) {
-      DataProvider::enableGroupSave(hackId);
-    } else {
-      DataProvider::disableGroupSave(hackId);
-    }
-  }
-}
-
 void MainWindow::play(bool multiplayer) {
   RomInfo romInfo;
   RomFile romFile;
@@ -639,7 +322,6 @@ void MainWindow::editSettings() {
   delete dialog;
   reloadSettings();
   refetchAll();
-  romSelectionChanged();
 }
 
 void MainWindow::manageRomSources() {
@@ -831,47 +513,6 @@ void MainWindow::rhdcDisable() {
     DataProvider::clearAllRhdcData();
     updateRhdcActions();
   }
-}
-
-void MainWindow::download() {
-  string hackId, downloadUrl;
-  if (m_ui->romView->currentIndex() == VIEW_RHDC) {
-    const string sha1 = m_ui->rhdcPage->getSelectedVersion();
-    if (DataProvider::romWithSha1Exists(sha1) ||
-        !m_ui->rhdcPage->tryGetHackIdAndDownloadUrl(hackId, downloadUrl))
-      return;
-  } else {
-    const RomReference rom = m_ui->romList->tryGetSelectedRom();
-    if (rom.file == nullptr || rom.file->local || !rom.rhdc)
-      return;
-    hackId = rom.rhdc->info.hackId;
-    downloadUrl = rom.file->path.u8string();
-  }
-
-  TreeUiState uiState = m_ui->romList->saveTreeState();
-  uiState.selectedRom = RhdcDownloadDialog::run(hackId, downloadUrl);
-  m_ui->romList->refetchAll();
-  m_ui->romList->restoreTreeState(uiState);
-  romSelectionChanged();
-}
-
-void MainWindow::rhdcViewToggled() {
-  if (m_ui->romView->currentIndex() < VIEW_RHDC) {
-    setView(VIEW_RHDC);
-    m_ui->rhdcViewToggleButton->setIcon(Icon::appIcon());
-  } else {
-    m_ui->romList->refetchAll();
-    setView(m_ui->romList->hasRoms() ? VIEW_CLASSIC : VIEW_NO_ROMS);
-    if (palette().buttonText().color().valueF() > 0.5) {
-      m_ui->rhdcViewToggleButton->setIcon(Icon::rhdcLight());
-    } else {
-      m_ui->rhdcViewToggleButton->setIcon(Icon::rhdcDark());
-    }
-    if (!RhdcCredentials::exists() && !DataProvider::hasRhdcData()) {
-      m_ui->rhdcViewToggleButton->setVisible(false);
-    }
-  }
-  romSelectionChanged();
 }
 
 void MainWindow::openSaveFileDirectory() const {

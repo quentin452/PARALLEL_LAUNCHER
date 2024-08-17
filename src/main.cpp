@@ -46,9 +46,6 @@ static int runMainWindow(QApplication &app) {
   QGuiApplication::setQuitOnLastWindowClosed(false);
   MainWindow mainWindow;
   mainWindow.show();
-#ifndef FLATPAK_VERSION
-  RetroUpdater::checkForUpdates(false, false);
-#endif
   return app.exec();
 }
 

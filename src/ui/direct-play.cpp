@@ -14,18 +14,12 @@
 
 static void playRom(const RomFile &romFile, const RomInfo &romInfo) {
   if (!Game::play(romFile, romInfo, false, true, []() {
-#ifndef FLATPAK_VERSION
-        RetroUpdater::checkForUpdates(true, false);
-#endif
         std::exit(0);
       }))
     std::exit(1);
 }
 
 static int runWithoutRom(QApplication &app) {
-#ifndef FLATPAK_VERSION
-  RetroUpdater::checkForUpdates(false, false);
-#endif
   QGuiApplication::setQuitOnLastWindowClosed(false);
   MainWindow mainWindow;
   mainWindow.show();

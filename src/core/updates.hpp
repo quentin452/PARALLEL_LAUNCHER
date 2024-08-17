@@ -78,12 +78,4 @@ void getLastKnownGood(const string &branch, const string &laterThan,
 }
 #endif
 
-#ifndef FLATPAK_VERSION
-namespace RetroUpdater {
-
-extern void checkForUpdates(bool waitForCoreUpdates, bool forceUpdate);
-
-}
-#endif
-
 #endif /* SRC_CORE_CORES_HPP_ */

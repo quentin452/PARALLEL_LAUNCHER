@@ -398,26 +398,6 @@ checkSchedule(const InstalledVersionsInfo &installedVersions) {
   }
 }
 
-#ifndef FLATPAK_VERSION
-void RetroUpdater::checkForUpdates(bool waitForCoreUpdates, bool forceUpdate) {
-  InstalledVersionsInfo installedVersions =
-      FileController::loadInstalledVersions();
-
-  if (forceUpdate || checkSchedule(installedVersions)) {
-    if (!installedVersions.retroArchVersion.lock) {
-      RetroArchUpdater::update();
-    }
-
-    if (waitForCoreUpdates) {
-      CoreInstaller::checkForUpdatesSync(installedVersions);
-      FileController::saveInstalledVersions(installedVersions);
-    } else {
-      CoreInstaller::checkForUpdatesAsync();
-    }
-  }
-}
-#endif
-
 void ParallelCoreBuilds::getLatest(
     const std::function<void(const ParallelCoreVersion &)> &onSuccess,
     const std::function<void(void)> &onFailure) {

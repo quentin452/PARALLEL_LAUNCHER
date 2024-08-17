@@ -499,9 +499,6 @@ void SettingsDialog::updateCores() {
   settings.mupenDevBranch = m_ui->useDevBranchCheckbox->isChecked();
   FileController::saveAppSettings(settings);
   FileController::saveInstalledVersions(coreVersions);
-#ifndef FLATPAK_VERSION
-  RetroUpdater::checkForUpdates(false, true);
-#endif
 }
 
 void SettingsDialog::applyAll_accurateDepthCompare() {

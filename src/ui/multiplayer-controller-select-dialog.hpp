@@ -18,7 +18,6 @@ private:
   std::map<GamepadId, ConnectedGamepad> m_devices;
 
   void updateComboBoxes();
-  void detectDevice(QComboBox *comboBox);
 
 public:
   MultiplayerControllerSelectDialog(bool multiPort);
@@ -30,11 +29,6 @@ public:
 private slots:
   void gamepadConnected(GamepadConnectedEvent event);
   void gamepadDisconnected(GamepadDisconnectedEvent event);
-
-  void detectDevice1();
-  void detectDevice2();
-  void detectDevice3();
-  void detectDevice4();
 };
 
 #endif /* SRC_UI_MULTIPLAYER_CONTROLLER_SELECT_DIALOG_HPP_ */

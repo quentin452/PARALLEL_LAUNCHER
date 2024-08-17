@@ -97,25 +97,6 @@ void RhdcLayoutTesterDialog::revertSave() {
   m_starDisplay->load();
 }
 
-void RhdcLayoutTesterDialog::playtest() {
-  m_starDisplay->save();
-
-  RomInfo romInfo;
-  RomFile romFile;
-  if (!DataProvider::tryFetchRomByPath(m_romPath, true, &romInfo, &romFile)) {
-    return;
-  }
-
-  hide();
-  Game::play(
-      romFile, romInfo, false, false,
-      [=]() {
-        this->m_starDisplay->load();
-        this->show();
-      },
-      &m_starDisplay->starLayout());
-}
-
 void RhdcLayoutTesterDialog::layoutModificationStatusChanged(bool modified) {
   if (!modified)
     return;

@@ -9,7 +9,6 @@
 #include "src/polyfill/crash.hpp"
 #include "src/rhdc/ui/rhdc-download-dialog.hpp"
 #include "src/types.hpp"
-#include "src/ui/direct-play.hpp"
 #include "src/ui/main-window.hpp"
 #include "src/ui/ui-fixes.hpp"
 #include <QApplication>
@@ -259,5 +258,5 @@ int main(int argc, char **argv) {
     romPath = processRomPath(romPath);
   }
 
-  return romPath.empty() ? runMainWindow(app) : DirectPlay::start(app, romPath);
+  return runMainWindow(app);
 }

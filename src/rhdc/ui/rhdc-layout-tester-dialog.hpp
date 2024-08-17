@@ -38,7 +38,6 @@ public slots:
 
 private slots:
   void revertSave();
-  void playtest();
   void layoutModificationStatusChanged(bool modified);
   void checkLayout();
 };

@@ -17,7 +17,6 @@
 
 #if defined(__linux__) && defined(_LP64)
 #include "src/polyfill/base-directory.hpp"
-#include "src/core/discord.hpp"
 #include "src/ui/download-dialog.hpp"
 #endif
 

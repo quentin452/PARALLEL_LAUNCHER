@@ -22,7 +22,6 @@
 #include "src/core/controller.hpp"
 #include "src/core/filesystem.hpp"
 #include "src/core/retroarch.hpp"
-#include "src/core/discord.hpp"
 #include "src/core/logging.hpp"
 #include "src/core/time.hpp"
 #include "src/core/sm64.hpp"
@@ -278,35 +277,10 @@ static bool playGame(
 	if( settings.enableIsViewer && emulatorCore == EmulatorCore::ParallelN64 ) {
 		isViewerWindow->show();
 	}
-
-	const bool setDiscordStatus = settings.discordIntegration;
-#ifdef _WIN32
-    /* On Windows, Discord will detect RetroArch playing after a short time and
-     * bully Parallel Launcher out of the way. To avoid this, we need to delay
-     * it so that Parallel Launcher sets its presence AFTER RetroArch is detected.
-     * Strangely, just setting it now and then also again in several seconds doesn't
-     * work consistently, but always waiting does work.
-     */
-	std::shared_ptr<bool> playingGame( new bool( true ) );
-	if( setDiscordStatus ) {
-		const string romName = getRomName( romFile, romInfo );
-		const int64 startTime = Time::now();
-		QTimer::singleShot( 5000, nullptr, [=]() {
-			if( *playingGame ) Discord::setNowPlaying( romName, startTime );
-		});
-	}
-#else
-	if( setDiscordStatus ) Discord::setNowPlaying( getRomName( romFile, romInfo ) );
-#endif
 	ProcessAwaiter::QtSafeAwait(
 		emulator,
 		[=]( [[maybe_unused]] int64 exitCode, int64 runtimeMs ) {
-#ifdef _WIN32
-			*playingGame = false;
-#endif
-			if( setDiscordStatus ) Discord::clearNowPlaying();
 			libplHandler->disconnect();
-
 			if( settings.enableIsViewer && emulatorCore == EmulatorCore::ParallelN64 ) {
 				isViewer->stop();
 				isViewerWindow->close();

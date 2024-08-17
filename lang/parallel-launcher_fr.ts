@@ -538,30 +538,30 @@
 <context>
     <name>DirectPlay</name>
     <message>
-        <location filename="../src/ui/play.cpp" line="672"/>
-        <location filename="../src/ui/play.cpp" line="679"/>
-        <location filename="../src/ui/play.cpp" line="686"/>
-        <location filename="../src/ui/play.cpp" line="693"/>
+        <location filename="../src/ui/play.cpp" line="646"/>
+        <location filename="../src/ui/play.cpp" line="653"/>
+        <location filename="../src/ui/play.cpp" line="660"/>
+        <location filename="../src/ui/play.cpp" line="667"/>
         <source>Patch Failed</source>
         <translation>Échec de l&apos;application du patch</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="673"/>
+        <location filename="../src/ui/play.cpp" line="647"/>
         <source>Failed to patch ROM. The .bps patch appears to be invalid.</source>
         <translation>Échec du patch de la ROM. Le patch .bps est invalide.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="680"/>
+        <location filename="../src/ui/play.cpp" line="654"/>
         <source>Failed to patch ROM. The base ROM does not match what the patch expects..</source>
         <translation>Échec du patch de la ROM. La ROM source ne correspond pas à celle attendue par le patch.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="687"/>
+        <location filename="../src/ui/play.cpp" line="661"/>
         <source>Failed to patch ROM. The base rom required to patch is not known to Parallel Launcher.</source>
         <translation>Échec du patch de la ROM. La ROM source requise par le patch n’est pas reconnue par Parallel Launcher.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="694"/>
+        <location filename="../src/ui/play.cpp" line="668"/>
         <source>Failed to patch ROM. An error occurred while writing the patched ROM to disk.</source>
         <translation>Échec du patch de la ROM. Une erreur s&apos;est produite pendant l&apos;écriture de la ROM patchée sur le disque.</translation>
     </message>
@@ -601,7 +601,7 @@
         <translation>Téléchargement de l&apos;installeur...</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="334"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="333"/>
         <source>Downloading Discord plugin</source>
         <translation>Téléchargement du plugin Discord</translation>
     </message>
@@ -645,52 +645,52 @@
 <context>
     <name>Game</name>
     <message>
-        <location filename="../src/ui/play.cpp" line="42"/>
+        <location filename="../src/ui/play.cpp" line="41"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM may contain invalid or unsafe RSP microcode that cannot be run on console accurate graphics plugins. Alternatively, if you have a very old onboard graphics card, it is possible that Vulkan is not supported on your system. In either case, using another graphics plugin might resolve the issue.</source>
         <translation>L&apos;émulateur s&apos;est fermé peu après le démarrage. Si d’autres ROMS peuvent être lancées sans problème, il se peut que cette ROM contienne un microcode RSP invalide ou dangereux qui ne peut pas être exécuté par un plugin graphique fidèle à la N64. Il est également possible que Vulkan ne soit pas combatible avec votre système si vous disposez d’une très vieille carte graphique. Dans les deux cas, utiliser un autre plugin graphique peut régler le problème.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="48"/>
+        <location filename="../src/ui/play.cpp" line="47"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM may contain invalid or unsafe RSP microcode that cannot be run on console accurate graphics plugins. If this is the case, try running the ROM with another graphics plugin instead.</source>
         <translation>L&apos;émulateur s&apos;est fermé peu après le démarrage. Si d’autres ROMS peuvent être lancées sans problème, il se peut que cette ROM contienne un microcode RSP invalide ou dangereux qui ne peut pas être exécuté par un plugin graphique fidèle à la N64. Dans ce cas, changer de plugin graphique règle parfois le problème.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="53"/>
+        <location filename="../src/ui/play.cpp" line="52"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM is most likely corrupt.</source>
         <translation>L&apos;émulateur s&apos;est fermé peu après le démarrage. Si d’autres ROMS peuvent être lancées sans problème, cette ROM est probablement corrompue.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="266"/>
+        <location filename="../src/ui/play.cpp" line="265"/>
         <source>Emulator Missing</source>
         <translation>Émulateur manquant</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="267"/>
+        <location filename="../src/ui/play.cpp" line="266"/>
         <source>Failed to launch emulator. It does not appear to be installed.</source>
         <translation>Échec du lancement de l’émulateur. Celui-ci semble ne pas être installé.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="456"/>
+        <location filename="../src/ui/play.cpp" line="430"/>
         <source>Possible ROM Error</source>
         <translation>Erreur possible venant de la ROM</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="526"/>
+        <location filename="../src/ui/play.cpp" line="500"/>
         <source>Warning</source>
         <translation>Avertissement</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="532"/>
+        <location filename="../src/ui/play.cpp" line="506"/>
         <source>Do not warn me again</source>
         <translation>Ne plus m&apos;avertir</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="605"/>
+        <location filename="../src/ui/play.cpp" line="579"/>
         <source>This game uses an emulated Gamecube controller, but you have not bound any inputs to the X and Y buttons.</source>
         <translation>Ce jeu utilise une manette Gamecube émulée, mais les boutons X et Y ne sont pas assignés à une touche.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="615"/>
+        <location filename="../src/ui/play.cpp" line="589"/>
         <source>This game uses an emulated Gamecube controller, but you do not have an analog stick bound to the C buttons (C stick).</source>
         <translation>Ce jeu utilise une manette Gamecube émulée, mais les boutons C (Stick C) ne sont pas assignés à un stick analogique.</translation>
     </message>
@@ -4729,89 +4729,89 @@ star layout</source>
         <translation>Restauration de l&apos;heure au chargement d&apos;une sauvegarde rapide</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="82"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="81"/>
         <source>Automatic (%1)</source>
         <translation>Automatique (%1)</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="330"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="329"/>
         <source>Install Discord Plugin?</source>
         <translation>Installer le plugin Discord ?</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="330"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="329"/>
         <source>You have enabled Discord integration, but the Discord plugin is not currently installed. Would you like to install it now?</source>
         <translation>L’intégration à Discord est activée, mais le plugin requis n’est pas installé. L’installer maintenant ?</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="340"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="339"/>
         <source>Download Failed</source>
         <translation>Échec du téléchargement</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="340"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="339"/>
         <source>Failed to download Discord plugin</source>
         <translation>Échec du téléchargement du plugin Discord</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="374"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="373"/>
         <source>Auto</source>
         <translation>Automatique</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="378"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="385"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="377"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="384"/>
         <source>Select a Folder</source>
         <translation>Sélectionner un dossier</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="394"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="393"/>
         <source>Confirm Reset</source>
         <translation>Confirmer la réinitialisation</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="395"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="394"/>
         <source>This will reset your RetroArch config file, undoing any changes you have made within RetroArch. Your Parallel Launcher settings will not be affected. Do you want to continue?</source>
         <translation>Cette action réinitialisera la configuration de RetroArch et toutes les modifications faites depuis RetroArch. Les paramètres de Parallel Launcher ne seront pas affectés. Réinitialiser la configuration ?</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="402"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="401"/>
         <source>Config Reset</source>
         <translation>Réinitialiser la configuration</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="402"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="401"/>
         <source>Your RetroArch config has been reset.</source>
         <translation>La configuration de RetroArch a été réinitialisée.</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="404"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="403"/>
         <source>Oops</source>
         <translation>Oups</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="404"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="403"/>
         <source>An unknown error occurred. Your RetroArch config has not been reset.</source>
         <translation>Une erreur inconnue s&apos;est produite. La configuration RetroArch n’a pas été réinitialisée.</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="423"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="429"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="435"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="441"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="422"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="428"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="434"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="440"/>
         <source>Confirm Apply All</source>
         <translation>Confirmer l’application globale</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="423"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="429"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="435"/>
-        <location filename="../src/ui/settings-dialog.cpp" line="441"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="422"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="428"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="434"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="440"/>
         <source>Apply this setting to all current roms?</source>
         <translation>Appliquer ce réglage à toutes les ROMs actuelles ?</translation>
     </message>
     <message>
-        <location filename="../src/ui/settings-dialog.cpp" line="453"/>
+        <location filename="../src/ui/settings-dialog.cpp" line="452"/>
         <source>Unlimited</source>
         <translation>Illimité</translation>
     </message>

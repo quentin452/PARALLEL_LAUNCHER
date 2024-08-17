@@ -112,14 +112,13 @@ endif()
 set(ALL_INCLUDE_DIR
     "${CMAKE_SOURCE_DIR}/"
     "${CMAKE_SOURCE_DIR}/build/"
-    "${CMAKE_SOURCE_DIR}/!third_party_libs/discord-rpc/win64-static/include"
 )
 include_directories("${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/include" "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/include")
 target_include_directories(parallel-launcher PUBLIC ${ALL_INCLUDE_DIR})
 
 # Include .lib files from a directory
 file(GLOB LIBS "${CMAKE_SOURCE_DIR}/!dlls_and_libs/windows_x64/libs/*.lib")
-target_link_libraries(parallel-launcher ${LIBS} "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/lib/*.lib" "${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/build/Release/SDL2.lib" "${CMAKE_SOURCE_DIR}/!third_party_libs/discord-rpc/win64-static/lib/*.lib")
+target_link_libraries(parallel-launcher ${LIBS} "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/lib/*.lib" "${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/build/Release/SDL2.lib")
 
 # Custom command to copy Qt DLLs
 add_custom_command(TARGET parallel-launcher POST_BUILD

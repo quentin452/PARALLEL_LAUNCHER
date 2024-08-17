@@ -1,7 +1,6 @@
 #include "src/rhdc/core/libpl-rhdc.hpp"
 
 #include "src/core/qthread.hpp"
-#include "src/core/rate-limiter.hpp"
 #include "src/core/time.hpp"
 #include "src/rhdc/core/credentials.hpp"
 #include "src/rhdc/web/api-helpers.hpp"
@@ -39,9 +38,6 @@ struct CachedAvatar {
 static std::mutex s_lock;
 static int s_sessionId = 0;
 
-static RateLimiter s_burstLimiter(50, 1000ll);
-static RateLimiter s_mainLimiter(250, 60000ll);
-
 static string s_username;
 static bool s_usernameFetched;
 static HashMap<string, CachedAvatar> s_avatars;
@@ -60,8 +56,6 @@ void clearRhdcLibplCache() {
   s_username.clear();
   s_avatars.clear();
   s_usernameFetched = false;
-  s_burstLimiter.clear();
-  s_mainLimiter.clear();
 }
 
 static bool handleGetMyUsernameRequest(const WritableFifoPipe &pipe,
@@ -202,12 +196,6 @@ static bool handleGetAvatarRequest(const WritableFifoPipe &pipe,
   CachedAvatar &avatar = s_avatars[username];
   switch (s_avatars[username].status) {
   case AsyncStatus::NotStarted:
-    if (!s_burstLimiter.check()) {
-      return writeHeader(pipe, LPL_OKAY, 4, 0, err);
-    } else if (!s_mainLimiter.check()) {
-      s_burstLimiter.pop();
-      return writeHeader(pipe, LPL_OKAY, 4, 0, err);
-    }
     avatar.status = AsyncStatus::Pending;
     fetchAvatarAsync(username);
     [[fallthrough]];

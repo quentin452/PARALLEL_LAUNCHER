@@ -36,32 +36,6 @@
 #include <memory>
 #endif
 
-static const char *s_crashMessageParallel = QT_TRANSLATE_NOOP(
-    "Game", ""
-            "The emulator exited shortly after launching. If you are able to "
-            "launch other ROMs without issues, then "
-            "this ROM may contain invalid or unsafe RSP microcode that cannot "
-            "be run on console accurate graphics "
-            "plugins. Alternatively, if you have a very old onboard graphics "
-            "card, it is possible that Vulkan is not "
-            "supported on your system. In either case, using another graphics "
-            "plugin might resolve the issue.");
-
-static const char *s_crashMessageAngrylion = QT_TRANSLATE_NOOP(
-    "Game", ""
-            "The emulator exited shortly after launching. If you are able to "
-            "launch other ROMs without issues, then "
-            "this ROM may contain invalid or unsafe RSP microcode that cannot "
-            "be run on console accurate graphics "
-            "plugins. If this is the case, try running the ROM with another "
-            "graphics plugin instead.");
-
-static const char *s_crashMessageDefault = QT_TRANSLATE_NOOP(
-    "Game", ""
-            "The emulator exited shortly after launching. If you are able to "
-            "launch other ROMs without issues, then "
-            "this ROM is most likely corrupt.");
-
 static ControllerProfile
 getControllerProfile(InputDriver driver, const ConnectedGamepad &controller) {
   if (controller.id < 0) {
@@ -84,50 +58,6 @@ getControllerProfile(InputDriver driver, const ConnectedGamepad &controller) {
                              getControllerType(controller.info.controllerId));
 }
 
-static ushort getStarCountFromSaveFile(const fs::path &saveFilePath,
-                                       const string &hackId) {
-  if (StarLayout::hasLayout(hackId)) {
-    StarLayout layout;
-    if (StarLayout::tryLoadLayout(hackId, layout)) {
-      return layout.countStars(saveFilePath);
-    }
-  }
-
-  InputFile saveFile(saveFilePath, true);
-  SM64::SaveFile saveData = SM64::SaveFile::read(saveFile);
-  if (FileController::loadRhdcSettings().checkAllSaveSlots) {
-    ushort starCount = 0;
-    for (int i = 0; i < 4; i++) {
-      const ushort slotStars = (ushort)saveData.slot(i).countStars();
-      starCount = slotStars > starCount ? slotStars : starCount;
-    }
-    return starCount;
-  } else {
-    return (ushort)saveData.slot(0).countStars();
-  }
-}
-
-static inline ushort getStarCount(const RomFile &romFile,
-                                  const string &hackId) {
-  const fs::path saveFilePath = RetroArch::getSaveFilePath(romFile.path);
-  if (!fs::existsSafe(saveFilePath))
-    return 0;
-
-  return getStarCountFromSaveFile(saveFilePath, hackId);
-}
-
-static inline string getRomName(const RomFile &romFile,
-                                const RomInfo &romInfo) {
-  RhdcHack hack;
-  if (DataProvider::tryFetchRhdcHackByChecksum(romInfo.sha1, &hack)) {
-    return hack.info.name;
-  } else if (!romInfo.name.empty()) {
-    return romInfo.name;
-  } else {
-    return romFile.path.stem().u8string();
-  }
-}
-
 static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
                      const std::vector<PlayerController> &players,
                      bool bindSavestate,
@@ -145,15 +75,6 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
   }
 
   return true;
-}
-
-static inline bool usesTwoPorts(const Uuid &inputModeId) {
-  const std::map<Uuid, InputMode> inputModes = FileController::loadInputModes();
-  if (inputModes.count(inputModeId) > 0) {
-    return inputModes.at(inputModeId).usesTwoPorts();
-  }
-
-  return false;
 }
 
 bool Game::play(const RomFile &romFile, const RomInfo &romInfo,

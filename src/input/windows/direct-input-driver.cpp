@@ -162,7 +162,7 @@ bool DirectInputDriver::isRunning() const {
 static int CALLBACK enumConnectedDevice(const DIDEVICEINSTANCE *device, void *deviceList) {
     const Uuid uuid((const ubyte *)&device->guidInstance);
 
-    std::string name = Unicode::toUtf8(reinterpret_cast<const wchar_t *>(device->tszInstanceName));
+    string name = Unicode::toUtf8(reinterpret_cast<const wchar_t *>(device->tszInstanceName));
     if (name.empty()) {
         name = Unicode::toUtf8(reinterpret_cast<const wchar_t *>(device->tszProductName));
     }

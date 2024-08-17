@@ -14,23 +14,27 @@
     <name>BindInputDialog</name>
     <message>
         <location filename="../src/ui/designer/bind-input-dialog.ui" line="14"/>
+        <location filename="../build/ui_bind-input-dialog.h" line="112"/>
         <source>Bind Input</source>
         <translatorcomment>Can also be ربط أجهزة الإدخال which is &quot;bind device input&quot;. Not sure about character limits with rendering and all that, which is why I went for the short version.</translatorcomment>
         <translation>ربط الإدخال</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/bind-input-dialog.ui" line="38"/>
+        <location filename="../build/ui_bind-input-dialog.h" line="113"/>
         <source>To map a button or axis to this input, either press a button on your controller or hold a control stick or trigger in a different position for a half second.</source>
         <translatorcomment>&quot;Controller&quot; is a PITA. You can use عصا التحكم which also means &quot;joystick&quot; or &quot;control stick&quot; (it works for both controller and the actual sticks themselves), or you can use &quot;وحدة التحكم&quot;  which also means &quot;control unit&quot; or &quot; ذراع التحكم&quot; which is what I used because it&apos;s the most common but also translates to &quot;control arm&quot;.</translatorcomment>
         <translation>لتعيين زر أو محور لهذا الإدخال ، إما أن تضغط على زر في ذراع التحكم الخاصة بك أو اضغط على عصا التحكم أو الزنأد في وضع مختلف لمدة نصف ثانية.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/bind-input-dialog.ui" line="76"/>
+        <location filename="../build/ui_bind-input-dialog.h" line="114"/>
         <source>Skip</source>
         <translation>تخطى</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/bind-input-dialog.ui" line="87"/>
+        <location filename="../build/ui_bind-input-dialog.h" line="115"/>
         <source>Cancel</source>
         <translation>إلغاء</translation>
     </message>
@@ -39,30 +43,35 @@
     <name>ControllerConfigDialog</name>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="14"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="822"/>
         <source>Configure Controller</source>
         <translatorcomment>Went with closest to retroarch. Can also be عدل ذراع التحكم or  أضبط ذراع التحكم or  ضبط ذراع التحكم</translatorcomment>
         <translation>ضبط ذراع التحكم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="25"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="823"/>
         <source>Configuring Controller:</source>
         <translatorcomment>I don&apos;t like this one, will come back to it.</translatorcomment>
         <translation>تطبيق إعدادات ذراع التحكم:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="62"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="824"/>
         <source>Quick Configure</source>
         <translatorcomment>This also translates to &quot;quick setup&quot;.</translatorcomment>
         <translation>ضبط سريع</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="86"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="825"/>
         <source>Enable Rumble</source>
         <translatorcomment>1:1 translates to &quot;enable vibration&quot; but follows what microsoft uses. Can also be تفعيل الدمدمة  or تفعيل القعقعة</translatorcomment>
         <translation>تمكين الاهتزاز</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="99"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="826"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="19"/>
         <source>Analog Up</source>
         <translatorcomment>can also be عصا التناظرية أعلى like retroarch&apos;s translation, but I don&apos;t like Retroarch&apos;s translation.</translatorcomment>
@@ -70,6 +79,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="122"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="827"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="20"/>
         <source>Analog Down</source>
         <translatorcomment>can also be عصا التناظرية أسفل like Retroarch but I don&apos;t like Retroarch&apos;s translation.</translatorcomment>
@@ -77,18 +87,21 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="145"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="828"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="21"/>
         <source>Analog Left</source>
         <translation>عصا التناظرية يسار</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="168"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="829"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="22"/>
         <source>Analog Right</source>
         <translation>عصا التناظرية يمين</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="191"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="830"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="31"/>
         <source>A Button</source>
         <translatorcomment>So if phonetically translating, it would be زر أي  , if trying for a 1:1 it would be زر أ  , I feel keeping the button letters in English like the actual controller is a better idea so that&apos;s what I did.</translatorcomment>
@@ -96,6 +109,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="214"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="831"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="32"/>
         <source>B Button</source>
         <translatorcomment>Same as in Button A. If you don&apos;t want the english letters left, let me know and I&apos;ll update these.</translatorcomment>
@@ -103,6 +117,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="248"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="832"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="23"/>
         <source>C Up</source>
         <translatorcomment>I added the word &quot;button&quot; to get the damn thing to render properly since it doesn&apos;t like the mixture of RTL with LTR when starting with English. If you can figure it out (C needs to be to the right of the wordفوق) , remove زر</translatorcomment>
@@ -110,6 +125,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="271"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="833"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="24"/>
         <source>C Down</source>
         <translatorcomment>same as C up</translatorcomment>
@@ -117,6 +133,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="294"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="834"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="25"/>
         <source>C Left</source>
         <translatorcomment>Same as C Up</translatorcomment>
@@ -124,6 +141,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="317"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="835"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="26"/>
         <source>C Right</source>
         <translatorcomment>Same as C Up</translatorcomment>
@@ -131,42 +149,49 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="340"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="836"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="34"/>
         <source>Z Trigger</source>
         <translation>زناد Z</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="363"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="837"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="35"/>
         <source>R Trigger</source>
         <translation>زناد R</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="397"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="838"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="27"/>
         <source>D-Pad Up</source>
         <translation>زر الاتجاهات فوق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="420"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="839"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="28"/>
         <source>D-Pad Down</source>
         <translation>زر الاتجاهات تحت</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="443"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="840"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="29"/>
         <source>D-Pad Left</source>
         <translation>زر الاتجاهات يسار</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="466"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="841"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="30"/>
         <source>D-Pad Right</source>
         <translation>زر الاتجاهات يمين</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="489"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="842"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="36"/>
         <source>Start Button</source>
         <translatorcomment>If you don&apos;t translate the word (which lots of arab gamers don&apos;t) you would use زر ستارت  instead, where start is transliterated. but what I put in is considered &quot;proper&quot; and is what retroarch uses</translatorcomment>
@@ -174,17 +199,20 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="512"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="843"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="33"/>
         <source>L Trigger</source>
         <translation>زناد L</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="546"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="844"/>
         <source>The following inputs are only used by games that support Gamecube Controllers:</source>
         <translation>المدخلات التالية مستخدمة فقط في الألعاب التي تدعم أذرعات تحكم Gamecube:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="566"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="845"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="37"/>
         <source>X Button</source>
         <translation>زر X</translation>
@@ -192,72 +220,86 @@
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="573"/>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="597"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="846"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="847"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="75"/>
         <source>Not Bound</source>
         <translation>غير ملزمة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="610"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="848"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="38"/>
         <source>Y Button</source>
         <translation>زر Y</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="660"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="851"/>
         <source>Sensitivity</source>
         <translation>حساسية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="686"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="852"/>
         <source>Deadzone</source>
         <translation>المنطقة الميتة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="745"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="853"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="39"/>
         <source>Save State</source>
         <translation>حفظ إلحالة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="774"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="854"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="40"/>
         <source>Load State</source>
         <translation>تحميل إلحالة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="822"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="855"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="42"/>
         <source>Toggle Slow Motion</source>
         <translation>تبديل &quot;الحركة البطيئة&quot;</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="832"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="856"/>
         <location filename="../src/ui/controller-config-dialog.cpp" line="41"/>
         <source>Toggle Fast Forward</source>
         <translation>تبديل التقديم السريع</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="864"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="858"/>
         <source>How far you need to press down a trigger or tilt a control stick that is bound to an N64 button before it is considered a button press</source>
         <translation>إلى أي مدى تحتاج إلى الضغط على الزناد أو إمالة عصا التحكم المرتبطة بزر N64 قبل اعتبارها ضغطة على الزر</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="867"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="860"/>
         <source>Analog to Digital Button Press Threshold</source>
         <translation>عتبة ضغط تحويل الزر التناظري إلى رقمي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="949"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="861"/>
         <source>Save As</source>
         <translation>احفظ باسم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="969"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="862"/>
         <source>Save</source>
         <translation>احفظ</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-config-dialog.ui" line="983"/>
+        <location filename="../build/ui_controller-config-dialog.h" line="863"/>
         <source>Cancel</source>
         <translation>إلغاء</translation>
     </message>
@@ -321,31 +363,37 @@
     <name>ControllerSelectDialog</name>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="14"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="234"/>
         <source>Select Controller</source>
         <translation>إختر ذراع التحكم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="28"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="235"/>
         <source>Input Driver</source>
         <translation>مشغل الإدخال</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="81"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="236"/>
         <source>If your controller does not appear in this list, or if you are having problems setting up your controller bindings, try switching to a different input driver.</source>
         <translation>إذا لم تظهر ذراع التحكم الخاصة بك في هذه القائمة ، أو إذا كنت تواجه مشاكل في إعداد روابط ذراع التحكم الخاصة بك ، فحاول التبديل إلى برنامج تشغيل إدخال مختلف.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="125"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="237"/>
         <source>Connected Controllers</source>
         <translation>أذرعة التحكم المتصلة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="154"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="238"/>
         <source>Controller Profiles</source>
         <translation>ملف ذراع التحكم الشخصي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="169"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="239"/>
         <location filename="../src/ui/controller-select-dialog.cpp" line="178"/>
         <location filename="../src/ui/controller-select-dialog.cpp" line="220"/>
         <source>Edit Profile</source>
@@ -353,6 +401,7 @@
     </message>
     <message>
         <location filename="../src/ui/designer/controller-select-dialog.ui" line="180"/>
+        <location filename="../build/ui_controller-select-dialog.h" line="240"/>
         <source>Delete Profile</source>
         <translation>احذف الملف الشخصي</translation>
     </message>
@@ -458,16 +507,19 @@
     <name>CrashReportDialog</name>
     <message>
         <location filename="../src/ui/designer/crash-report-dialog.ui" line="14"/>
+        <location filename="../build/ui_crash-report-dialog.h" line="98"/>
         <source>View Crash Reports</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/crash-report-dialog.ui" line="26"/>
+        <location filename="../build/ui_crash-report-dialog.h" line="99"/>
         <source>Only show crashes from the current application version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/crash-report-dialog.ui" line="61"/>
+        <location filename="../build/ui_crash-report-dialog.h" line="100"/>
         <source>Crash Report</source>
         <translation type="unfinished"></translation>
     </message>
@@ -476,22 +528,26 @@
     <name>DeviceBusyDialog</name>
     <message>
         <location filename="../src/ui/designer/device-busy-dialog.ui" line="17"/>
+        <location filename="../build/ui_device-busy-dialog.h" line="102"/>
         <source>Device Busy</source>
         <translation>الجهاز مشغول</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/device-busy-dialog.ui" line="26"/>
+        <location filename="../build/ui_device-busy-dialog.h" line="103"/>
         <source>One or more SD cards are busy. Waiting for all file operations to complete...</source>
         <translation>واحدة أو أكثر من بطاقات الSD مشغولة. في انتظار اكتمال كافة عمليات الملف...</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/device-busy-dialog.ui" line="58"/>
+        <location filename="../build/ui_device-busy-dialog.h" line="104"/>
         <source>Force Unmount</source>
         <translatorcomment>note if the context is say &quot;force unmount SD card&quot; the translation would be فرض إلغاء تحميل بطاقة sd</translatorcomment>
         <translation>فرض إلغاء تحميل</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/device-busy-dialog.ui" line="69"/>
+        <location filename="../build/ui_device-busy-dialog.h" line="105"/>
         <source>Cancel</source>
         <translation>إلغاء</translation>
     </message>
@@ -499,30 +555,30 @@
 <context>
     <name>DirectPlay</name>
     <message>
-        <location filename="../src/ui/play.cpp" line="677"/>
-        <location filename="../src/ui/play.cpp" line="684"/>
-        <location filename="../src/ui/play.cpp" line="691"/>
-        <location filename="../src/ui/play.cpp" line="698"/>
+        <location filename="../src/ui/play.cpp" line="672"/>
+        <location filename="../src/ui/play.cpp" line="679"/>
+        <location filename="../src/ui/play.cpp" line="686"/>
+        <location filename="../src/ui/play.cpp" line="693"/>
         <source>Patch Failed</source>
         <translation>فشل الرقعه</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="678"/>
+        <location filename="../src/ui/play.cpp" line="673"/>
         <source>Failed to patch ROM. The .bps patch appears to be invalid.</source>
         <translation>فشل ترقيع إلROM. يبدو أن ترقيع إلbps غير صالح.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="685"/>
+        <location filename="../src/ui/play.cpp" line="680"/>
         <source>Failed to patch ROM. The base ROM does not match what the patch expects..</source>
         <translation>فشل ترقيع إلROM. إلROM الأساسي لا يتطابق مع ما يتوقعه الترقيع ..</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="692"/>
+        <location filename="../src/ui/play.cpp" line="687"/>
         <source>Failed to patch ROM. The base rom required to patch is not known to Parallel Launcher.</source>
         <translation>فشل ترقيع إلROM. إلROM الأساسي المطلوب للترقيعه غير معروف لـ Parallel Launcher.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="699"/>
+        <location filename="../src/ui/play.cpp" line="694"/>
         <source>Failed to patch ROM. An error occurred while writing the patched ROM to disk.</source>
         <translation>فشل ترقيع إلROM. حدث خطأ أثناء كتابة إلROM المرقعه إلى  القرص.</translation>
     </message>
@@ -531,12 +587,14 @@
     <name>DirectPlayWindow</name>
     <message>
         <location filename="../src/ui/designer/direct-play-window.ui" line="14"/>
+        <location filename="../build/ui_direct-play-window.h" line="95"/>
         <source>ROM Settings</source>
         <translatorcomment>transliterated ROM instead of translated as done by major arab romhacking/gaming  sites like pixelarab.com</translatorcomment>
         <translation>إعدادات إلROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/direct-play-window.ui" line="27"/>
+        <location filename="../build/ui_direct-play-window.h" line="96"/>
         <source>This is your first time running this ROM. Please select any ROM specific settings. You can always change these settings later.</source>
         <translation>هذه هي المرة الأولى التي تقوم فيها بتشغيل هذا إلROM. الرجاء تحديد أي إعدادات محددة للROM . يمكنك دائمًا تغيير هذه الإعدادات لاحقًا.</translation>
     </message>
@@ -605,52 +663,52 @@
 <context>
     <name>Game</name>
     <message>
-        <location filename="../src/ui/play.cpp" line="45"/>
+        <location filename="../src/ui/play.cpp" line="42"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM may contain invalid or unsafe RSP microcode that cannot be run on console accurate graphics plugins. Alternatively, if you have a very old onboard graphics card, it is possible that Vulkan is not supported on your system. In either case, using another graphics plugin might resolve the issue.</source>
         <translation>خرج المحاكي بعد وقت قصير من الإطلاق. إذا كنت قادرًا على تشغيل ROMs أخرى دون مشاكل ، فقد يحتوي هذا إلROM على رمز صغير RSP غير صالح أو غير آمن لا يمكن تشغيله على ملحقات رسومات دقيقة لوحدة ألعاب. بدلاً من ذلك ، إذا كان لديك بطاقة رسومات قديمة جدًا ، فمن المحتمل أن Vulkan غير مدعوم على نظامك. في كلتا الحالتين ، قد يؤدي استخدام مكون آخر للرسومات إلى حل المشكلة.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="51"/>
+        <location filename="../src/ui/play.cpp" line="48"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM may contain invalid or unsafe RSP microcode that cannot be run on console accurate graphics plugins. If this is the case, try running the ROM with another graphics plugin instead.</source>
         <translation>خرج المحاكي بعد وقت قصير من الإطلاق. إذا كنت قادرًا على تشغيل ROMs أخرى دون مشاكل ، فقد يحتوي هذا إلROM على رمز صغير RSP غير صالح أو غير آمن لا يمكن تشغيله على ملحقات رسومات دقيقة لوحدة ألعاب. إذا كانت هذه هي الحالة ، فحاول تشغيل إلROM باستخدام مكون آخر للرسومات بدلاً من ذلك.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="56"/>
+        <location filename="../src/ui/play.cpp" line="53"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM is most likely corrupt.</source>
         <translation>خرج المحاكي بعد وقت قصير من الإطلاق. إذا كنت قادرًا على تشغيل ROMs أخرى دون مشاكل ، فمن المرجح أن يكون هذا الROM تالفًا.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="271"/>
+        <location filename="../src/ui/play.cpp" line="266"/>
         <source>Emulator Missing</source>
         <translation>المحاكي مفقود</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="272"/>
+        <location filename="../src/ui/play.cpp" line="267"/>
         <source>Failed to launch emulator. It does not appear to be installed.</source>
         <translation>فشل تشغيل المحاكي. لا يبدو أنه مثبت.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="461"/>
+        <location filename="../src/ui/play.cpp" line="456"/>
         <source>Possible ROM Error</source>
         <translation>خطأ ROM محتمل</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="531"/>
+        <location filename="../src/ui/play.cpp" line="526"/>
         <source>Warning</source>
         <translation>تحذير</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="537"/>
+        <location filename="../src/ui/play.cpp" line="532"/>
         <source>Do not warn me again</source>
         <translation>لا تحذرني مرة أخرى</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="610"/>
+        <location filename="../src/ui/play.cpp" line="605"/>
         <source>This game uses an emulated Gamecube controller, but you have not bound any inputs to the X and Y buttons.</source>
         <translation>تستخدم هذه اللعبة وحدة تحكم Gamecube مقلدة ، لكنك لم تربط أي أدخال بأزرار X و Y.</translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="620"/>
+        <location filename="../src/ui/play.cpp" line="615"/>
         <source>This game uses an emulated Gamecube controller, but you do not have an analog stick bound to the C buttons (C stick).</source>
         <translation>تستخدم هذه اللعبة وحدة تحكم Gamecube مقلدة ، ولكن ليس لديك عصا تناظرية مرتبطة بأزرار C (عصا C).</translation>
     </message>
@@ -731,22 +789,26 @@
     <name>ImportSdCardDialog</name>
     <message>
         <location filename="../src/ui/designer/import-sd-card-dialog.ui" line="17"/>
+        <location filename="../build/ui_import-sd-card-dialog.h" line="117"/>
         <source>Import SD Card</source>
         <translatorcomment>there&apos;s no Arabic word for SD card</translatorcomment>
         <translation>استيراد بطاقة sd</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/import-sd-card-dialog.ui" line="31"/>
+        <location filename="../build/ui_import-sd-card-dialog.h" line="118"/>
         <source>Name</source>
         <translation>اسم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/import-sd-card-dialog.ui" line="69"/>
+        <location filename="../build/ui_import-sd-card-dialog.h" line="119"/>
         <source>Use this file directly</source>
         <translation>استخدم هذا الملف مباشرة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/import-sd-card-dialog.ui" line="79"/>
+        <location filename="../build/ui_import-sd-card-dialog.h" line="120"/>
         <source>Make a copy of this file</source>
         <translation>قم بعمل نسخة من هذا الملف</translation>
     </message>
@@ -838,16 +900,19 @@
     <name>KeyboardConfigDialog</name>
     <message>
         <location filename="../src/ui/designer/keyboard-config-dialog.ui" line="14"/>
+        <location filename="../build/ui_keyboard-config-dialog.h" line="118"/>
         <source>Configure Keyboard Controls</source>
         <translation>اضبط ضوابط لوحة المفاتيح</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/keyboard-config-dialog.ui" line="28"/>
+        <location filename="../build/ui_keyboard-config-dialog.h" line="119"/>
         <source>Hotkeys</source>
         <translation>مفاتيح الاختصار</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/keyboard-config-dialog.ui" line="71"/>
+        <location filename="../build/ui_keyboard-config-dialog.h" line="120"/>
         <source>Keyboard Controls</source>
         <translation>ضوابط لوحة المفاتيح</translation>
     </message>
@@ -1091,46 +1156,55 @@
     <name>LogViewerDialog</name>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="14"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="163"/>
         <source>Log Viewer</source>
         <translation>عارض سجل</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="28"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="164"/>
         <source>Only show logs from this session</source>
         <translation>إعرض السجلات من هذه الجلسة فقط</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="48"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="165"/>
         <source>Show timestamps</source>
         <translation>اعرض الطوابع الزمنية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="60"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="166"/>
         <source>Visible Logs</source>
         <translation>سجلات مرئية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="66"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="167"/>
         <source>Debug</source>
         <translation>تنقيح</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="76"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="168"/>
         <source>Info</source>
         <translation>معلومات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="86"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="169"/>
         <source>Warn</source>
         <translation>تحذير</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="96"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="170"/>
         <source>Error</source>
         <translation>خطأ</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/log-viewer-dialog.ui" line="106"/>
+        <location filename="../build/ui_log-viewer-dialog.h" line="171"/>
         <source>Fatal</source>
         <translation>فادح</translation>
     </message>
@@ -1138,22 +1212,22 @@
 <context>
     <name>Main</name>
     <message>
-        <location filename="../src/main.cpp" line="232"/>
+        <location filename="../src/main.cpp" line="234"/>
         <source>Installing RetroArch</source>
         <translation>يجري تثبيت ريتروارش</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="233"/>
+        <location filename="../src/main.cpp" line="235"/>
         <source>Parallel Launcher will now install RetroArch.</source>
         <translation>ستقوم Parallel Launcher الآن بتثبيت ريتروأرش.</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="242"/>
+        <location filename="../src/main.cpp" line="243"/>
         <source>Fatal Error</source>
         <translation>خطأ فادح</translation>
     </message>
     <message>
-        <location filename="../src/main.cpp" line="243"/>
+        <location filename="../src/main.cpp" line="244"/>
         <source>Failed to install RetroArch.</source>
         <translation>فشل تثبيت ريتروارش.</translation>
     </message>
@@ -1162,129 +1236,155 @@
     <name>MainWindow</name>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="64"/>
+        <location filename="../build/ui_main-window.h" line="407"/>
         <source>Refresh ROM List</source>
         <translation>انعش قائمة إلROMS</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="81"/>
+        <location filename="../build/ui_main-window.h" line="410"/>
         <source>Configure Controller</source>
         <translation>ضبط ذراع التحكم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="98"/>
+        <location filename="../build/ui_main-window.h" line="413"/>
         <source>Options</source>
         <translation>خيارات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="128"/>
+        <location filename="../build/ui_main-window.h" line="415"/>
         <source>Searching for ROMs...</source>
         <translation>يجري البحث عن ROMs ...</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="185"/>
+        <location filename="../build/ui_main-window.h" line="416"/>
         <source>No ROMS have been found</source>
         <translation>لم يتم العثور على ROMS</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="192"/>
         <location filename="../src/ui/designer/main-window.ui" line="333"/>
+        <location filename="../build/ui_main-window.h" line="389"/>
+        <location filename="../build/ui_main-window.h" line="417"/>
         <source>Manage ROM Sources</source>
         <translation>إدير مصادر ROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="236"/>
+        <location filename="../build/ui_main-window.h" line="418"/>
         <source>Search...</source>
         <translation>ابحث...</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="283"/>
+        <location filename="../build/ui_main-window.h" line="419"/>
         <source>Download</source>
         <translation>تنزيل</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="300"/>
+        <location filename="../build/ui_main-window.h" line="420"/>
         <source>Play Multiplayer</source>
         <translation>لعب متعددة اللاعبين</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="311"/>
+        <location filename="../build/ui_main-window.h" line="421"/>
         <source>Play Singleplayer</source>
         <translation>لعب منفرد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="328"/>
+        <location filename="../build/ui_main-window.h" line="388"/>
         <source>Settings</source>
         <translation>الإعدادات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="338"/>
+        <location filename="../build/ui_main-window.h" line="390"/>
         <source>Configure Controllers</source>
         <translation>ضبط أذرعة التحكم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="343"/>
+        <location filename="../build/ui_main-window.h" line="391"/>
         <source>Keyboard Controls and Hotkeys</source>
         <translation>ضوابط لوحة المفاتيح ومفاتيح الاختصار</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="346"/>
+        <location filename="../build/ui_main-window.h" line="393"/>
         <source>Configure keyboard controls and hotkeys</source>
         <translation>اضبط ضوابط لوحة المفاتيح ومفاتيح الاختصار</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="351"/>
+        <location filename="../build/ui_main-window.h" line="395"/>
         <location filename="../src/ui/main-window.cpp" line="789"/>
         <source>Login to romhacking.com</source>
         <translation>تسجيل الدخول إلى romhacking.com</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="356"/>
+        <location filename="../build/ui_main-window.h" line="396"/>
         <source>Logout of romhacking.com</source>
         <translation>تسجيل الخروج من romhacking.com</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="361"/>
+        <location filename="../build/ui_main-window.h" line="397"/>
         <source>Disable romhacking.com integration</source>
         <translation>عطل تكامل romhacking.com</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="366"/>
+        <location filename="../build/ui_main-window.h" line="398"/>
         <source>Add Single ROM</source>
         <translation>ضيف ROM واحد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="375"/>
+        <location filename="../build/ui_main-window.h" line="399"/>
         <source>Quit Parallel Launcher</source>
         <translation>إنهاء  Parallel Launcher</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="380"/>
+        <location filename="../build/ui_main-window.h" line="400"/>
         <source>Open save file directory</source>
         <translation>افتح دليل حفظ الملف</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="385"/>
+        <location filename="../build/ui_main-window.h" line="401"/>
         <source>Open savestate directory</source>
         <translatorcomment>There&apos;s no translation for savestate that I know of so I translated it literally </translatorcomment>
         <translation>افتح دليل حالة حفظ</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="390"/>
+        <location filename="../build/ui_main-window.h" line="402"/>
         <source>Open SD card directory</source>
         <translation>افتح دليل بطاقة SD</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="395"/>
+        <location filename="../build/ui_main-window.h" line="403"/>
         <source>Open app data directory</source>
         <translation>افتح دليل بيانات التطبيق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="400"/>
+        <location filename="../build/ui_main-window.h" line="404"/>
         <source>Open app config directory</source>
         <translation>افتح دليل تكوين التطبيق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="405"/>
+        <location filename="../build/ui_main-window.h" line="405"/>
         <source>Open app cache directory</source>
         <translation>افتح دليل ذاكرة التخزين المؤقت للتطبيق</translation>
     </message>
@@ -1351,21 +1451,25 @@
     <name>ManageGroupsDialog</name>
     <message>
         <location filename="../src/ui/designer/manage-groups-dialog.ui" line="14"/>
+        <location filename="../build/ui_manage-groups-dialog.h" line="123"/>
         <source>Manage Groups</source>
         <translation>إدارة المجموعات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-groups-dialog.ui" line="32"/>
+        <location filename="../build/ui_manage-groups-dialog.h" line="124"/>
         <source>Delete</source>
         <translation>احذف</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-groups-dialog.ui" line="43"/>
+        <location filename="../build/ui_manage-groups-dialog.h" line="125"/>
         <source>Rename</source>
         <translation>إعادة تسمية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-groups-dialog.ui" line="54"/>
+        <location filename="../build/ui_manage-groups-dialog.h" line="126"/>
         <source>New</source>
         <translation>جديد</translation>
     </message>
@@ -1420,51 +1524,61 @@
     <name>ManageSdCardsDialog</name>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="14"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="357"/>
         <source>Manage Virtual SD Cards</source>
         <translation>إدارة بطاقات SD الافتراضية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="42"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="358"/>
         <source>Create New</source>
         <translation>انشاء جديد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="53"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="359"/>
         <source>Import</source>
         <translation>استيراد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="111"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="360"/>
         <source>Size</source>
         <translation>سعة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="118"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="361"/>
         <source>Format</source>
         <translation>تهيئة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="147"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="362"/>
         <source>None</source>
         <translation>منعدم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="168"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="364"/>
         <source>Name</source>
         <translation>الاسم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="211"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="365"/>
         <source>Reformat</source>
         <translation>إعادة تهيئة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="222"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="366"/>
         <source>Delete</source>
         <translation>احذف</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="251"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="367"/>
         <location filename="../src/ui/manage-sd-cards-dialog.cpp" line="423"/>
         <location filename="../src/ui/manage-sd-cards-dialog.cpp" line="445"/>
         <source>Clone</source>
@@ -1472,16 +1586,19 @@
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="262"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="368"/>
         <source>Browse Files</source>
         <translation>تصفح ملفات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="295"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="369"/>
         <source>Create</source>
         <translation>إنشاء</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/manage-sd-cards-dialog.ui" line="306"/>
+        <location filename="../build/ui_manage-sd-cards-dialog.h" line="370"/>
         <source>Cancel</source>
         <translation>إلغاء</translation>
     </message>
@@ -1582,11 +1699,13 @@
     <name>MultiplayerControllerSelectDialog</name>
     <message>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="14"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="168"/>
         <source>Select Controllers</source>
         <translation>إختر أذرعة التحكم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="22"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="169"/>
         <source>Port 1</source>
         <translation>منفذ ١</translation>
     </message>
@@ -1595,6 +1714,10 @@
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="59"/>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="85"/>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="111"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="170"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="174"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="178"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="182"/>
         <source>-- None --</source>
         <translation>-- منعدم --</translation>
     </message>
@@ -1603,26 +1726,34 @@
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="67"/>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="93"/>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="119"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="172"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="176"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="180"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="184"/>
         <source>Detect Device</source>
         <translation>أكشف جهاز</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="48"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="173"/>
         <source>Port 2</source>
         <translation>منفذ ٢</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="74"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="177"/>
         <source>Port 3</source>
         <translation>منفذ ٣</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="100"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="181"/>
         <source>Port 4</source>
         <translation>منفذ ٤</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/multiplayer-controller-select-dialog.ui" line="128"/>
+        <location filename="../build/ui_multiplayer-controller-select-dialog.h" line="185"/>
         <source>Allow port 1 to save and load states</source>
         <translation>اسمح للمنفذ 1 بحفظ وتحميل الحالات</translation>
     </message>
@@ -1631,11 +1762,13 @@
     <name>NeutralInputDialog</name>
     <message>
         <location filename="../src/ui/designer/neutral-input-dialog.ui" line="14"/>
+        <location filename="../build/ui_neutral-input-dialog.h" line="70"/>
         <source>Return to Neutral</source>
         <translation>العودة إلى الوضع المحايد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/neutral-input-dialog.ui" line="29"/>
+        <location filename="../build/ui_neutral-input-dialog.h" line="71"/>
         <source>Return all triggers and analog sticks to their neutral position, then press any button on the controller or click the OK button to continue.</source>
         <translation>أعد جميع الازندة  والعصي التناظرية إلى موضعها المحايد ، ثم اضغط على أي زر في ذراع التحكم أو انقر فوق الزر &quot;موافق&quot; للمتابعة.</translation>
     </message>
@@ -1644,31 +1777,37 @@
     <name>NowPlayingWidget</name>
     <message>
         <location filename="../src/ui/designer/now-playing-widget.ui" line="34"/>
+        <location filename="../build/ui_now-playing-widget.h" line="203"/>
         <source>Now Playing: </source>
         <translation>العب الان: </translation>
     </message>
     <message>
         <location filename="../src/ui/designer/now-playing-widget.ui" line="106"/>
+        <location filename="../build/ui_now-playing-widget.h" line="204"/>
         <source>Play Time</source>
         <translation>وقت اللعب</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/now-playing-widget.ui" line="119"/>
+        <location filename="../build/ui_now-playing-widget.h" line="205"/>
         <source>Total</source>
         <translation>إجمالي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/now-playing-widget.ui" line="150"/>
+        <location filename="../build/ui_now-playing-widget.h" line="206"/>
         <source>This Session</source>
         <translation>هذه إلجلسة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/now-playing-widget.ui" line="221"/>
+        <location filename="../build/ui_now-playing-widget.h" line="207"/>
         <source>Hard Reset</source>
         <translation>إعادة التعيين الكلي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/now-playing-widget.ui" line="232"/>
+        <location filename="../build/ui_now-playing-widget.h" line="208"/>
         <source>Kill Emulator</source>
         <translation>اقتل المحاكي</translation>
     </message>
@@ -1695,11 +1834,13 @@
     <name>RhdcDownloadDialog</name>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-download-dialog.ui" line="14"/>
+        <location filename="../build/ui_rhdc-download-dialog.h" line="87"/>
         <source>Downloading Patch</source>
         <translation>يجري تنزيل الترقيعه</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-download-dialog.ui" line="25"/>
+        <location filename="../build/ui_rhdc-download-dialog.h" line="88"/>
         <source>Fetching hack info</source>
         <translation>يجري جلب معلومات الاختراق</translation>
     </message>
@@ -1760,67 +1901,80 @@
     <name>RhdcHackView</name>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="30"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="300"/>
         <source>Hack List:</source>
         <translation>قائمة الاختراقت:</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="63"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="301"/>
         <source>Sort By:</source>
         <translation>صنف حسب:</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="80"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="302"/>
         <source>Name</source>
         <translation>الاسم</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="85"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="303"/>
         <source>Popularity</source>
         <translation>إلشعبية</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="90"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="304"/>
         <source>Rating</source>
         <translation>التقدير</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="95"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="305"/>
         <source>Difficulty</source>
         <translation>الصعوبة</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="100"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="306"/>
         <source>Last Played</source>
         <translation>اخر مره لعبت</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="105"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="307"/>
         <source>Play Time</source>
         <translation>وقت اللعب</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="110"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="308"/>
         <source>Stars</source>
         <translation>النجوم</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="115"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="309"/>
         <source>Fixed Shuffle</source>
         <extracomment>&quot;Fixed Shuffle&quot; means that the order of the roms is arbitrary, but will be consistent every time, as opposed to the &quot;Random Shuffle&quot; option which is randomized every time</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="120"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="310"/>
         <source>Random Shuffle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="141"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="312"/>
         <source>Search...</source>
         <translation>ابحث...</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack-view.ui" line="276"/>
+        <location filename="../build/ui_rhdc-hack-view.h" line="313"/>
         <source>Version</source>
         <translation>الإصدار</translation>
     </message>
@@ -1965,24 +2119,32 @@
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="302"/>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="341"/>
+        <location filename="../build/ui_rhdc-hack.h" line="392"/>
+        <location filename="../build/ui_rhdc-hack.h" line="395"/>
         <source>Popularity (Downloads)</source>
         <translation>الشعبية (التنزيلات)</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="385"/>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="424"/>
+        <location filename="../build/ui_rhdc-hack.h" line="398"/>
+        <location filename="../build/ui_rhdc-hack.h" line="401"/>
         <source>Rating</source>
         <translation>التقدير</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="465"/>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="504"/>
+        <location filename="../build/ui_rhdc-hack.h" line="404"/>
+        <location filename="../build/ui_rhdc-hack.h" line="407"/>
         <source>Difficulty</source>
         <translation>إلصعوبة</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="561"/>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="600"/>
+        <location filename="../build/ui_rhdc-hack.h" line="410"/>
+        <location filename="../build/ui_rhdc-hack.h" line="413"/>
         <source>Last Played</source>
         <extracomment>Date and time that a hack was last played</extracomment>
         <translation>اخر مره لعبت</translation>
@@ -1990,6 +2152,8 @@
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="641"/>
         <location filename="../src/rhdc/ui/designer/rhdc-hack.ui" line="680"/>
+        <location filename="../build/ui_rhdc-hack.h" line="416"/>
+        <location filename="../build/ui_rhdc-hack.h" line="419"/>
         <source>Total Play Time</source>
         <translation>إجمالي وقت اللعب</translation>
     </message>
@@ -2014,131 +2178,156 @@
     <name>RhdcLoginDialog</name>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="14"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="627"/>
         <source>RHDC Login</source>
         <translation>تسجيل الدخول RHDC</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="66"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="628"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To enable romhacking.com integration, you must have an unmodified copy of the US version of &lt;span style=&quot; font-style:italic;&quot;&gt;Super Mario 64&lt;/span&gt; in z64 format.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>لتمكين تكامل romhacking.com، يجب أن يكون لديك نسخة غير معدلة من إصدار الولايات المتحدة من Super Mario 64 بتنسيق .z64 </translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;‫لتمكين تكامل romhacking.com، يجب أن يكون لديك نسخة غير معدلة من إصدار الولايات المتحدة من &lt;span style=&quot; font-style:italic;&quot;&gt;Super Mario 64 &lt;/span&gt;بتنسيق إلz64. .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="128"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="629"/>
         <source>Browse for SM64 ROM</source>
         <translation>تصفح من أجل SM64 ROM</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="180"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="630"/>
         <source>Sign in to romhacking.com</source>
         <translation>سجل الدخول إلى romhacking.com</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="194"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="631"/>
         <source>Username</source>
         <translation>اسم المستخدم</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="204"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="632"/>
         <source>Password</source>
         <translation>كلمة المرور</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="256"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="633"/>
         <source>Sign In</source>
         <translation>سجل الدخول</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="359"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="634"/>
         <source>Multi-factor authentication is enabled on this account</source>
         <translatorcomment>Temporary translation until a better one is provided</translatorcomment>
         <translation>المصادقة الثنائية</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="366"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="635"/>
         <source>Please enter the 6-digit authentication code from your authenticator app.</source>
         <translatorcomment>Temporary translation until a better one is provided</translatorcomment>
         <translation>إن حسابك محمي بواسطة المصادقة الثنائية. يُرجى إدخال الرمز المعروض في تطبيق المصادقة.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="437"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="636"/>
         <source>Verify</source>
         <translatorcomment>Temporary translation until a better one is provided</translatorcomment>
         <translation>تحقق من</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="501"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="637"/>
         <source>Incorrect authentication code</source>
         <translatorcomment>Temporary translation until a better one is provided</translatorcomment>
         <translation>تم إدخال الرمز بشكل غير صحيح</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="546"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="638"/>
         <source>Please confirm your romhacking.com integration settings. You can always change these later in the settings dialog.</source>
         <translation>يرجى تأكيد إعدادات تكامل romhacking.com. يمكنك دائمًا تغييرها لاحقًا في مربع حوار الإعدادات.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="574"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="639"/>
         <source>Download Directory</source>
         <translation>دليل التنزيل</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="596"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="640"/>
         <source>Browse</source>
         <translation>تصفح</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="620"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="641"/>
         <source>Sets the directory that hacks downloaded from romhacking.com will be saved to. If you change this setting later, your roms will automatically be moved to the new directory.</source>
         <translation>يضبط الدليل الذي سيتم حفظ الاختراق الذي تم تنزيله من romhacking.com فيه. إذا قمت بتغيير هذا الإعداد لاحقًا ، فسيتم تلقائيًا نقل إلROMs الخاص بك إلى الدليل الجديد.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="652"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="642"/>
         <source>Enable Star Display</source>
         <translation>تفعيل عرض النجوم</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="673"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="643"/>
         <source>If checked, when a rom is running that has a supported layout file from RHDC, a layout of all the stars in the hack will be shown. This layout updates automatically after the game is saved.</source>
         <translation>إذا تم تحديده ، عند تشغيل rom به ملف تخطيط مدعوم من RHDC ، سيتم عرض تخطيط لجميع النجوم في الاختراق. يتم تحديث هذا التخطيط تلقائيًا بعد حفظ اللعبة.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="710"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="644"/>
         <source>Show star display for hacks without a star layout</source>
         <translation>إظهار عرض النجوم للاختراق بدون تخطيط نجوم</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="731"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="645"/>
         <source>If checked, Parallel Launcher will still show a star display with a default layout if the hack author did not provide one.</source>
         <translation>إذا تم تحديده ، فسيظل Parallel Launcher يعرض عرض النجوم بتخطيط افتراضي إذا لم يقدم مؤلف الاختراق واحدًا.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="768"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="646"/>
         <source>Check all save slots</source>
         <translation>تحقق من جميع فتحات الحفظ</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="786"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="647"/>
         <source>If checked, Parallel Launcher will submit your highest star count across all save slots to romhacking.com; otherwise, it will only submit your star count in slot A.</source>
         <translation>إذا تم تحديده ، فسيقوم Parallel Launcher بإرسال أعلى عدد نجوم لك عبر جميع فتحات الحفظ إلى romhacking.com ؛ وإلا ، فسيتم إرسال عدد النجوم في الفتحة A  فقط.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="818"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="648"/>
         <source>Prefer HLE plugins</source>
         <translation>تفضل ملحقات HLE</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="836"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="649"/>
         <source>If checked, Parallel Launcher will use the GLideN64 plugin instead of the ParaLLEl plugin when it guesses that ParrLLEl is probably the best plugin to use. Only check this if your computer has an old GPU with poor Vulkan support. If you still experience lag even with GLideN64, you may need to disable &apos;Emulate Framebuffer&apos; and/or &apos;Emulate N64 Depth Compare&apos; in the GFX Plugins section of your Parallel Launcher settings.</source>
         <translation>إذا تم تحديده ، فسيستخدم Parallel Launcher الملحق GLideN64 بدلاً من الملحق ParaLLEl عندما يخمن أن ParrLLEl هو على الأرجح أفضل ملحق يمكن استخدامه. تحقق فقط من هذا إذا كان جهاز الكمبيوتر الخاص بك يحتوي على وحدة معالجة رسومات قديمة مع دعم Vulkan ضعيف. إذا كنت لا تزال تواجه تأخرًا حتى مع GLideN64 ، فقد تحتاج إلى تعطيل &quot;Emulate Framebuffer&quot; و / أو &quot;محاكاة مقارنة عمق N64&quot; في قسم ملحقات GFX في إعدادات Parallel Launcher.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="868"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="650"/>
         <source>Ignore widescreen hint</source>
         <translation>تجاهل تلميح الشاشة العريضة</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-login-dialog.ui" line="886"/>
+        <location filename="../build/ui_rhdc-login-dialog.h" line="651"/>
         <source>If checked, Parallel Launcher will always default to using 4:3 resolution, even if the recommended settings indicate that widescreen is supported</source>
         <translation>إذا تم تحديده ، فسيظل Parallel Launcher دائمًا لاستخدام دقة 4: 3 بشكل إفتراضي ، حتى إذا كانت الإعدادات الموصى بها تشير إلى أن الشاشة العريضة مدعومة</translation>
     </message>
@@ -2192,22 +2381,26 @@
     <name>RhdcRatingDialog</name>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-rating-dialog.ui" line="14"/>
+        <location filename="../build/ui_rhdc-rating-dialog.h" line="232"/>
         <source>Rate this Hack</source>
         <translation>قيم هذا الإختراق</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-rating-dialog.ui" line="25"/>
+        <location filename="../build/ui_rhdc-rating-dialog.h" line="233"/>
         <source>How would you rate this hack?</source>
         <translation>كيف تقيم هذا الاختراق؟</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-rating-dialog.ui" line="51"/>
+        <location filename="../build/ui_rhdc-rating-dialog.h" line="234"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Quality. &lt;/span&gt;How enjoyable, impressive, and/or polished was this hack?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>إلجودة: إلى أي مدى كان هذا الاختراق ممتعًا ومثيرًا للإعجاب و / أو مصقولًا؟ </translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;إلجودة. &lt;/span&gt;إلى أي مدى كان هذا الاختراق ممتعًا ومثيرًا للإعجاب و / أو مصقولًا؟&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-rating-dialog.ui" line="174"/>
+        <location filename="../build/ui_rhdc-rating-dialog.h" line="235"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Difficulty. &lt;/span&gt;In general, how would you rate this hack&apos;s difficulty level?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>الصعوبة: بشكل عام ، كيف تقيم مستوى صعوبة هذا الاختراق؟</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; الصعوبة. &lt;/span&gt;بشكل عام ، كيف تقيم مستوى صعوبة هذا الاختراق؟&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -2363,28 +2556,33 @@
     <name>RhdcSaveSyncDialog</name>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-save-sync-dialog.ui" line="14"/>
+        <location filename="../build/ui_rhdc-save-sync-dialog.h" line="89"/>
         <source>Synchronize Save Files</source>
         <translation>مزامنة ملفات الحفظ</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-save-sync-dialog.ui" line="32"/>
+        <location filename="../build/ui_rhdc-save-sync-dialog.h" line="90"/>
         <source>Save file synchronization is enabled for this hack; however, your save file progress is not currently in sync. Please select which save file you would like to use for this hack.</source>
         <translation>مزامنة ملف الحفظ لهذا الاختراق مفعلة؛ ومع ذلك ، فإن تقدم ملف الحفظ الخاص بك ليس متزامنًا حاليًا. يرجى تحديد ملف الحفظ الذي ترغب في استخدامه لهذا الاختراق.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-save-sync-dialog.ui" line="67"/>
+        <location filename="../build/ui_rhdc-save-sync-dialog.h" line="92"/>
         <source>Version</source>
         <extracomment>Which version of the hack the save file is for</extracomment>
         <translation>الإصدار</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-save-sync-dialog.ui" line="72"/>
+        <location filename="../build/ui_rhdc-save-sync-dialog.h" line="94"/>
         <source>Last Saved</source>
         <extracomment>When the save file was last modified</extracomment>
         <translation>آخر حفظ</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-save-sync-dialog.ui" line="77"/>
+        <location filename="../build/ui_rhdc-save-sync-dialog.h" line="96"/>
         <source>Stars</source>
         <extracomment>Number of stars collected on the save file</extracomment>
         <translation>نجوم</translation>
@@ -2402,11 +2600,13 @@
     <name>RhdcViewBubble</name>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-view-bubble.ui" line="171"/>
+        <location filename="../build/ui_rhdc-view-bubble.h" line="156"/>
         <source>Click here to go to the romhacking.com view.</source>
         <translation>انقر هنا للذهاب إلى عرض romhacking.com.</translation>
     </message>
     <message>
         <location filename="../src/rhdc/ui/designer/rhdc-view-bubble.ui" line="214"/>
+        <location filename="../build/ui_rhdc-view-bubble.h" line="157"/>
         <source>Okay</source>
         <translation>حسنا</translation>
     </message>
@@ -2563,139 +2763,166 @@
     <name>RomSettingsWidget</name>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="20"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="446"/>
         <source>Sync save files between hack versions</source>
         <translation>مزامنة ملفات الحفظ بين إصدارات الاختراق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="29"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="447"/>
         <source>Input Mode</source>
         <translation>وضع الإدخال</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="76"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="448"/>
         <source>SD Card</source>
         <translation>كارت SD</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="156"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="450"/>
         <source>Unlocks the CPU to run at full speed, removing CPU-based lag you would encounter on console. This is almost always safe, but can rarely cause issues on certain ROMs.</source>
         <translation>يسمح لوحدة المعالجة المركزية التشغيل بأقصى سرعة ، ويزيل التأخر بسبب وحدة المعالجة المركزية الذي قد تواجهه على وحدة إلعب الأصليه. هذا آمن دائمًا تقريبًا ، ولكن نادرًا ما يتسبب في حدوث مشاكل في بعض إلROMs.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="159"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="452"/>
         <location filename="../src/ui/rom-settings-widget.cpp" line="171"/>
         <source>Overclock CPU (Recommended)</source>
         <translation>ارفع تردد التشغيل لوحدة المعالجة المركزية (موصى به)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="175"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="454"/>
         <source>Alters the vertical interrupt timing. In most cases this either gives a slight performance boost or has no effect, but in some cases it can cause the game to run at the wrong framerate.</source>
         <translation>يغير توقيت المقاطعة العمودية. في معظم الحالات ، يؤدي هذا إما إلى زيادة طفيفة في الأداء أو ليس له أي تأثير ، ولكن في بعض الحالات يمكن أن يتسبب في تشغيل اللعبة بمعدل إطار خاطئ.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="178"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="456"/>
         <source>Overclock VI</source>
         <translation>ارفع تردد تشغيل VI</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="191"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="458"/>
         <source>Overrides save type autodetection, and forces the use of 16kB EEPROM for save data. This breaks roms that use 4kB EEPROM, so only enable this for romhacks that require it.</source>
         <translation>يتجاوز حفظ نوع الاكتشاف التلقائي ، ويفرض استخدام 16kB EEPROM لبيانات الحفظ. هذا يكسر إلROMs التي تستخدم 4kB EEPROM ، لذلك قم فقط بتمكين هذا من أجل إختراقات إلROMs التي تتطلب ذلك.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="194"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="460"/>
         <source>Force 16kB EEPROM</source>
         <translation>فرض 16kB EEPROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="207"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="462"/>
         <source>Use the interpreter core instead of the dynamic recompiler. Slower, but can be useful for debugging.</source>
         <translation>استخدم نواة المفسر بدلاً من برنامج إعادة الترجمه الديناميكي.هذا أبطأ ، ولكن يمكن أن يكون مفيدًا في التصحيح.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="210"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="464"/>
         <source>Use Interpreter Core</source>
         <translation>استخدم نواة المفسر</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="223"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="466"/>
         <source>Enable widescreen mode by stretching the video. Some ROMs have a widescreen mode that will allow the video to no longer be stretched when it is enabled.</source>
         <translation>قم بتمكين وضع الشاشة العريضة عن طريق تمديد الفيديو. تحتوي بعض إلROMs على وضع الشاشة العريضة الذي سيسمح للفيديو بعدم التمدد عند تمكينه.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="226"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="468"/>
         <source>Widescreen (Stretched)</source>
         <translation>شاشة عريضة (ممتدة)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="239"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="470"/>
         <source>Enable widescreen mode by forcing the game to use a widescreen viewport. You will experience visual artifacts on the sides of the screen unless you are playing a romhack specifically designed for this widescreen mode.</source>
         <translation>قم بتمكين وضع الشاشة العريضة من خلال إجبار اللعبة على استخدام Viewport بشاشة عريضة. ستختبر القطع الأثرية المرئية على جوانب الشاشة إلا إذا كنت تلعب إختراق ROM مصمم خصيصًا لوضع الشاشة العريضة هذا.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="242"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="472"/>
         <source>Widescreen (Viewport Hack)</source>
         <translation>شاشة عريضة (إختراق Viewport)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="255"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="474"/>
         <source>Upscale textures drawn using the TEX_RECT command. This can cause visual artifacts in some games.</source>
         <translation>قم بإلترقية قوام الرسومات باستخدام امر TEX_RECT. يمكن أن يتسبب هذا في حدوث عيوب بصرية في بعض الألعاب.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="258"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="476"/>
         <source>Upscale TEXRECTs</source>
         <translation>قم بترقية TEXRECTs</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="271"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="478"/>
         <source>Removes the black borders on the left and right sides of the video. Since these pixels are never rendered on real hardware, results will vary depending on the game.</source>
         <translation>يزيل الحدود السوداء على الجانبين الأيمن والأيسر من الفيديو. نظرًا لأن وحدات البكسل هذه لا تُعرض أبدًا على إلأجهزة إلحقيقية ، فستختلف النتائج اعتمادًا على اللعبة.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="274"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="480"/>
         <source>Remove Black Borders</source>
         <translation>إزالة الحدود السوداء</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="287"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="482"/>
         <source>Emulate the native framebuffer. This is required for some visual effects to work, but may cause lag on lower end GPUs</source>
         <translation>محاكاة مخزن الإطار المؤقت الأصلي. هذا مطلوب حتى تعمل بعض التأثيرات المرئية ، ولكنه قد يتسبب في تأخير في وحدات معالجة الرسومات ذات قدرة منخفضة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="290"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="484"/>
         <source>Emulate Framebuffer</source>
         <translation>محاكاة مخزن الإطار المؤقت</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="306"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="486"/>
         <source>Greatly increases accuracy by rendering decals correctly, but may cause a loss in performance</source>
         <translation>يزيد الدقة بشكل كبير من خلال عرض الشارات بشكل صحيح ، ولكنه قد يتسبب في فقدان الأداء</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="309"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="488"/>
         <source>Emulate N64 Depth Compare</source>
         <translation>محاكاة مقارنة عمق N64</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="325"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="490"/>
         <source>Allows roms with custom RSP microcode to be played, but causes visible seams in models due to plugin inaccuracies.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="348"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="492"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning: &lt;/span&gt;Not enabling CPU overclocking is likely to result in a laggy experience. This option should only be used for speedruns or testing where you want to approximate console CPU lag.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>تحذير: من المحتمل أن يؤدي عدم تمكين رفع تردد التشغيل لوحدة المعالجة المركزية إلى تجربة فيها تأخر . ينصح استخدام هذا الخيار فقط لمسابقات السرعة أو للاختبار حيث تريد تقدير تأخر وحدة المعالجة المركزية بوحدة الألعاب</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;‫تحذير: &lt;/span&gt;من المحتمل أن يؤدي عدم تمكين رفع تردد التشغيل لوحدة المعالجة المركزية إلى تجربة فيها تأخر . ينصح استخدام هذا الخيار فقط لمسابقات السرعة أو للاختبار حيث تريد تقدير تأخر وحدة المعالجة المركزية بوحدة الألعاب .&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="373"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="493"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning:&lt;/span&gt; The &lt;span style=&quot; font-style:italic;&quot;&gt;Emulate N64 Depth Compare&lt;/span&gt; option does not work on MacOS. Some things may not render correctly.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>تحذير: اختيار محاكاة مقارنة عمق N64 لا يعمل على نظام MacOS. قد لا يتم عرض بعض الأشياء بشكل صحيح</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;‫تحذير:&lt;/span&gt; اختيار   &lt;span style=&quot; font-style:italic;&quot;&gt;محاكاة مقارنة عمق N64&lt;/span&gt; لا يعمل على نظام MacOS. قد لا يتم عرض بعض الأشياء بشكل صحيح&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="398"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="494"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning:&lt;/span&gt; This ROM supports mouse input, but you do not have a hotkey assigned to &lt;span style=&quot; font-style:italic;&quot;&gt;Grab Mouse&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>تحذير: يدعم هذا إلROM إدخال الماوس ، ولكن ليس لديك مفتاح اختصار معين إلى انتزع الماوس</translatorcomment>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;‫تحذير:&lt;/span&gt;يدعم هذا إلROM إدخال الماوس ، ولكن ليس لديك مفتاح اختصار معين إلى &lt;span style=&quot; font-style:italic;&quot;&gt;انتزع الماوس&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -2703,34 +2930,41 @@
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="475"/>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="592"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="495"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="500"/>
         <source>Graphics Plugin</source>
         <translation>ملحق الرسومات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="484"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="496"/>
         <location filename="../src/ui/rom-settings-widget.cpp" line="539"/>
         <source>ParaLLEl (Recommended - very accurate to console)</source>
         <translation>ملحق ParaLLEl (موصى به - دقيقة جدًا لوحدة ألعاب)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="497"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="497"/>
         <location filename="../src/ui/rom-settings-widget.cpp" line="540"/>
         <source>GLideN64 (Recommended for lower end computers)</source>
         <translation>ملحق GLideN64 (موصى به لأجهزة الكمبيوتر ذات قدرة منخفضة)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="507"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="498"/>
         <location filename="../src/ui/rom-settings-widget.cpp" line="541"/>
         <source>OGRE (Needed by some older romhacks)</source>
         <translation>ملحق OGRE (مطلوب من قبل بعض إختراقات إلROM الأقدم)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="557"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="499"/>
         <source>gln64 (Obsolete)</source>
         <translation>ملحق gln64 (مهمل)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-settings-widget.ui" line="601"/>
+        <location filename="../build/ui_rom-settings-widget.h" line="501"/>
         <source>ParaLLEl (Recommended)</source>
         <translation>ملحق ParaLLEl (موصى به)</translation>
     </message>
@@ -2769,32 +3003,38 @@
     <name>RomSourceDialog</name>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="14"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="528"/>
         <source>Manage ROM Sources</source>
         <translation>إدير مصادر ROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="31"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="549"/>
         <source>ROM Search Folders</source>
         <translation>مجلدات بحث الROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="68"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="529"/>
         <source>Delete</source>
         <translation>احذف</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="82"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="530"/>
         <location filename="../src/ui/rom-source-dialog.cpp" line="77"/>
         <source>New Source</source>
         <translation>مصدر جديد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="103"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="531"/>
         <source>ROM Source</source>
         <translation>مصدر ROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="114"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="532"/>
         <source>Browse for a folder</source>
         <translation>تصفح عن مجلد</translation>
     </message>
@@ -2802,97 +3042,118 @@
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="121"/>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="431"/>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="502"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="533"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="554"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="558"/>
         <source>Browse</source>
         <translation>تصفح</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="134"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="535"/>
         <source>Also scan all subfolders</source>
         <translation>افحص أيضًا كافة المجلدات الفرعية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="137"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="537"/>
         <source>Recursive</source>
         <translation>تكراري</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="168"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="539"/>
         <source>Ignore directories that begin with a period character</source>
         <translation>تجاهل الدلائل التي تبدأ بالنقطة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="171"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="541"/>
         <source>Ignore hidden directories</source>
         <translation>تجاهل الدلائل المخفية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="183"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="542"/>
         <source>Max Depth</source>
         <translation>أقصى عمق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="236"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="544"/>
         <source>Follow symbolic links to folders and ROMs</source>
         <translation>اتبع الروابط الرمزية للمجلدات و إلROMs</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="239"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="546"/>
         <source>Follow Symlinks</source>
         <translation>اتبع  الروابط الرمزية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="256"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="547"/>
         <source>Automatically add to groups</source>
         <translation>ضيف إلى المجموعات تلقائيًا</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="289"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="548"/>
         <source>Manage Groups</source>
         <translation>إدارة المجموعات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="317"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="552"/>
         <source>Individual ROMs</source>
         <translation>إلROMs إلفردية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="348"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="550"/>
         <source>Forget Selected ROM</source>
         <translation>إنسى إلROM المختاره</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="359"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="551"/>
         <source>Add New ROM(s)</source>
         <translation>ضيف ROM واحد أو أكثر جديد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="388"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="560"/>
         <source>BPS Patches</source>
         <translation>رقأعإت BPS</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="417"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="553"/>
         <location filename="../src/ui/rom-source-dialog.cpp" line="298"/>
         <source>Patch File</source>
         <translation>ملف الرقعه</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="444"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="555"/>
         <source>Base ROM</source>
         <translation>إلROM الأساسي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="450"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="556"/>
         <source>Automatic (Search Existing ROMs)</source>
         <translation>تلقائي (البحث في ROM موجودة بالفعل)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="463"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="557"/>
         <source>Provided ROM:</source>
         <translation>إلROM المقدمة:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="532"/>
+        <location filename="../build/ui_rom-source-dialog.h" line="559"/>
         <source>Apply Patch</source>
         <translation>طبق الرقعه</translation>
     </message>
@@ -2960,47 +3221,56 @@
     <name>SaveFileEditorDialog</name>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="14"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="142"/>
         <source>Edit SM64 Save File</source>
         <translation>حرر ملف حفظ SM64</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="29"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="143"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Warning: &lt;/span&gt;This is a save file editor for Super Mario 64 and SM64 romhacks. Attempting to use this save file editor with other ROMs will corrupt your save file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translatorcomment>تحذير: هذا محرر ملف لملفات حفظ Super Mario 64 وإختراقات SM64 . ستؤدي محاولة استخدام محرر حفظ الملف هذا مع ROMs أخرى إلى إتلاف ملف الحفظ.</translatorcomment>
         <translation>&lt;html&gt; &lt;head /&gt; &lt;body&gt; &lt;p&gt; &lt;span style = &quot;font-weight: 600؛&quot;&gt;‫ تحذير: &lt;/ span&gt; هذا محرر ملف لملفات حفظ Super Mario 64 وإختراقات  SM64 . ستؤدي محاولة استخدام محرر حفظ الملف هذا مع ROMs  أخرى إلى إتلاف ملف الحفظ. &lt;/ p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="41"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="144"/>
         <source>Save Slot:</source>
         <translation>فتحة حفظ:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="55"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="145"/>
         <source>Slot A (Empty)</source>
         <translation>الفتحة A (فارغة)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="60"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="146"/>
         <source>Slot B (Empty)</source>
         <translation>الفتحة B (فارغة)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="65"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="147"/>
         <source>Slot C (Empty)</source>
         <translation>الفتحة C (فارغة)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="70"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="148"/>
         <source>Slot D (Empty)</source>
         <translation>الفتحة D (فارغة)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="95"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="150"/>
         <source>Delete Save Slot</source>
         <translation>احذف  فتحة حفظ</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-file-editor-dialog.ui" line="106"/>
+        <location filename="../build/ui_save-file-editor-dialog.h" line="151"/>
         <location filename="../src/ui/save-file-editor-dialog.cpp" line="62"/>
         <source>Edit Save Slot</source>
         <translation>حرر فتحة حفظ</translation>
@@ -3025,180 +3295,214 @@
     <name>SaveSlotEditorDialog</name>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="14"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="431"/>
         <source>Edit Save Slot (SM64)</source>
         <translation>حرر فتحة حفظ [SM64]</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="20"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="432"/>
         <source>Show flags and stars unused in the vanilla game</source>
         <translation>أظهر الأعلام والنجوم إلغير مستخدمة في اللعبة الفانيليا</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="32"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="433"/>
         <source>Flags</source>
         <translation>الأعلام</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="74"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="434"/>
         <source>Caps Unlocked</source>
         <translation>قبعات غير مقفلة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="80"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="435"/>
         <source>Wing Cap</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="93"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="436"/>
         <source>Metal Cap</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="106"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="437"/>
         <source>Vanish Cap</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="122"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="438"/>
         <source>Keys Collected</source>
         <translation>مفاتيح إلمجمعة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="128"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="439"/>
         <source>Basement Key</source>
         <translation>مفتاح البدروم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="141"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="440"/>
         <source>Upstairs Key</source>
         <translation>مفتاح الطابق العلوي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="157"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="441"/>
         <source>Unlocked Doors</source>
         <translation>أبواب غير مقفلة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="163"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="442"/>
         <source>Basement Key Door</source>
         <translation>باب مفتاح البدروم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="176"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="443"/>
         <source>Upstairs Key Door</source>
         <translation>باب مفتاح الطابق العلوي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="189"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="444"/>
         <source>Peach&apos;s Secret Slide Door</source>
         <translatorcomment>You can leave &quot;Peach&apos;s Secret Slide&quot; untranslated</translatorcomment>
         <translation>باب Peach&apos;s Secret Slide</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="202"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="445"/>
         <source>Whomp&apos;s Fortress Door</source>
         <translatorcomment>You can leave &quot;Whomp&apos;s Fortress&quot; untranslated</translatorcomment>
         <translation>باب Whomp&apos;s Fortress</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="215"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="446"/>
         <source>Cool Cool Mountain Door</source>
         <translatorcomment>You can leave &quot;Cool Cool Mountain&quot; untranslated</translatorcomment>
         <translation>باب Cool Cool Mountain</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="228"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="447"/>
         <source>Jolly Rodger Bay Door</source>
         <translatorcomment>You can leave &quot;Jolly Rodger Bay&quot; untranslated</translatorcomment>
         <translation>باب Jolly Rodger Bay</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="241"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="448"/>
         <source>Dark World Door</source>
         <translatorcomment>You can leave &quot;Dark World&quot; untranslated</translatorcomment>
         <translation>باب Dark World</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="254"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="449"/>
         <source>Fire Sea Door</source>
         <translatorcomment>You can leave &quot;Fire Sea&quot; untranslated</translatorcomment>
         <translation>باب Fire Sea</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="267"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="450"/>
         <source>50 Star Door</source>
         <translation>باب ٥٠ نجمة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="283"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="451"/>
         <source>Miscellaneous</source>
         <translation>متفرقات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="289"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="452"/>
         <source>Moat Drained</source>
         <translation>تجفف الخندق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="302"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="453"/>
         <source>Bowser&apos;s Sub Gone</source>
         <translation>ذهبت غواصة Bowser</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="318"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="454"/>
         <source>Unused</source>
         <translation>غير مستعمل</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="366"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="455"/>
         <source>Lost/Stolen Cap</source>
         <translation>قبعه مفقوده / مسروقه</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="374"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="456"/>
         <source>Level</source>
         <translation>المرحلة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="395"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="457"/>
         <source>Area</source>
         <translation>منطقة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="427"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="458"/>
         <source>Cap Stolen By:</source>
         <translation>القبعه مسروقه بواسطة:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="434"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="460"/>
         <source>The flag indicates that Mario&apos;s cap is on the ground, however, when loading a save file, a cap that is on the ground is either given back to Mario or moved to the appropriate NPC for the area, so it will never actually be on the ground.</source>
         <translation>يشير العلم إلى أن قبعة ماريو موجوده على الأرض ، ومع ذلك ، عند تحميل ملف حفظ ، يتم إعادة القبعة الموجوده على الأرض إلى ماريو أو يتم نقله إلى الشخصية المناسب للمنطقة ، لذلك لن تكون القبعة في الواقع على أرض.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="437"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="462"/>
         <source>Automatic*</source>
         <translation>تلقائي *</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="450"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="463"/>
         <source>Klepto (Bird)</source>
         <translatorcomment>Yeah I can&apos;t translate this name. </translatorcomment>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="463"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="464"/>
         <source>Ukiki (Monkey)</source>
         <translatorcomment>Yeah I can&apos;t translate this name. </translatorcomment>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="476"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="465"/>
         <source>Mr. Blizzard (Snowman)</source>
         <translatorcomment>Yeah I can&apos;t translate this name. </translatorcomment>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/save-slot-editor-dialog.ui" line="499"/>
+        <location filename="../build/ui_save-slot-editor-dialog.h" line="466"/>
         <source>Stars and Coins</source>
         <translation>نجوم وعملات</translation>
     </message>
@@ -3898,295 +4202,355 @@
     <name>SettingsDialog</name>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="14"/>
+        <location filename="../build/ui_settings-dialog.h" line="1193"/>
         <source>Settings</source>
         <translation>الإعدادات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="44"/>
+        <location filename="../build/ui_settings-dialog.h" line="1198"/>
         <source>User Interface</source>
         <translation>واجهة المستخدم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="49"/>
+        <location filename="../build/ui_settings-dialog.h" line="1200"/>
         <source>Emulation</source>
         <translation>محاكاة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="54"/>
+        <location filename="../build/ui_settings-dialog.h" line="1202"/>
         <source>BPS Patches</source>
         <translation>رقأعإت BPS</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="59"/>
+        <location filename="../build/ui_settings-dialog.h" line="1204"/>
         <source>GFX Plugins</source>
         <translation>ملحقات GFX</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="64"/>
+        <location filename="../build/ui_settings-dialog.h" line="1206"/>
         <source>Updaters</source>
         <translation>المحدثين</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="69"/>
+        <location filename="../build/ui_settings-dialog.h" line="1208"/>
         <source>Romhacking.com</source>
         <translatorcomment>as is, urls are not translated even in arabic.</translatorcomment>
         <translation>Romhacking.com</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="118"/>
+        <location filename="../build/ui_settings-dialog.h" line="1215"/>
         <source>Theme (Requires Restart)</source>
         <translation>السمة (يتطلب إعادة التشغيل)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="134"/>
+        <location filename="../build/ui_settings-dialog.h" line="1216"/>
         <source>Dark Mode (Requires Restart)</source>
         <translation>إلنمط إلداكن (يتطلب إعادة التشغيل)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="143"/>
+        <location filename="../build/ui_settings-dialog.h" line="1217"/>
         <source>Language (Requires Restart)</source>
         <translation>اللغة (يتطلب إعادة التشغيل)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="158"/>
+        <location filename="../build/ui_settings-dialog.h" line="1218"/>
         <source>Hide launcher while playing ROM</source>
         <translation>إخفي المشغل أثناء تشغيل إلROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="165"/>
+        <location filename="../build/ui_settings-dialog.h" line="1219"/>
         <source>Check for updates on startup</source>
         <translation>تحقق من وجود تحديثات عند بدء التشغيل</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="175"/>
+        <location filename="../build/ui_settings-dialog.h" line="1220"/>
         <source>Discord &quot;Now Playing&quot; Integration</source>
         <translation>تكامل &quot;العب الان&quot; لديسكورد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="182"/>
+        <location filename="../build/ui_settings-dialog.h" line="1222"/>
         <source>Show additional rom settings meant for advanced users</source>
         <translation>عرض إعدادات إلROM الإضافية المخصصة للمستخدمين المتقدمين</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="185"/>
+        <location filename="../build/ui_settings-dialog.h" line="1224"/>
         <source>Show advanced ROM options</source>
         <translation>إعرض خيارات إلROM المتقدمة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="192"/>
+        <location filename="../build/ui_settings-dialog.h" line="1225"/>
         <source>Visible Columns</source>
         <translation>أعمدة مرئية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="198"/>
+        <location filename="../build/ui_settings-dialog.h" line="1227"/>
         <source>The full path to the file</source>
         <translation>المسار الكامل للملف</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="201"/>
+        <location filename="../build/ui_settings-dialog.h" line="1229"/>
         <source>File Path</source>
         <translation>مسار الملف</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="211"/>
+        <location filename="../build/ui_settings-dialog.h" line="1231"/>
         <source>The filename without the extension</source>
         <translation>اسم الملف بدون الامتداد</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="214"/>
+        <location filename="../build/ui_settings-dialog.h" line="1233"/>
         <source>Name</source>
         <translation>الاسم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="227"/>
+        <location filename="../build/ui_settings-dialog.h" line="1235"/>
         <source>The name stored in the ROM itself</source>
         <translation>الاسم المخزن في إلROM نفسه</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="230"/>
+        <location filename="../build/ui_settings-dialog.h" line="1237"/>
         <source>Internal Name</source>
         <translation>إلاسم الداخلي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="237"/>
+        <location filename="../build/ui_settings-dialog.h" line="1239"/>
         <source>The date you last played the ROM</source>
         <translation>تاريخ آخر مرة قمت فيها بلعب إلROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="240"/>
+        <location filename="../build/ui_settings-dialog.h" line="1241"/>
         <source>Last Played</source>
         <translation>اخر مره لعبت</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="250"/>
+        <location filename="../build/ui_settings-dialog.h" line="1243"/>
         <source>The total time spent playing the ROM</source>
         <translation>إجمالي الوقت المستغرق في لعب هذأ إلROM</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="253"/>
+        <location filename="../build/ui_settings-dialog.h" line="1245"/>
         <source>Total Play Time</source>
         <translation>إجمالي وقت اللعب</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="438"/>
+        <location filename="../build/ui_settings-dialog.h" line="1252"/>
         <source>Window Scale</source>
         <translation>مقياس النافذة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="409"/>
+        <location filename="../build/ui_settings-dialog.h" line="1250"/>
         <source>Default ParallelN64 Plugin</source>
         <translation>ملحق ParallelN64 الافتراضي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="448"/>
+        <location filename="../build/ui_settings-dialog.h" line="1253"/>
         <source>Default Mupen Plugin</source>
         <translation>ملحق Mupen الافتراضي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="385"/>
+        <location filename="../build/ui_settings-dialog.h" line="1248"/>
         <source>Default Emulator Core</source>
         <translation>نواة المحاكي الافتراضي</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="74"/>
+        <location filename="../build/ui_settings-dialog.h" line="1210"/>
         <source>Developer</source>
         <translatorcomment>If you want to go with just developer, then it&apos;s مطور  however, if you want to go with &quot;hack developer&quot; then it&apos;s مطور الاختراق or &quot;software developer&quot; would be مطور برامج</translatorcomment>
         <translation>مطور الاختراق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="79"/>
+        <location filename="../build/ui_settings-dialog.h" line="1212"/>
         <source>System Clock</source>
         <translation>ساعة النظام</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="458"/>
+        <location filename="../build/ui_settings-dialog.h" line="1254"/>
         <source>Audio Driver</source>
         <translation>مشغّل الصّوت</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="486"/>
+        <location filename="../build/ui_settings-dialog.h" line="1256"/>
         <source>Fullscreen</source>
         <translation>ملء الشاشة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="493"/>
+        <location filename="../build/ui_settings-dialog.h" line="1257"/>
         <source>Vsync</source>
         <translation></translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="500"/>
+        <location filename="../build/ui_settings-dialog.h" line="1258"/>
         <source>Pause when emulator loses focus</source>
         <translation>وقف المحاكاه عندما يفقد المحاكي التركيز</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="507"/>
+        <location filename="../build/ui_settings-dialog.h" line="1260"/>
         <source>Do not show RetroArch notifications such as &quot;Saved state to slot #0&quot; or &quot;Device disconnected from port #1&quot;</source>
         <translation>لا تعرض اخطارات ريتروارش مثل &quot;الحالة المحفوظة في الفتحة رقم 0&quot; أو &quot;تم فصل الجهاز عن المنفذ رقم 1&quot;</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="510"/>
+        <location filename="../build/ui_settings-dialog.h" line="1262"/>
         <source>Hide notifications</source>
         <translation>إخفي الإخطارات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="527"/>
+        <location filename="../build/ui_settings-dialog.h" line="1263"/>
         <source>Emulate SummerCart64 SD card interface</source>
         <translation>محاكاة واجهة بطاقة SD الخاصة بـ SummerCart64</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="542"/>
+        <location filename="../build/ui_settings-dialog.h" line="1264"/>
         <source>Reset RetroArch Config</source>
         <translation>إعادة تعيين تكوين ريتروارش</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="594"/>
+        <location filename="../build/ui_settings-dialog.h" line="1265"/>
         <source>When loading a BPS patch, save the patched ROM...</source>
         <translation>عند تحميل ترقيع BPS ، احفظ إلROM المرقعه ...</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="601"/>
+        <location filename="../build/ui_settings-dialog.h" line="1266"/>
         <source>To the same folder as the patch</source>
         <translation>إلى نفس المجلد مثل الرقعه</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="614"/>
+        <location filename="../build/ui_settings-dialog.h" line="1267"/>
         <source>To this folder:</source>
         <translation>إلى هذا المجلد:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="656"/>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1355"/>
+        <location filename="../build/ui_settings-dialog.h" line="1268"/>
+        <location filename="../build/ui_settings-dialog.h" line="1326"/>
         <source>Browse</source>
         <translation>تصفح</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="691"/>
+        <location filename="../build/ui_settings-dialog.h" line="1282"/>
         <source>Global Settings</source>
         <translation>الاعدادات العامة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="715"/>
+        <location filename="../build/ui_settings-dialog.h" line="1269"/>
         <source>Upscaling</source>
         <translation>الارتقاء</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="731"/>
+        <location filename="../build/ui_settings-dialog.h" line="1270"/>
         <source>Native (x1 - 320x240)</source>
         <translation>أصلي (x1 - 320x240)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="769"/>
         <location filename="../src/ui/designer/settings-dialog.ui" line="898"/>
+        <location filename="../build/ui_settings-dialog.h" line="1272"/>
+        <location filename="../build/ui_settings-dialog.h" line="1280"/>
         <source>Anti-Aliasing</source>
         <translation>إزالة التسنن</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="804"/>
+        <location filename="../build/ui_settings-dialog.h" line="1273"/>
         <source>Filtering</source>
         <translation>تصفية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="815"/>
+        <location filename="../build/ui_settings-dialog.h" line="1274"/>
         <source>None</source>
         <translation>منعدم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="820"/>
+        <location filename="../build/ui_settings-dialog.h" line="1275"/>
         <source>Anti-Alias</source>
         <translation>إزالة التسنن</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="825"/>
+        <location filename="../build/ui_settings-dialog.h" line="1276"/>
         <source>Anti-Alias + Dedither</source>
         <translation>إزالة التسنن + Dedither</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="830"/>
+        <location filename="../build/ui_settings-dialog.h" line="1277"/>
         <source>Anti-Alias + Blur</source>
         <translation>إزالة التسنن + طمس</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="835"/>
+        <location filename="../build/ui_settings-dialog.h" line="1278"/>
         <source>Filtered</source>
         <translation>تمت تصفيته</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="908"/>
+        <location filename="../build/ui_settings-dialog.h" line="1281"/>
         <source>Use N64 3-Point Filtering</source>
         <translation>استخدم تصفية N64 ثلاثية النقاط</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="932"/>
+        <location filename="../build/ui_settings-dialog.h" line="1311"/>
         <source>Default ROM Settings</source>
         <translation>إعدادات إلROM الافتراضية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="956"/>
+        <location filename="../build/ui_settings-dialog.h" line="1284"/>
         <source>Upscale textures drawn using the TEX_RECT command. This can cause visual artifacts in some games.</source>
         <translation>قم بإلترقية قوام الرسومات باستخدام امر TEX_RECT. يمكن أن يتسبب هذا في حدوث عيوب بصرية في بعض الألعاب.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="959"/>
+        <location filename="../build/ui_settings-dialog.h" line="1286"/>
         <source>Upscale TEXRECTs</source>
         <translation>قم بترقية TEXRECTs</translation>
     </message>
@@ -4194,106 +4558,129 @@
         <location filename="../src/ui/designer/settings-dialog.ui" line="979"/>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1101"/>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1145"/>
+        <location filename="../build/ui_settings-dialog.h" line="1288"/>
+        <location filename="../build/ui_settings-dialog.h" line="1300"/>
+        <location filename="../build/ui_settings-dialog.h" line="1308"/>
         <source>Apply to all existing ROMs</source>
         <translation>طبق على جميع إلROMs الموجودة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="997"/>
+        <location filename="../build/ui_settings-dialog.h" line="1292"/>
         <source>Removes the black borders on the left and right sides of the video. Since these pixels are never rendered on real hardware, results will vary depending on the game.</source>
         <translation>يزيل الحدود السوداء على الجانبين الأيمن والأيسر من الفيديو. نظرًا لأن وحدات البكسل هذه لا تُعرض أبدًا على إلأجهزة إلحقيقية ، فستختلف النتائج اعتمادًا على اللعبة.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1000"/>
+        <location filename="../build/ui_settings-dialog.h" line="1294"/>
         <source>Remove Black Borders</source>
         <translation>إزالة الحدود السوداء</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1075"/>
+        <location filename="../build/ui_settings-dialog.h" line="1296"/>
         <source>Emulate the native framebuffer. This is required for some visual effects to work, but may cause lag on lower end GPUs</source>
         <translation>محاكاة مخزن الإطار المؤقت الأصلي. هذا مطلوب حتى تعمل بعض التأثيرات المرئية ، ولكنه قد يتسبب في تأخير في وحدات معالجة الرسومات ذات قدرة منخفضة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1078"/>
+        <location filename="../build/ui_settings-dialog.h" line="1298"/>
         <source>Emulate Framebuffer</source>
         <translation>محاكاة مخزن الإطار المؤقت</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1119"/>
+        <location filename="../build/ui_settings-dialog.h" line="1304"/>
         <source>Greatly increases accuracy by rendering decals correctly, but may cause a loss in performance</source>
         <translation>يزيد الدقة بشكل كبير من خلال عرض الشارات بشكل صحيح ، ولكنه قد يتسبب في فقدان الأداء</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1122"/>
+        <location filename="../build/ui_settings-dialog.h" line="1306"/>
         <source>Emulate N64 Depth Compare</source>
         <translation>محاكاة مقارنة عمق N64</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1182"/>
+        <location filename="../build/ui_settings-dialog.h" line="1312"/>
         <source>Enable RetroArch Automatic Updates</source>
         <translation>قم بتمكين التحديثات التلقائية لـريتروارش</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1192"/>
+        <location filename="../build/ui_settings-dialog.h" line="1313"/>
         <source>Enable Mupen64Plus-Next Automatic Updates</source>
         <translation>قم بتمكين التحديثات التلقائية لـMupen64Plus-Next</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1220"/>
+        <location filename="../build/ui_settings-dialog.h" line="1314"/>
         <source>Use development branch</source>
         <translation>استخدام فرع التنمية</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1234"/>
+        <location filename="../build/ui_settings-dialog.h" line="1315"/>
         <source>Update Interval</source>
         <translation>الفاصل الزمني للتحديث</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1254"/>
+        <location filename="../build/ui_settings-dialog.h" line="1316"/>
         <source>Every Launch</source>
         <translation>كل إطلاق</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1259"/>
+        <location filename="../build/ui_settings-dialog.h" line="1317"/>
         <source>Daily</source>
         <translation>يوميا</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1264"/>
+        <location filename="../build/ui_settings-dialog.h" line="1318"/>
         <source>Weekly</source>
         <translation>أسبوعيا</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1269"/>
+        <location filename="../build/ui_settings-dialog.h" line="1319"/>
         <source>Monthly</source>
         <translation>شهريا</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1294"/>
+        <location filename="../build/ui_settings-dialog.h" line="1321"/>
         <source>Check for Updates</source>
         <translation>تحقق من وجود تحديثات</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1333"/>
+        <location filename="../build/ui_settings-dialog.h" line="1322"/>
         <source>Download Directory</source>
         <translation>دليل التنزيل</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1345"/>
+        <location filename="../build/ui_settings-dialog.h" line="1324"/>
         <source>Sets the directory that hacks downloaded from romhacking.com will be saved to. If you change this setting later, your roms will automatically be moved to the new directory.</source>
         <translation>يضبط الدليل الذي سيتم حفظ الاختراق الذي تم تنزيله من romhacking.com فيه. إذا قمت بتغيير هذا الإعداد لاحقًا ، فسيتم تلقائيًا نقل إلROMs الخاص بك إلى الدليل الجديد.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1384"/>
+        <location filename="../build/ui_settings-dialog.h" line="1327"/>
         <source>Enable Star Display</source>
         <translation>تفعيل عرض النجوم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1413"/>
+        <location filename="../build/ui_settings-dialog.h" line="1329"/>
         <source>If checked, Parallel Launcher will still show a star display with a default layout if the hack author did not provide one.</source>
         <translation>إذا تم تحديده ، فسيظل Parallel Launcher يعرض عرض النجوم بتخطيط افتراضي إذا لم يقدم مؤلف الاختراق واحدًا.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1416"/>
+        <location filename="../build/ui_settings-dialog.h" line="1331"/>
         <source>Show star display for hacks without a
 star layout</source>
         <translation>إظهار عرض النجوم للاختراقأت بدون ملف
@@ -4301,71 +4688,85 @@ star layout</source>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1430"/>
+        <location filename="../build/ui_settings-dialog.h" line="1334"/>
         <source>If checked, Parallel Launcher will submit your highest star count across all save slots to romhacking.com; otherwise, it will only submit your star count in slot A.</source>
         <translation>إذا تم تحديده ، فسيقوم Parallel Launcher بإرسال أعلى عدد نجوم لك عبر جميع فتحات الحفظ إلى romhacking.com ؛ وإلا ، فسيتم إرسال عدد النجوم في الفتحة A  فقط.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1433"/>
+        <location filename="../build/ui_settings-dialog.h" line="1336"/>
         <source>Check all save slots</source>
         <translation>تحقق من جميع فتحات الحفظ</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1440"/>
+        <location filename="../build/ui_settings-dialog.h" line="1338"/>
         <source>If checked, Parallel Launcher will use the GLideN64 plugin instead of the ParaLLEl plugin when it guesses that ParrLLEl is probably the best plugin to use. Only check this if your computer has an old GPU with poor Vulkan support. If you still experience lag even with GlideN64, you may need to disable &apos;Emulate Framebuffer&apos; and/or &apos;Emulate N64 Depth Compare&apos; in the GFX Plugins section of your Parallel Launcher settings.</source>
         <translation>إذا تم تحديده ، فسيستخدم Parallel Launcher الملحق GLideN64 بدلاً من الملحق ParaLLEl عندما يخمن أن ParrLLEl هو على الأرجح أفضل ملحق يمكن استخدامه. تحقق فقط من هذا إذا كان جهاز الكمبيوتر الخاص بك يحتوي على وحدة معالجة رسومات قديمة مع دعم Vulkan ضعيف. إذا كنت لا تزال تواجه تأخرًا حتى مع GLideN64 ، فقد تحتاج إلى تعطيل &quot;Emulate Framebuffer&quot; و / أو &quot;محاكاة مقارنة عمق N64&quot; في قسم ملحقات GFX في إعدادات Parallel Launcher.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1443"/>
+        <location filename="../build/ui_settings-dialog.h" line="1340"/>
         <source>Prefer HLE plugins</source>
         <translation>تفضل ملحقات HLE</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1450"/>
+        <location filename="../build/ui_settings-dialog.h" line="1342"/>
         <source>If checked, Parallel Launcher will always default to using 4:3 resolution, even if the recommended settings indicate that widescreen is supported</source>
         <translation>إذا تم تحديده ، فسيظل Parallel Launcher دائمًا لاستخدام دقة 4: 3 بشكل إفتراضي ، حتى إذا كانت الإعدادات الموصى بها تشير إلى أن الشاشة العريضة مدعومة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1453"/>
+        <location filename="../build/ui_settings-dialog.h" line="1344"/>
         <source>Ignore widescreen hint</source>
         <translation>تجاهل تلميح الشاشة العريضة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1477"/>
+        <location filename="../build/ui_settings-dialog.h" line="1346"/>
         <source>Emulate IS Viewer hardware and display any messages sent from the ROM in a separate window</source>
         <translation>محاكاة جهاز IS Viewer وعرض أي رسائل مرسلة من ذاكرة القراءة فقط (ROM) في نافذة منفصلة</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1480"/>
+        <location filename="../build/ui_settings-dialog.h" line="1348"/>
         <source>Enable IS Viewer (ParallelN64 only)</source>
         <translation>تمكين IS Viewer (Parallel N64 فقط)</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1508"/>
+        <location filename="../build/ui_settings-dialog.h" line="1349"/>
         <source>History Size</source>
         <translation>حجم التاريخ</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1577"/>
+        <location filename="../build/ui_settings-dialog.h" line="1350"/>
         <source>The following options only apply to the ParallelN64 emulator core. The mupen64plus core will always sync to the system clock.</source>
         <translation>تنطبق الخيارات التالية فقط على نواة محاكي ParallelN64. سيتزامن نواة mupen64plus دائمًا مع ساعة النظام.</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1593"/>
+        <location filename="../build/ui_settings-dialog.h" line="1351"/>
         <source>N64 Real Time Clock</source>
         <translation>ساعة الوقت الحقيقي N64</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1600"/>
+        <location filename="../build/ui_settings-dialog.h" line="1352"/>
         <source>Sync to system clock</source>
         <translation>مزامنة مع ساعة النظام</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1613"/>
+        <location filename="../build/ui_settings-dialog.h" line="1353"/>
         <source>Use this time:</source>
         <translation>استخدم هذا الوقت:</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/settings-dialog.ui" line="1653"/>
+        <location filename="../build/ui_settings-dialog.h" line="1354"/>
         <source>Rollback clock when loading a savestate</source>
         <translation>تراجع الساعة عند تحميل حالة حفظ</translation>
     </message>
@@ -4461,11 +4862,13 @@ star layout</source>
     <name>SingleplayerControllerSelectDialog</name>
     <message>
         <location filename="../src/ui/designer/singleplayer-controller-select-dialog.ui" line="20"/>
+        <location filename="../build/ui_singleplayer-controller-select-dialog.h" line="55"/>
         <source>Controller Select</source>
         <translation>إختيار ذراع التحكم</translation>
     </message>
     <message>
         <location filename="../src/ui/designer/singleplayer-controller-select-dialog.ui" line="32"/>
+        <location filename="../build/ui_singleplayer-controller-select-dialog.h" line="56"/>
         <source>Multiple controllers are connected. Please press any button on the controller you wish to use, or press Esc on the keyboard to use keyboard controls.</source>
         <translatorcomment>Placeholder Google Translate translation</translatorcomment>
         <translation>يوجد أذرعات تحكم متعددة متصلة. يرجى الضغط على أي زر في ذراع التحكم التي ترغب في استخدامها ، أو اضغط على Esc في لوحة المفاتيح لاستخدام ضوابط لوحة المفاتيح.</translation>
@@ -4475,21 +4878,25 @@ star layout</source>
     <name>UpdateDialog</name>
     <message>
         <location filename="../src/updaters/update-dialog.ui" line="14"/>
+        <location filename="../build/ui_update-dialog.h" line="96"/>
         <source>Update Available</source>
         <translation>يوجد تحديث</translation>
     </message>
     <message>
         <location filename="../src/updaters/update-dialog.ui" line="26"/>
+        <location filename="../build/ui_update-dialog.h" line="97"/>
         <source>A new update is available for Parallel Launcher. Would you like to update now?</source>
         <translation>يوجد تحديث جديد ل Parallel Launcher ، هل ترغب في إلتحديث الآن؟</translation>
     </message>
     <message>
         <location filename="../src/updaters/update-dialog.ui" line="62"/>
+        <location filename="../build/ui_update-dialog.h" line="98"/>
         <source>Changelog:</source>
         <translation>سجل التغيير:</translation>
     </message>
     <message>
         <location filename="../src/updaters/update-dialog.ui" line="79"/>
+        <location filename="../build/ui_update-dialog.h" line="99"/>
         <source>Don&apos;t remind me again</source>
         <translation>لا تذكرني مرة أخرى</translation>
     </message>

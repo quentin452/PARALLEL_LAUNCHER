@@ -1,9 +1,8 @@
-# SUPPORT OFFICIALLY WINDOWS 11 X64
 cmake_minimum_required(VERSION 3.5.0)
 project(parallel-launcher VERSION 0.1.0 LANGUAGES C CXX)
 
 # Rechercher Qt 5
-find_package(Qt5 COMPONENTS Widgets Network Core REQUIRED)
+find_package(Qt5 COMPONENTS Widgets Network Core LinguistTools REQUIRED)
 
 # Ajouter SQLite3
 set(SQLITE3_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/!third_party_libs/SQLite")
@@ -13,7 +12,7 @@ file(GLOB_RECURSE SOURCES
     ${PROJECT_SOURCE_DIR}/src/*.cpp
     ${PROJECT_SOURCE_DIR}/src/*.hpp
     ${PROJECT_SOURCE_DIR}/src/*.c
-    ${SQLITE3_SOURCE}  # Add the SQLite source file here
+    ${SQLITE3_SOURCE}
 )
 
 # Find all .ui files
@@ -29,8 +28,24 @@ set(CMAKE_AUTOUIC_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/ui)
 # Generate headers from .ui files
 qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
+# Définir les fichiers de traduction
+set(TRANSLATIONS
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_en_us.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_en_gb.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_it.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_es.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_fr.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_fr_ca.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_de.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_ar.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_pt.ts
+)
+
+# Créer des fichiers .qm à partir des fichiers .ts
+qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
+
 # Add the generated headers to the list of sources
-set(SOURCES ${SOURCES} ${UI_HEADERS})
+set(SOURCES ${SOURCES} ${UI_HEADERS} ${QM_FILES})
 
 # Define the executable target
 file(GLOB_RECURSE MOC_HEADERS
@@ -40,11 +55,19 @@ file(GLOB_RECURSE MOC_HEADERS
 # Générer les fichiers MOC
 qt5_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
 add_executable(parallel-launcher WIN32 ${SOURCES} ${MOC_SOURCES})
+
+# Assurez-vous que le projet utilise Qt pour les traductions
+ set_target_properties(parallel-launcher PROPERTIES
+    AUTOMOC ON
+    AUTORCC ON
+)
+
 if (MSVC)
     set_target_properties(parallel-launcher PROPERTIES
         WIN32_EXECUTABLE ON
     )
 endif()
+
 # Inclure les répertoires d'en-têtes Qt et SQLite3
 target_include_directories(parallel-launcher PUBLIC ${Qt5Widgets_INCLUDE_DIRS} ${Qt5Core_INCLUDE_DIRS} ${Qt5Network_INCLUDE_DIRS} ${SQLITE3_INCLUDE_DIR} ${CMAKE_AUTOUIC_OUTPUT_DIRECTORY})
 

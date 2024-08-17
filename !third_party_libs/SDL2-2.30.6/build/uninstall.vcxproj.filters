@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\github-intellidea\PARALLEL_LAUNCHER\!third_party_libs\SDL2-2.30.6\build\CMakeFiles\8e6c65803de91d5782dc56072e278172\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\github-intellidea\PARALLEL_LAUNCHER\!third_party_libs\SDL2-2.30.6\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\github-intellidea\PARALLEL_LAUNCHER\!third_party_libs\SDL2-2.30.6\build\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{18CE1C1A-A403-3207-BCE5-190C17A216F1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

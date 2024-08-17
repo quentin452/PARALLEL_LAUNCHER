@@ -1,0 +1,9 @@
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/sdl_headers_copy.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/SDL2main.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/SDL2.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/SDL2-static.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/SDL2_test.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/uninstall.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/INSTALL.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/ALL_BUILD.dir
+D:/github-intellidea/PARALLEL_LAUNCHER/!third_party_libs/SDL2-2.30.6/build/CMakeFiles/ZERO_CHECK.dir

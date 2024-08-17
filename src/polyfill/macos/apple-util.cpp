@@ -1,3 +1,4 @@
+#if defined(__APPLE__)
 #include "src/polyfill/macos/apple-util.hpp"
 
 #include <exception>
@@ -51,3 +52,4 @@ bool AppleUtil::isArmLibrary( const char *path ) noexcept {
 		return false;
 	}
 }
+#endif //defined(__APPLE__)

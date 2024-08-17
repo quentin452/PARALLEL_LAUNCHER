@@ -1,3 +1,4 @@
+#if defined(__linux__)
 #include "src/input/linux/joydev-driver.hpp"
 
 #include <unordered_map>
@@ -412,3 +413,4 @@ GamepadState JoyDevDriver::getState( GamepadId id ) const {
 	if( i == s_devices.end() ) return GamepadState{};
 	return i->second.state;
 }
+#endif // defined(__linux__)

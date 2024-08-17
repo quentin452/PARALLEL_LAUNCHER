@@ -2987,7 +2987,7 @@ extern "C" {
 #include <sys/stat.h>
 
 #if defined(_MSC_VER) || defined(__MINGW64__)
-#include "src/thirdparty/miniz_patch.h"
+#include "miniz_patch.h"
 
 //xxx patched to fix non-ascii characters in zip file paths
 static FILE *mz_fopen(const char *pFilename, const char *pMode)

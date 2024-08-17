@@ -1,3 +1,4 @@
+#if defined(__APPLE__)
 #include "src/input/macos/hid-driver.hpp"
 
 #include <IOKit/hid/IOHIDManager.h>
@@ -497,3 +498,4 @@ std::vector<Uuid> HidDriver::getDeviceOrder() {
 
 	return sortedDevices;
 }
+#endif //defined(__APPLE__)

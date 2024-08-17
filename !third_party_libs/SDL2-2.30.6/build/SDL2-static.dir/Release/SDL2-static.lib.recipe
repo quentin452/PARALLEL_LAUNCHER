@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\github-intellidea\PARALLEL_LAUNCHER\!third_party_libs\SDL2-2.30.6\build\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\github-intellidea\PARALLEL_LAUNCHER\!third_party_libs\SDL2-2.30.6\build\x64\Release\sdl_headers_copy</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

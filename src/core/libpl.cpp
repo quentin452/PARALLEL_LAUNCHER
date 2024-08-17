@@ -353,71 +353,6 @@ static bool handleCoreLibplRequest(ubyte commandId, ushort payloadSize,
   }
 }
 
-inline static void lplLoopImpl(ReadableFifoPipe &input,
-                               WritableFifoPipe &output, RomInfo &romInfo) {
-  std::error_code err;
-
-  if (!input.connect(err)) {
-    logError("Failed to connect libpl integration to emulator: "s +
-             err.message());
-    return;
-  }
-
-  if (!output.connect(err)) {
-    logError("Failed to connect libpl integration to emulator: "s +
-             err.message());
-    return;
-  }
-
-  Buffer inputBuffer(0xFFFC);
-  const ubyte defaultResponse[4] = {0x01, 0x00, 0x00, 0x00};
-  while (input.active()) {
-    ubyte header[4];
-    if (!input.read(4, header, err)) {
-      logDebug("libpl read error: "s + err.message());
-      return;
-    }
-
-    const ushort payloadSize = ((ushort)header[2] << 8) | (ushort)header[3];
-    if (payloadSize > 0 &&
-        !input.read((size_t)payloadSize, inputBuffer.data(), err)) {
-      logDebug("libpl read error: "s + err.message());
-      return;
-    }
-
-    bool handled;
-    switch (header[0]) {
-    case 0x01: {
-      handled = handleCoreLibplRequest(
-          header[1], payloadSize, inputBuffer.udata(), output, romInfo, err);
-      break;
-    }
-    case 0x02: {
-      handled = handleRhdcLibplRequest(header[1], payloadSize,
-                                       inputBuffer.udata(), output, err);
-      break;
-    }
-    default: {
-      output.write(4, defaultResponse, err);
-      handled = true;
-      break;
-    }
-    }
-
-    if (!handled) {
-      logDebug("libpl write error: "s + err.message());
-      return;
-    }
-  }
-}
-
-static void lplLoop(ReadableFifoPipe &input, WritableFifoPipe &output,
-                    RomInfo romInfo) {
-  lplLoopImpl(input, output, romInfo);
-  input.close();
-  output.close();
-}
-
 int LibplHandler::initialize() {
   const std::string randomId = Uuid::Random().toString();
 
@@ -436,8 +371,6 @@ int LibplHandler::initialize() {
 }
 
 void LibplHandler::connect(const RomInfo &romInfo) {
-  m_thread =
-      std::thread(lplLoop, std::ref(m_input), std::ref(m_output), romInfo);
 }
 
 void LibplHandler::disconnect() {

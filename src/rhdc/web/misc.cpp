@@ -2,16 +2,6 @@
 #include "src/rhdc/web/api.hpp"
 #include "src/rhdc/web/require-login.hpp"
 
-void RhdcApi::getAvatarAsync(
-    const string &username,
-    const std::function<void(const QByteArray &)> &onSuccess,
-    const std::function<void(ApiErrorType)> &onFailure) {
-  QNetworkReply *response =
-      ApiUtil::send(HttpMethod::Get,
-                    string(RHDC_API_HOST "/v3/user/") + username + "/avatar");
-  ApiUtil::onResponse(
-      response, [=]() { onSuccess(response->readAll()); }, onFailure);
-}
 
 void RhdcApi::downloadFile(const string &downloadUrl, QFile *destinationFile,
                            const std::function<void(int64, int64)> &onProgress,

@@ -170,11 +170,6 @@ submitPlayTimeAsync(const string &hackId, int64 playTime,
 
 /* Misc */
 
-extern void
-getAvatarAsync(const string &username,
-               const std::function<void(const QByteArray &)> &onSuccess,
-               const std::function<void(ApiErrorType)> &onFailure);
-
 extern void downloadFile(const string &downloadUrl, QFile *destinationFile,
                          const std::function<void(int64, int64)> &onProgress,
                          const std::function<void(void)> &onSuccess,

@@ -4,8 +4,8 @@
 #include "src/types.hpp"
 
 namespace CurrentVersion_WIN32 {
-	extern const ushort major;
-	extern const ushort minor;
-}
+extern const ushort major;
+extern const ushort minor;
+} // namespace CurrentVersion_WIN32
 
 #endif

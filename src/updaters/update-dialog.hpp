@@ -3,26 +3,25 @@
 
 #ifndef __linux__
 
-#include <QDialog>
 #include "src/core/version.hpp"
+#include <QDialog>
 
 namespace Ui {
-	class UpdateDialog;
+class UpdateDialog;
 }
 
 class UpdateDialog : public QDialog {
-	Q_OBJECT
+  Q_OBJECT
 
-	private:
-	Ui::UpdateDialog *m_ui;
-	const Version &m_latestVersion;
+private:
+  Ui::UpdateDialog *m_ui;
+  const Version &m_latestVersion;
 
-	public:
-	UpdateDialog( const Version &latestVersion, const QString &changelog );
-	~UpdateDialog();
+public:
+  UpdateDialog(const Version &latestVersion, const QString &changelog);
+  ~UpdateDialog();
 
-	bool stopReminders() const;
-
+  bool stopReminders() const;
 };
 
 #endif

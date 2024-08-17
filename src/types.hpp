@@ -3,16 +3,19 @@
 
 #include <string>
 
-using std::string;
 using std::size_t;
+using std::string;
 using namespace std::string_literals;
 
 #define HashMap std::unordered_map
 #define HashSet std::unordered_set
 
-#define foreach_key( i, map ) for( [[maybe_unused]] const auto &[i,_discard##__LINE__] : map )
-#define foreach_cvalue( i, map ) for( [[maybe_unused]] const auto &[_discard##__LINE__,i] : map )
-#define foreach_mvalue( i, map ) for( [[maybe_unused]] auto &[_discard##__LINE__,i] : map )
+#define foreach_key(i, map)                                                    \
+  for ([[maybe_unused]] const auto &[i, _discard##__LINE__] : map)
+#define foreach_cvalue(i, map)                                                 \
+  for ([[maybe_unused]] const auto &[_discard##__LINE__, i] : map)
+#define foreach_mvalue(i, map)                                                 \
+  for ([[maybe_unused]] auto &[_discard##__LINE__, i] : map)
 
 typedef signed char sbyte;
 typedef unsigned char ubyte;

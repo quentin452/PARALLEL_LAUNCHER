@@ -4,17 +4,17 @@
 #include "src/types.hpp"
 
 struct AppContextInfo {
-	/* Core context info */
-	const char *crashlogFilepath;
-	const char *appVersion;
-	int64 appStartTime;
-	/* Extra context info */
-	const char *deviceId;
-	const char *locale;
-	int screenWidth;
-	int screenHeight;
-	int screenDpiX;
-	int screenDpiY;
+  /* Core context info */
+  const char *crashlogFilepath;
+  const char *appVersion;
+  int64 appStartTime;
+  /* Extra context info */
+  const char *deviceId;
+  const char *locale;
+  int screenWidth;
+  int screenHeight;
+  int screenDpiX;
+  int screenDpiY;
 };
 
 extern const AppContextInfo &getAppContext();

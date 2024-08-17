@@ -2,6 +2,6 @@
 
 namespace RNG {
 
-	extern void getBytes( void *buffer, size_t count );
+extern void getBytes(void *buffer, size_t count);
 
 }

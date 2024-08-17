@@ -5,7 +5,7 @@
 
 #include <wchar.h>
 
-extern void mz_utf8_to_utf16( const char *src, wchar_t* dest, int maxChars );
+extern void mz_utf8_to_utf16(const char *src, wchar_t *dest, int maxChars);
 
 #endif
 

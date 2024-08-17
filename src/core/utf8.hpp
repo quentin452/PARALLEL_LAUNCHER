@@ -5,7 +5,7 @@
 
 namespace Utf8 {
 
-	extern bool validate( const std::string &str, std::string *safeString = nullptr );
+extern bool validate(const std::string &str, std::string *safeString = nullptr);
 
 }
 

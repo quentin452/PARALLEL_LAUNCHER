@@ -6,13 +6,11 @@
 
 namespace CoreInstaller {
 
-	extern bool requireCore( EmulatorCore core );
-	extern void updateParallelSync();
-	extern void checkForUpdatesAsync();
-	extern void checkForUpdatesSync( InstalledVersionsInfo &versions );
+extern bool requireCore(EmulatorCore core);
+extern void updateParallelSync();
+extern void checkForUpdatesAsync();
+extern void checkForUpdatesSync(InstalledVersionsInfo &versions);
 
-}
-
-
+} // namespace CoreInstaller
 
 #endif /* SRC_UI_CORE_INSTALLER_HPP_ */

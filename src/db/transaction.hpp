@@ -3,17 +3,16 @@
 
 class SqlTransaction final {
 
-	private:
-	bool m_committed;
+private:
+  bool m_committed;
 
-	public:
-	SqlTransaction() noexcept;
-	SqlTransaction( SqlTransaction &&other ) noexcept;
-	SqlTransaction( const SqlTransaction &other ) = delete;
-	~SqlTransaction() noexcept;
+public:
+  SqlTransaction() noexcept;
+  SqlTransaction(SqlTransaction &&other) noexcept;
+  SqlTransaction(const SqlTransaction &other) = delete;
+  ~SqlTransaction() noexcept;
 
-	void commit() noexcept;
-
+  void commit() noexcept;
 };
 
 #endif /* SRC_DB_TRANSACTION_HPP_ */

@@ -1,31 +1,28 @@
 #ifndef SRC_UI_GET_CONTROLLER_PORT_DIALOG_HPP_
 #define SRC_UI_GET_CONTROLLER_PORT_DIALOG_HPP_
 
-#include <QMessageBox>
 #include "src/input/gamepad-controller.hpp"
+#include <QMessageBox>
 
 class GetControllerPortDialog : public QMessageBox {
-	Q_OBJECT
+  Q_OBJECT
 
-	private:
-	GamepadId m_gamepadId;
+private:
+  GamepadId m_gamepadId;
 
-	GetControllerPortDialog();
+  GetControllerPortDialog();
 
-	public:
-	virtual ~GetControllerPortDialog() {}
+public:
+  virtual ~GetControllerPortDialog() {}
 
-	static inline GamepadId getGamepadId() {
-		GetControllerPortDialog dialog;
-		dialog.exec();
-		return dialog.m_gamepadId;
-	}
+  static inline GamepadId getGamepadId() {
+    GetControllerPortDialog dialog;
+    dialog.exec();
+    return dialog.m_gamepadId;
+  }
 
-	private slots:
-	void buttonPressed( GamepadButtonEvent event );
-
+private slots:
+  void buttonPressed(GamepadButtonEvent event);
 };
-
-
 
 #endif /* SRC_UI_GET_CONTROLLER_PORT_DIALOG_HPP_ */

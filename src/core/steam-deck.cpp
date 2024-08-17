@@ -2,41 +2,39 @@
 
 #ifdef FLATPAK_VERSION
 
-#include <stdlib.h>
 #include "src/polyfill/file.hpp"
 #include "src/types.hpp"
+#include <stdlib.h>
 
 static inline bool getIsSteamDeck() {
-	InputFile osInfo( "/run/host/etc/os-release", false );
+  InputFile osInfo("/run/host/etc/os-release", false);
 
-	string line;
-	while( std::getline( osInfo, line ).good() && !osInfo.eof() ) {
-		if( line.length() < 11 ) continue;
-		if( line.substr( 0, 11 ) != "VARIANT_ID=" ) continue;
+  string line;
+  while (std::getline(osInfo, line).good() && !osInfo.eof()) {
+    if (line.length() < 11)
+      continue;
+    if (line.substr(0, 11) != "VARIANT_ID=")
+      continue;
 
-		return line.substr( 11 ) == "steamdeck";
-	}
+    return line.substr(11) == "steamdeck";
+  }
 
-	return false;
+  return false;
 }
 
 bool SteamDeck::isSteamDeck() {
-	static const bool isDeck = getIsSteamDeck();
-	return isDeck;
+  static const bool isDeck = getIsSteamDeck();
+  return isDeck;
 }
 
 bool SteamDeck::inGamingMode() {
-	return isSteamDeck() && getenv( "SteamEnv" ) != nullptr;
+  return isSteamDeck() && getenv("SteamEnv") != nullptr;
 }
 
 #else
 
-bool SteamDeck::isSteamDeck() {
-	return false;
-}
+bool SteamDeck::isSteamDeck() { return false; }
 
-bool SteamDeck::inGamingMode() {
-	return false;
-}
+bool SteamDeck::inGamingMode() { return false; }
 
 #endif

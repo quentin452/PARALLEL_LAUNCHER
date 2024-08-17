@@ -5,13 +5,8 @@
 
 namespace Zip {
 
-	extern bool unzip(
-		const fs::path &zipFilePath,
-		const fs::path &outputDir
-	);
+extern bool unzip(const fs::path &zipFilePath, const fs::path &outputDir);
 
 }
-
-
 
 #endif /* SRC_CORE_ZIP_HPP_ */

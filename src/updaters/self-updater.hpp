@@ -3,7 +3,7 @@
 
 #ifndef __linux__
 namespace SelfUpdater {
-	extern void checkForUpdates();
+extern void checkForUpdates();
 }
 #endif
 

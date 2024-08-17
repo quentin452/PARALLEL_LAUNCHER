@@ -5,9 +5,9 @@
 
 namespace FileExplorer {
 
-	extern void showFile( const fs::path &filePath );
-	extern void showFolder( const fs::path &folderPath );
+extern void showFile(const fs::path &filePath);
+extern void showFolder(const fs::path &folderPath);
 
-}
+} // namespace FileExplorer
 
 #endif /* SRC_POLYFILL_FILE_EXPLORER_HPP_ */

@@ -1,76 +1,77 @@
 #ifndef STARDISPLAYWIDGET_HPP
 #define STARDISPLAYWIDGET_HPP
 
-#include <vector>
-#include <QFileSystemWatcher>
-#include <QVBoxLayout>
-#include <QTabWidget>
+#include "src/core/filesystem.hpp"
 #include "src/rhdc/core/layout.hpp"
 #include "src/rhdc/ui/star-set.hpp"
-#include "src/core/filesystem.hpp"
+#include <QFileSystemWatcher>
+#include <QTabWidget>
+#include <QVBoxLayout>
+#include <vector>
 
 struct SDWLayoutSides {
-	QVBoxLayout *top;
-	QVBoxLayout *right;
-	QVBoxLayout *bottom;
-	QVBoxLayout *left;
+  QVBoxLayout *top;
+  QVBoxLayout *right;
+  QVBoxLayout *bottom;
+  QVBoxLayout *left;
 };
 
 class StarDisplayWidget : public QTabWidget {
-	Q_OBJECT
+  Q_OBJECT
 
-	protected:
-	const StarLayout m_layout;
-	std::vector<StarSetUi*> m_starSets;
+protected:
+  const StarLayout m_layout;
+  std::vector<StarSetUi *> m_starSets;
 
-	StarDisplayWidget( QWidget *parent, StarLayout &&layout );
-	virtual ~StarDisplayWidget() {}
+  StarDisplayWidget(QWidget *parent, StarLayout &&layout);
+  virtual ~StarDisplayWidget() {}
 
-	void setup( bool editable );
-	virtual SDWLayoutSides makeColumnContainer( QWidget *parent, int slot ) = 0;
+  void setup(bool editable);
+  virtual SDWLayoutSides makeColumnContainer(QWidget *parent, int slot) = 0;
 
-	public:
-	inline const StarLayout &starLayout() const noexcept { return m_layout; }
-	void makeScrollable();
-
+public:
+  inline const StarLayout &starLayout() const noexcept { return m_layout; }
+  void makeScrollable();
 };
 
 class EditableStarDisplayWidget : public StarDisplayWidget {
-	Q_OBJECT
+  Q_OBJECT
 
-	private:
-	std::vector<bool> m_slotActive;
-	const fs::path m_saveFilePath;
+private:
+  std::vector<bool> m_slotActive;
+  const fs::path m_saveFilePath;
 
-	public:
-	EditableStarDisplayWidget( QWidget *parent, const fs::path &saveFilePath, StarLayout &&layout );
-	virtual ~EditableStarDisplayWidget() {}
+public:
+  EditableStarDisplayWidget(QWidget *parent, const fs::path &saveFilePath,
+                            StarLayout &&layout);
+  virtual ~EditableStarDisplayWidget() {}
 
-	void save() const;
-	void load();
+  void save() const;
+  void load();
 
-	protected:
-	virtual SDWLayoutSides makeColumnContainer( QWidget *parent, int slot ) override;
-
+protected:
+  virtual SDWLayoutSides makeColumnContainer(QWidget *parent,
+                                             int slot) override;
 };
 
 class LiveStarDisplayWidget : public StarDisplayWidget {
-	Q_OBJECT
+  Q_OBJECT
 
-	private:
-	QFileSystemWatcher m_fileWatcher;
-	const fs::path m_saveFilePath;
+private:
+  QFileSystemWatcher m_fileWatcher;
+  const fs::path m_saveFilePath;
 
-	public:
-	LiveStarDisplayWidget( QWidget *parent, const fs::path &saveFilePath, StarLayout &&layout );
-	virtual ~LiveStarDisplayWidget() {}
+public:
+  LiveStarDisplayWidget(QWidget *parent, const fs::path &saveFilePath,
+                        StarLayout &&layout);
+  virtual ~LiveStarDisplayWidget() {}
 
-	private slots:
-	void saveFileChanged();
+private slots:
+  void saveFileChanged();
 
-	protected:
-	virtual SDWLayoutSides makeColumnContainer( QWidget *parent, int slot ) override;
-
+protected:
+  virtual SDWLayoutSides makeColumnContainer(QWidget *parent,
+                                             int slot) override;
 };
 
 #endif // STARDISPLAYWIDGET_HPP

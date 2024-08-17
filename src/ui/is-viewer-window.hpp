@@ -4,16 +4,15 @@
 #include <QMainWindow>
 
 class IsViewerWindow : public QMainWindow {
-	Q_OBJECT
+  Q_OBJECT
 
-	public:
-	IsViewerWindow();
-	~IsViewerWindow();
+public:
+  IsViewerWindow();
+  ~IsViewerWindow();
 
-	public slots:
-	void logMessage( QString message );
-	void error( bool connected );
-
+public slots:
+  void logMessage(QString message);
+  void error(bool connected);
 };
 
 #endif /* SRC_UI_IS_VIEWER_WINDOW_HPP_ */

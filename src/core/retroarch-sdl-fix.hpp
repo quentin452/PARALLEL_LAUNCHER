@@ -4,10 +4,10 @@
 #ifdef _WIN32
 namespace RetroArch {
 
-	extern bool hasCorrectSdlLibrary();
-	extern bool fixSdlLibrary();
+extern bool hasCorrectSdlLibrary();
+extern bool fixSdlLibrary();
 
-}
+} // namespace RetroArch
 #endif
 
 #endif /* SRC_CORE_RETROARCH_SDL_FIX_HPP_ */

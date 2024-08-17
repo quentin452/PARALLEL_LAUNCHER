@@ -5,23 +5,22 @@
 
 class DirectInputDriver : public IGamepadDriver {
 
-	public:
-	DirectInputDriver( const GamepadEventEmitter &eventEmitter );
-	~DirectInputDriver();
+public:
+  DirectInputDriver(const GamepadEventEmitter &eventEmitter);
+  ~DirectInputDriver();
 
-	InputDriver id() const override { return InputDriver::DirectInput; }
+  InputDriver id() const override { return InputDriver::DirectInput; }
 
-	void start() override;
-	void stop() override;
-	bool isRunning() const override;
+  void start() override;
+  void stop() override;
+  bool isRunning() const override;
 
-	std::vector<ConnectedGamepad> getConnected() override;
-	std::vector<Uuid> getDeviceOrder() override;
-	GamepadState getState( GamepadId id ) const override;
+  std::vector<ConnectedGamepad> getConnected() override;
+  std::vector<Uuid> getDeviceOrder() override;
+  GamepadState getState(GamepadId id) const override;
 
-	private:
-	void processEvents();
-
+private:
+  void processEvents();
 };
 
 #endif /* SRC_INPUT_WINDOWS_DIRECT_INPUT_DRIVER_HPP_ */

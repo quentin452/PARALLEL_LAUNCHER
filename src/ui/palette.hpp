@@ -8,13 +8,12 @@
 namespace ColourPalette {
 
 #ifndef __linux__
-	extern const QPalette &light();
-	extern const QPalette &dark();
+extern const QPalette &light();
+extern const QPalette &dark();
 #endif
 
-	extern bool systemIsDarkMode();
+extern bool systemIsDarkMode();
 
-}
-
+} // namespace ColourPalette
 
 #endif /* SRC_UI_PALETTE_HPP_ */

@@ -24,7 +24,6 @@
 #include "src/ui/core-installer.hpp"
 #include "src/ui/icons.hpp"
 #include "src/ui/keyboard-config-dialog.hpp"
-#include "src/ui/log-viewer-dialog.hpp"
 #include "src/ui/now-playing-window.hpp"
 #include "src/ui/play.hpp"
 #include "src/ui/rom-list-model.hpp"
@@ -758,7 +757,6 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 void MainWindow::keyPressEvent(QKeyEvent *event) {
   if (event->key() == Qt::Key_F7) {
     event->accept();
-    LogViewerDialog().exec();
   } else {
     QMainWindow::keyPressEvent(event);
   }

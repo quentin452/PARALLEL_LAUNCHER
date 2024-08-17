@@ -91,7 +91,6 @@ private slots:
   void mupenPluginRadioChanged(int pluginId, bool checked);
   void morePluginsToggled();
   void sdCardChanged(int index);
-  void manageSdCards();
 
 signals:
   void inputModeChanged();

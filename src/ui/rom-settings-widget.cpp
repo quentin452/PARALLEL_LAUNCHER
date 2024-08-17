@@ -7,7 +7,7 @@
 #include "src/input/keyboard.hpp"
 #include "src/ui/flow-layout.hpp"
 #include "src/ui/icons.hpp"
-#include "src/ui/manage-sd-cards-dialog.hpp"
+
 #include <QVBoxLayout>
 
 RomSettingsWidget::RomSettingsWidget(QWidget *parent)
@@ -499,31 +499,6 @@ void RomSettingsWidget::sdCardChanged(int index) {
   } else {
     emit activeSdCardChanged(m_sdCards[index - 1].name);
   }
-}
-
-void RomSettingsWidget::manageSdCards() {
-  ManageSdCardsDialog dialog(this);
-  dialog.exec();
-
-  const std::string selectedCard = sdCard();
-  refreshSdCards();
-
-  if (selectedCard.empty() || selectedCard == "?") {
-    m_ui->sdCardSelect->setCurrentIndex(0);
-    return;
-  }
-
-  for (int i = 0; i < m_ui->sdCardSelect->count(); i++) {
-    if (selectedCard == m_ui->sdCardSelect->itemData(i, Qt::UserRole)
-                            .toString()
-                            .toStdString()) {
-      m_ui->sdCardSelect->setCurrentIndex(i);
-      return;
-    }
-  }
-
-  m_ui->sdCardSelect->setCurrentIndex(0);
-  emit activeSdCardChanged(std::string());
 }
 
 void RomSettingsWidget::updatePluginLangterms(GfxPlugin recommendedPlugin) {

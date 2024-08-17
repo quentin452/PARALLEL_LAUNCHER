@@ -33,7 +33,7 @@
 #include <QInputDialog>
 #endif
 #ifndef FLATPAK_VERSION
-#include "src/updaters/retroarch-updater.hpp"
+
 #endif
 
 #include "src/core/sdcard.hpp"
@@ -198,25 +198,29 @@ int main(int argc, char **argv) {
   initExtraAppContext();
 
   QTranslator translations;
-  loadTranslations(translations, {
+  loadTranslations(translations,
+                   {
 #ifdef __linux__
 #if defined(FLATPAK_VERSION)
-    fs::path("/app/share/parallel-launcher/translations/")
+                       fs::path("/app/share/parallel-launcher/translations/")
 #elif defined(DEBUG)
-                                       BaseDir::program() / "lang",
-                                       fs::path("/usr/local/share/parallel-launcher/translations/"),
-                                       fs::path("/usr/share/parallel-launcher/translations/")
+                       BaseDir::program() / "lang",
+                       fs::path(
+                           "/usr/local/share/parallel-launcher/translations/"),
+                       fs::path("/usr/share/parallel-launcher/translations/")
 #else
-                                       fs::path("/usr/share/parallel-launcher/translations/"),
-                                       fs::path("/usr/local/share/parallel-launcher/translations/"),
-                                       BaseDir::program() / "lang"
+                       fs::path("/usr/share/parallel-launcher/translations/"),
+                       fs::path(
+                           "/usr/local/share/parallel-launcher/translations/"),
+                       BaseDir::program() / "lang"
 #endif
 #elif __APPLE__
-                                       BaseDir::program().parent_path() / "Resources" / "translations"
+                       BaseDir::program().parent_path() / "Resources" /
+                       "translations"
 #else
-                                       BaseDir::program() / L"translations"
+                       BaseDir::program() / L"translations"
 #endif
-  });
+                   });
   app.installTranslator(&translations);
 
   if (QLocale().language() == QLocale::Arabic) {
@@ -235,14 +239,6 @@ int main(int argc, char **argv) {
             QMessageBox::Ok | QMessageBox::Cancel) != QMessageBox::Ok) {
       std::exit(0);
     }
-
-    if (!RetroArchUpdater::install()) {
-      QMessageBox::critical(
-          nullptr, QCoreApplication::translate("Main", "Fatal Error"),
-          QCoreApplication::translate("Main", "Failed to install RetroArch."));
-      std::exit(1);
-    }
-
 #ifdef _WIN32
     RetroArch::fixSdlLibrary();
   } else if (!RetroArch::hasCorrectSdlLibrary()) {

@@ -11,7 +11,7 @@
 #include "src/polyfill/base-directory.hpp"
 #include "src/ui/core-installer.hpp"
 #include "src/ui/download-dialog.hpp"
-#include "src/updaters/retroarch-updater.hpp"
+
 #include <QCoreApplication>
 #include <QDateTime>
 #include <QMetaObject>

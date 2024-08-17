@@ -1,7 +1,6 @@
 #include "src/core/app-context.hpp"
 #include "src/core/file-controller.hpp"
 #include "src/core/logging.hpp"
-#include "src/core/migration.hpp"
 #include "src/core/retroarch.hpp"
 #include "src/core/thread-safety.hpp"
 #include "src/core/updates.hpp"
@@ -183,12 +182,9 @@ int main(int argc, char **argv) {
 #ifdef FLATPAK_VERSION
   fixDiscordIntegrationInFlatpak();
 #endif
-  Migration::updateDatabaseSchema();
-
   applyUiFixes(app);
   qInstallMessageHandler(onQtMessage);
 
-  Migration::run();
   AppSettings settings = FileController::loadAppSettings();
 
   if (settings.locale.empty()) {

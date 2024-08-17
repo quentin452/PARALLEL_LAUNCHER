@@ -8,7 +8,6 @@
 #include "src/polyfill/file-explorer.hpp"
 #include "src/ui/device-busy-dialog.hpp"
 #include "src/ui/icons.hpp"
-#include "src/ui/import-sd-card-dialog.hpp"
 #include "src/ui/util.hpp"
 #include <QCloseEvent>
 #include <QDialogButtonBox>
@@ -117,24 +116,6 @@ void ManageSdCardsDialog::refreshList() {
     }
   }
 }
-
-void ManageSdCardsDialog::reformat() {
-  if (QMessageBox::question(
-          this, tr("Confirm Reformat"),
-          tr("Are you sure you want to reformat this virtual SD card? All data "
-             "currently on it will be lost.")) !=
-      QMessageBox::StandardButton::Yes) {
-    return;
-  }
-
-  const string &cardName = m_ui->nameInput->text().toStdString();
-  if (!unmountOne(cardName))
-    return;
-
-  SdCardManager::deleteCard(cardName);
-  createCard();
-}
-
 static inline QString makeSafeName(const QString &name) {
   QString safeName;
   safeName.reserve(name.size());
@@ -302,43 +283,6 @@ void ManageSdCardsDialog::createCard() {
   std::thread asyncTask(ManageSdCardsDialog::createAsync,
                         m_ui->nameInput->text(), task, m_alive, this);
   asyncTask.detach();
-}
-
-void ManageSdCardsDialog::importCard() {
-  const fs::path filePath = FileDialog::getFile(
-      tr("Import SD Card").toStdString().c_str(),
-      {{tr("Raw Disk Image").toStdString().c_str(), "*.iso"}});
-
-  if (filePath.empty())
-    return;
-
-  fs::error_code err;
-  const uintmax_t fileSize = fs::file_size(filePath, err);
-  if (fileSize == 0 || err) {
-    QMessageBox::critical(this, tr("Invalid disk image"),
-                          tr("The specified file is not a valid disk image."));
-    return;
-  } else if (fileSize > 2199023255552ull) {
-    QMessageBox::critical(this, tr("Disk image too large"),
-                          tr("The disk image could not be imported because it "
-                             "is larger than 2 TiB."));
-    return;
-  }
-
-  ImportSdCardDialog dialog(this, filePath);
-  if (dialog.exec() == QDialog::Accepted) {
-    refreshList();
-    discard();
-
-    const QString cardName = filePath.stem().u8string().c_str();
-    for (int i = 0; i < m_ui->cardSelector->count(); i++) {
-      if (m_ui->cardSelector->item(i)->text() == cardName) {
-        m_ui->cardSelector->setCurrentRow(i);
-        cardSelected(i);
-        return;
-      }
-    }
-  }
 }
 
 void ManageSdCardsDialog::discard() {

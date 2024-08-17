@@ -45,12 +45,10 @@ protected slots:
   virtual void reject();
 
 private slots:
-  void reformat();
   void nameChanged(QString name);
   void formatChanged(int format);
   void deleteCard();
   void createCard();
-  void importCard();
   void discard();
   void beginCreate();
   void cardSelected(int cardIndex);

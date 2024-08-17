@@ -6,18 +6,20 @@
 #include "src/polyfill/base-directory.hpp"
 #include "src/polyfill/crash.hpp"
 
-#include <thread>
 #include <chrono>
+#include <thread>
 
 using namespace std::chrono_literals;
 
-inline static void assertStatusGood( sqlite3 *connection, int status ) {
-	if( status == SQLITE_DONE || status == SQLITE_ROW || status == SQLITE_OK ) return;
+inline static void assertStatusGood(sqlite3 *connection, int status) {
+  if (status == SQLITE_DONE || status == SQLITE_ROW || status == SQLITE_OK)
+    return;
 
-	const int extStatus = sqlite3_extended_errcode( connection );
-	string errorMessage = "SQL Error (Status = "s + Number::toString( status ) + "." + Number::toString( extStatus ) + ")\n";
-	errorMessage += sqlite3_errmsg( connection );
-	pl_crash( "Assertion Failed", errorMessage.c_str() );
+  const int extStatus = sqlite3_extended_errcode(connection);
+  string errorMessage = "SQL Error (Status = "s + Number::toString(status) +
+                        "." + Number::toString(extStatus) + ")\n";
+  errorMessage += sqlite3_errmsg(connection);
+  pl_crash("Assertion Failed", errorMessage.c_str());
 }
 
 static const char s_initSql[] = R"#(
@@ -159,187 +161,177 @@ CREATE INDEX IF NOT EXISTS ix_unreported_crash_logs ON CRASH_LOGS( crash_date ) 
 
 class DbConnection final {
 
-	private:
-	sqlite3 *m_connection;
+private:
+  sqlite3 *m_connection;
 
-	inline DbConnection( sqlite3 *connection ) noexcept : m_connection( connection ) {}
-	inline DbConnection( DbConnection &&other ) noexcept : m_connection( other.m_connection ) { other.m_connection = nullptr; }
-	DbConnection( const DbConnection &other ) = delete;
-	~DbConnection() noexcept {
-		if( m_connection != nullptr ) sqlite3_close( m_connection );
-	}
+  inline DbConnection(sqlite3 *connection) noexcept
+      : m_connection(connection) {}
+  inline DbConnection(DbConnection &&other) noexcept
+      : m_connection(other.m_connection) {
+    other.m_connection = nullptr;
+  }
+  DbConnection(const DbConnection &other) = delete;
+  ~DbConnection() noexcept {
+    if (m_connection != nullptr)
+      sqlite3_close(m_connection);
+  }
 
-	static DbConnection create() noexcept {
-		const fs::path dbFile = BaseDir::data() / _NFS("roms.sqlite");
+  static DbConnection create() noexcept {
+    const fs::path dbFile = BaseDir::data() / _NFS("roms.sqlite");
 
-		sqlite3 *db = nullptr;
-		int status = sqlite3_open( dbFile.u8string().c_str(), &db );
-		if( status != SQLITE_OK ) {
-			std::cerr << "Failed to open or create sqlite database" << std::endl << std::flush;
-			std::exit( status );
-		}
+    sqlite3 *db = nullptr;
+    int status = sqlite3_open(dbFile.u8string().c_str(), &db);
+    if (status != SQLITE_OK) {
+      std::cerr << "Failed to open or create sqlite database" << std::endl
+                << std::flush;
+      std::exit(status);
+    }
 
-		sqlite3_extended_result_codes( db, 1 );
-		sqlite3_busy_timeout( db, 280 );
+    sqlite3_extended_result_codes(db, 1);
+    sqlite3_busy_timeout(db, 280);
 
-		for( int i = 0; i < 3; i++ ) {
-			status = sqlite3_exec( db, s_initSql, nullptr, nullptr, nullptr );
-			if( status != SQLITE_BUSY ) break;
-			std::this_thread::sleep_for( 75ms );
-		}
+    for (int i = 0; i < 3; i++) {
+      status = sqlite3_exec(db, s_initSql, nullptr, nullptr, nullptr);
+      if (status != SQLITE_BUSY)
+        break;
+      std::this_thread::sleep_for(75ms);
+    }
 
-		assertStatusGood( db, status );
-		return DbConnection( db );
-	}
+    assertStatusGood(db, status);
+    return DbConnection(db);
+  }
 
-	public:
-	static sqlite3 *instance() noexcept {
-		static DbConnection s_db = DbConnection::create();
-		return s_db.m_connection;
-	}
-
+public:
+  static sqlite3 *instance() noexcept {
+    static DbConnection s_db = DbConnection::create();
+    return s_db.m_connection;
+  }
 };
 
-SqlCommand::SqlCommand( const char *sql ) noexcept : m_bindingIndex( 0 ) {
-	const int status = sqlite3_prepare_v3(
-		DbConnection::instance(),
-		sql,
-		-1,
-		SQLITE_PREPARE_PERSISTENT,
-		&m_statement,
-		nullptr
-	);
-	assertStatusGood( DbConnection::instance(), status );
+SqlCommand::SqlCommand(const char *sql) noexcept : m_bindingIndex(0) {
+  const int status =
+      sqlite3_prepare_v3(DbConnection::instance(), sql, -1,
+                         SQLITE_PREPARE_PERSISTENT, &m_statement, nullptr);
+  assertStatusGood(DbConnection::instance(), status);
 }
 
-SqlCommand::SqlCommand( SqlCommand &&other ) noexcept :
-	m_statement( other.m_statement ),
-	m_bindingIndex( other.m_bindingIndex )
-{
-	other.m_statement = nullptr;
+SqlCommand::SqlCommand(SqlCommand &&other) noexcept
+    : m_statement(other.m_statement), m_bindingIndex(other.m_bindingIndex) {
+  other.m_statement = nullptr;
 }
 
-SqlCommand::~SqlCommand() noexcept {
-	sqlite3_finalize( m_statement );
+SqlCommand::~SqlCommand() noexcept { sqlite3_finalize(m_statement); }
+
+void SqlCommand::execNonQuery(int *status) noexcept {
+  ThreadSafety::assertThreadIsSafe();
+  m_bindingIndex = 0;
+
+  const int sqlStatus = sqlite3_step(m_statement);
+  sqlite3_reset(m_statement);
+  sqlite3_clear_bindings(m_statement);
+  if (status != nullptr) {
+    *status = sqlStatus;
+  } else {
+    assertStatusGood(DbConnection::instance(), sqlStatus);
+  }
 }
 
-void SqlCommand::execNonQuery( int *status ) noexcept {
-	ThreadSafety::assertThreadIsSafe();
-	m_bindingIndex = 0;
-
-	const int sqlStatus = sqlite3_step( m_statement );
-	sqlite3_reset( m_statement );
-	sqlite3_clear_bindings( m_statement );
-	if( status != nullptr ) {
-		*status = sqlStatus;
-	} else {
-		assertStatusGood( DbConnection::instance(), sqlStatus );
-	}
-
+DataRecordIterator::DataRecordIterator(sqlite3_stmt *statement) noexcept
+    : m_statement(statement), m_status(SQLITE_OK) {
+  ThreadSafety::assertThreadIsSafe();
 }
 
-DataRecordIterator::DataRecordIterator( sqlite3_stmt *statement ) noexcept :
-	m_statement( statement ),
-	m_status( SQLITE_OK )
-{
-	ThreadSafety::assertThreadIsSafe();
-}
-
-DataRecordIterator::DataRecordIterator( DataRecordIterator &&other ) noexcept :
-	m_statement( other.m_statement ),
-	m_status( other.m_status )
-{
-	ThreadSafety::assertThreadIsSafe();
-	other.m_statement = nullptr;
-	other.m_status = SQLITE_MISUSE;
+DataRecordIterator::DataRecordIterator(DataRecordIterator &&other) noexcept
+    : m_statement(other.m_statement), m_status(other.m_status) {
+  ThreadSafety::assertThreadIsSafe();
+  other.m_statement = nullptr;
+  other.m_status = SQLITE_MISUSE;
 }
 
 DataRecordIterator::~DataRecordIterator() noexcept {
-	if( m_statement == nullptr ) return;
-	sqlite3_reset( m_statement );
-	sqlite3_clear_bindings( m_statement );
-	assertStatusGood( DbConnection::instance(), status() );
+  if (m_statement == nullptr)
+    return;
+  sqlite3_reset(m_statement);
+  sqlite3_clear_bindings(m_statement);
+  assertStatusGood(DbConnection::instance(), status());
 }
 
 bool DataRecordIterator::moveNext() noexcept {
-	m_status = sqlite3_step( m_statement );
-	return m_status == SQLITE_ROW;
+  m_status = sqlite3_step(m_statement);
+  return m_status == SQLITE_ROW;
 }
 
 void DataRecordIterator::close() noexcept {
-	sqlite3_reset( m_statement );
-	sqlite3_clear_bindings( m_statement );
-	m_statement = nullptr;
-	m_status = SQLITE_MISUSE;
+  sqlite3_reset(m_statement);
+  sqlite3_clear_bindings(m_statement);
+  m_statement = nullptr;
+  m_status = SQLITE_MISUSE;
 }
 
-SqlBatch::SqlBatch( const char *sql ) : m_bindingIndex( 0 ) {
-	while( sql[0] != '\0' ) {
-		if( sql[0] == ' ' || sql[0] == '\t' || sql[0] == '\n' ) {
-			sql++;
-			continue;
-		}
+SqlBatch::SqlBatch(const char *sql) : m_bindingIndex(0) {
+  while (sql[0] != '\0') {
+    if (sql[0] == ' ' || sql[0] == '\t' || sql[0] == '\n') {
+      sql++;
+      continue;
+    }
 
-		const char *next = nullptr;
-		sqlite3_stmt *statement = nullptr;
-		const int status = sqlite3_prepare_v3(
-			DbConnection::instance(),
-			sql,
-			-1,
-			SQLITE_PREPARE_PERSISTENT,
-			&statement,
-			&next
-		);
-		assertStatusGood( DbConnection::instance(), status );
-		sql = next;
-		m_statements.push_back( statement );
-	}
-	pl_assert( m_statements.size() > 1 );
+    const char *next = nullptr;
+    sqlite3_stmt *statement = nullptr;
+    const int status =
+        sqlite3_prepare_v3(DbConnection::instance(), sql, -1,
+                           SQLITE_PREPARE_PERSISTENT, &statement, &next);
+    assertStatusGood(DbConnection::instance(), status);
+    sql = next;
+    m_statements.push_back(statement);
+  }
+  pl_assert(m_statements.size() > 1);
 }
 
-SqlBatch::SqlBatch( SqlBatch &&other ) noexcept :
-	m_statements( std::move( other.m_statements ) ),
-	m_bindingIndex( other.m_bindingIndex ) {}
+SqlBatch::SqlBatch(SqlBatch &&other) noexcept
+    : m_statements(std::move(other.m_statements)),
+      m_bindingIndex(other.m_bindingIndex) {}
 
 SqlBatch::~SqlBatch() {
-	for( sqlite3_stmt *statement : m_statements ) {
-		sqlite3_finalize( statement );
-	}
+  for (sqlite3_stmt *statement : m_statements) {
+    sqlite3_finalize(statement);
+  }
 }
 
 void SqlBatch::execNonQuery() noexcept {
-	static SqlCommand s_start( "SAVEPOINT batch" );
-	static SqlCommand s_end( "RELEASE batch" );
+  static SqlCommand s_start("SAVEPOINT batch");
+  static SqlCommand s_end("RELEASE batch");
 
-	m_bindingIndex = 0;
-	s_start.execNonQuery();
-	for( sqlite3_stmt *statement : m_statements ) {
-		const int sqlStatus = sqlite3_step( statement );
-		sqlite3_reset( statement );
-		sqlite3_clear_bindings( statement );
-		assertStatusGood( DbConnection::instance(), sqlStatus );
-	}
-	s_end.execNonQuery();
+  m_bindingIndex = 0;
+  s_start.execNonQuery();
+  for (sqlite3_stmt *statement : m_statements) {
+    const int sqlStatus = sqlite3_step(statement);
+    sqlite3_reset(statement);
+    sqlite3_clear_bindings(statement);
+    assertStatusGood(DbConnection::instance(), sqlStatus);
+  }
+  s_end.execNonQuery();
 }
 
-SqlTransaction::SqlTransaction() noexcept : m_committed( false ) {
-	static SqlCommand s_beginSql( "BEGIN TRANSACTION" );
-	s_beginSql.execNonQuery();
+SqlTransaction::SqlTransaction() noexcept : m_committed(false) {
+  static SqlCommand s_beginSql("BEGIN TRANSACTION");
+  s_beginSql.execNonQuery();
 }
 
-SqlTransaction::SqlTransaction( SqlTransaction &&other ) noexcept : m_committed( other.m_committed ) {
-	other.m_committed = true;
+SqlTransaction::SqlTransaction(SqlTransaction &&other) noexcept
+    : m_committed(other.m_committed) {
+  other.m_committed = true;
 }
 
 SqlTransaction::~SqlTransaction() noexcept {
-	if( m_committed ) return;
-	static SqlCommand s_rollbackSql( "ROLLBACK TRANSACTION" );
-	s_rollbackSql.execNonQuery();
+  if (m_committed)
+    return;
+  static SqlCommand s_rollbackSql("ROLLBACK TRANSACTION");
+  s_rollbackSql.execNonQuery();
 }
 
 void SqlTransaction::commit() noexcept {
-	pl_assert( !m_committed );
-	static SqlCommand s_commitSql( "COMMIT TRANSACTION" );
-	s_commitSql.execNonQuery();
-	m_committed = true;
+  pl_assert(!m_committed);
+  static SqlCommand s_commitSql("COMMIT TRANSACTION");
+  s_commitSql.execNonQuery();
+  m_committed = true;
 }

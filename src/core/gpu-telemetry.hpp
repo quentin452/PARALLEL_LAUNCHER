@@ -5,9 +5,9 @@
 
 namespace GpuTelemetry {
 
-	extern void generateReport( JsonWriter &jw );
-	extern string generateReport();
+extern void generateReport(JsonWriter &jw);
+extern string generateReport();
 
-}
+} // namespace GpuTelemetry
 
 #endif /* SRC_CORE_GPU_TELEMETRY_HPP_ */

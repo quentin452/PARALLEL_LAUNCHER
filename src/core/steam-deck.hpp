@@ -3,11 +3,9 @@
 
 namespace SteamDeck {
 
-	extern bool isSteamDeck();
-	extern bool inGamingMode();
+extern bool isSteamDeck();
+extern bool inGamingMode();
 
-}
-
-
+} // namespace SteamDeck
 
 #endif /* SRC_CORE_STEAM_DECK_HPP_ */

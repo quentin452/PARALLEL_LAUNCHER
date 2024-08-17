@@ -5,10 +5,8 @@
 
 namespace WindowsLocale {
 
-	extern std::string getUserLocale();
+extern std::string getUserLocale();
 
 }
-
-
 
 #endif /* SRC_POLYFILL_WINDOWS_LOCALE_HPP_ */

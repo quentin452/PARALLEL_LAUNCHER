@@ -3,9 +3,9 @@
 
 namespace ThreadSafety {
 
-	extern void registerMainThread() noexcept;
-	extern void assertThreadIsSafe() noexcept;
-	
-}
+extern void registerMainThread() noexcept;
+extern void assertThreadIsSafe() noexcept;
+
+} // namespace ThreadSafety
 
 #endif /* SRC_CORE_THREAD_SAFETY_HPP_ */

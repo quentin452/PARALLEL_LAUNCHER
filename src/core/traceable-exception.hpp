@@ -5,17 +5,16 @@
 
 class TraceableException {
 
-	private:
-	const Backtrace m_backtrace;
+private:
+  const Backtrace m_backtrace;
 
-	protected:
-	TraceableException() noexcept : m_backtrace() {};
+protected:
+  TraceableException() noexcept : m_backtrace(){};
 
-	public:
-	virtual ~TraceableException() {};
+public:
+  virtual ~TraceableException(){};
 
-	inline const Backtrace &backtrace() const noexcept { return m_backtrace; }
-
+  inline const Backtrace &backtrace() const noexcept { return m_backtrace; }
 };
 
 #endif /* SRC_CORE_TRACEABLE_EXCEPTION_HPP_ */

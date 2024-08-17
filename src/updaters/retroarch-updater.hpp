@@ -4,13 +4,13 @@
 namespace RetroArchUpdater {
 
 #ifdef FLATPAK_VERSION
-	inline bool install() noexcept { return false; }
-	inline void update() noexcept {}
+inline bool install() noexcept { return false; }
+inline void update() noexcept {}
 #else
-	extern bool install();
-	extern void update();
+extern bool install();
+extern void update();
 #endif
 
-}
+} // namespace RetroArchUpdater
 
 #endif /* SRC_UPDATERS_RETROARCH_UPDATE_DIALOG_HPP_ */

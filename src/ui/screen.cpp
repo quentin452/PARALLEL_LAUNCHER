@@ -1,27 +1,30 @@
 #include "src/ui/screen.hpp"
 
-#include <QGuiApplication>
 #include <QApplication>
-#include <QWindow>
+#include <QGuiApplication>
 #include <QWidget>
+#include <QWindow>
 
 QScreen *Screen::getActive() {
-	const QWidget *const activeWindow = QApplication::activeWindow();
-	if( activeWindow != nullptr ) {
-		const QWindow *const handle = activeWindow->windowHandle();
-		if( handle != nullptr ) {
-			QScreen *screen = handle->screen();
-			if( screen != nullptr ) return screen;
-		}
-	}
+  const QWidget *const activeWindow = QApplication::activeWindow();
+  if (activeWindow != nullptr) {
+    const QWindow *const handle = activeWindow->windowHandle();
+    if (handle != nullptr) {
+      QScreen *screen = handle->screen();
+      if (screen != nullptr)
+        return screen;
+    }
+  }
 
-	for( const QWidget *window : QApplication::topLevelWidgets() ) {
-		const QWindow *const handle = window->windowHandle();
-		if( handle == nullptr ) continue;
+  for (const QWidget *window : QApplication::topLevelWidgets()) {
+    const QWindow *const handle = window->windowHandle();
+    if (handle == nullptr)
+      continue;
 
-		QScreen *screen = handle->screen();
-		if( screen != nullptr ) return screen;
-	}
+    QScreen *screen = handle->screen();
+    if (screen != nullptr)
+      return screen;
+  }
 
-	return QGuiApplication::primaryScreen();
+  return QGuiApplication::primaryScreen();
 }

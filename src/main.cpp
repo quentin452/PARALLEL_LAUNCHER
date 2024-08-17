@@ -29,9 +29,6 @@
 #include "src/polyfill/windows/locale.hpp"
 #include "src/polyfill/windows/unicode.hpp"
 #endif
-#ifdef __APPLE__
-#include "src/ui/mac-file-open-handler.hpp"
-#endif
 #if !defined(__linux__)
 #include "src/updaters/self-updater.hpp"
 #include <QInputDialog>
@@ -267,17 +264,6 @@ int main(int argc, char **argv) {
 #endif
 
   fs::path romPath = (argc >= 2) ? tryGetRomPath(argc, argv) : fs::path();
-#ifdef __APPLE__
-  if (romPath.empty()) {
-    MacFileOpenHandler *fileOpenHandler = new MacFileOpenHandler(&romPath);
-    app.installEventFilter(fileOpenHandler);
-    QCoreApplication::processEvents(QEventLoop::ExcludeUserInputEvents |
-                                        QEventLoop::WaitForMoreEvents,
-                                    100);
-    fileOpenHandler->doneStartup();
-  }
-#endif
-
   if (!romPath.empty()) {
     romPath = processRomPath(romPath);
   }

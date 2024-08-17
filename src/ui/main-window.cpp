@@ -21,7 +21,7 @@
 #include "src/rhdc/ui/rhdc-login-dialog.hpp"
 #include "src/rhdc/ui/rhdc-view-bubble.hpp"
 #include "src/rhdc/web/api.hpp"
-#include "src/ui/core-installer.hpp"
+
 #include "src/ui/icons.hpp"
 #include "src/ui/keyboard-config-dialog.hpp"
 #include "src/ui/now-playing-window.hpp"

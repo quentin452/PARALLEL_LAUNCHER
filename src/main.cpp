@@ -9,7 +9,6 @@
 #include "src/polyfill/crash.hpp"
 #include "src/rhdc/ui/rhdc-download-dialog.hpp"
 #include "src/types.hpp"
-#include "src/ui/core-installer.hpp"
 #include "src/ui/direct-play.hpp"
 #include "src/ui/main-window.hpp"
 #include "src/ui/ui-fixes.hpp"

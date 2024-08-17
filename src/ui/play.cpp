@@ -18,7 +18,7 @@
 #include "src/rhdc/core/layout.hpp"
 #include "src/rhdc/ui/rhdc-save-sync-dialog.hpp"
 #include "src/rhdc/web/api.hpp"
-#include "src/ui/core-installer.hpp"
+
 #include "src/ui/is-viewer-window.hpp"
 #include "src/ui/multiplayer-controller-select-dialog.hpp"
 #include "src/ui/now-playing-window.hpp"
@@ -489,7 +489,6 @@ bool Game::play(const RomFile &romFile, const RomInfo &romInfo,
           {FileController::loadLastControllerProfile(inputDriver), Uuid()});
     }
   } else {
-
   }
 
   size_t highestMousePort = 0;

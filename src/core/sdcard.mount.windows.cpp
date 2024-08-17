@@ -11,7 +11,7 @@
 #include "src/polyfill/base-directory.hpp"
 #include "src/polyfill/fifo-pipe.hpp"
 #include "src/polyfill/windows/unicode.hpp"
-#include "src/ui/download-dialog.hpp"
+
 #include <Windows.h>
 #include <cstring>
 #include <filesystem>
@@ -420,44 +420,6 @@ static bool writeVhdFooter(fs::path &filePath, SdCardInfo &info) {
   return true;
 }
 
-static inline bool DownloadSdCardHelper(const fs::path &installDir) {
-  fs::error_code err;
-  if (fs::is_regular_file(installDir / L"mount-sd-card.exe", err) &&
-      fs::is_regular_file(installDir / L"virtdisk.dll", err) && !err)
-    return true;
-
-  fs::remove_all(installDir, err);
-  fs::create_directories(installDir, err);
-
-  const fs::path zipPath = BaseDir::temp() / L"mount-sd-card.zip";
-  fs::remove(zipPath, err);
-
-  DownloadResult result = DownloadDialog::download(
-      QT_TRANSLATE_NOOP("DownloadDialog",
-                        "Downloading SD Card Manager Extension"),
-#ifdef _WIN64
-      "https://parallel-launcher.ca/optional/windows_64/mount-sd-card.zip",
-#else
-      "https://parallel-launcher.ca/optional/windows_32/mount-sd-card.zip",
-#endif
-      zipPath);
-
-  if (!result.success) {
-    logError("Failed to download SD Card Manager extension: "s +
-             result.errorMessage);
-    return false;
-  }
-
-  if (!Zip::unzip(zipPath, installDir)) {
-    logError("Failed to extract the SD Card Manager extension");
-    fs::remove(zipPath, err);
-    return false;
-  }
-
-  fs::remove(zipPath, err);
-  return true;
-}
-
 std::shared_ptr<MountedSdCard> SdCardManager::mount(const std::string &name) {
   fs::path imagePath = BaseDir::data() / L"sdcard" / fs::to_path(name + ".iso");
 
@@ -471,8 +433,6 @@ std::shared_ptr<MountedSdCard> SdCardManager::mount(const std::string &name) {
   const fs::path extensionDir = BaseDir::data().parent_path() / L"ext32";
 #endif
 
-  if (!DownloadSdCardHelper(extensionDir))
-    return nullptr;
   UnmountProcessInfo *proc = new UnmountProcessInfo();
   const std::string randomId = Uuid::Random().toString();
 

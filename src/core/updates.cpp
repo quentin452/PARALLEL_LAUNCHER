@@ -9,7 +9,6 @@
 #include "src/core/time.hpp"
 #include "src/core/zip.hpp"
 #include "src/polyfill/base-directory.hpp"
-#include "src/ui/download-dialog.hpp"
 
 #include <QCoreApplication>
 #include <QDateTime>

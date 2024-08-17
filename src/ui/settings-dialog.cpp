@@ -17,7 +17,7 @@
 
 #if defined(__linux__) && defined(_LP64)
 #include "src/polyfill/base-directory.hpp"
-#include "src/ui/download-dialog.hpp"
+
 #endif
 
 #ifdef _WIN32
@@ -380,33 +380,6 @@ void SettingsDialog::save() {
       m_ui->enableDefaultLayoutsCheckbox->isChecked();
   rhdcSettings.ignoreWidescreenHint =
       m_ui->ignoreWidescreenCheckbox->isChecked();
-
-#if defined(__linux__) && defined(_LP64) && defined(DISCORD_LAZY_LINKING)
-  if (settings.discordIntegration && !Discord::pluginInstalled()) {
-    if (QMessageBox::question(
-            this, tr("Install Discord Plugin?"),
-            tr("You have enabled Discord integration, but the Discord plugin "
-               "is not currently installed. Would you like to install it "
-               "now?")) == QMessageBox::Yes) {
-      fs::error_code err;
-      fs::create_directories(BaseDir::data() / "plugins", err);
-      const DownloadResult result = DownloadDialog::download(
-          QT_TRANSLATE_NOOP("DownloadDialog", "Downloading Discord plugin"),
-          "https://parallel-launcher.ca/optional/linux_64/libdiscord-rpc.so",
-          BaseDir::data() / "plugins" / "libdiscord-rpc.so");
-
-      if (!result.success) {
-        QMessageBox::critical(this, tr("Download Failed"),
-                              tr("Failed to download Discord plugin")
-                                  .append("\n")
-                                  .append(result.errorMessage.c_str()));
-        settings.discordIntegration = false;
-      }
-    } else {
-      settings.discordIntegration = false;
-    }
-  }
-#endif
 
   settings.enableIsViewer = m_ui->isViewerCheckbox->isChecked();
   settings.isViewerHistorySize = (m_ui->historySizeSpinner->value() <= 1000)

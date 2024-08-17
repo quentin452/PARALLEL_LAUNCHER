@@ -142,20 +142,9 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
       (romInfo.emulator == EmulatorCore::UseDefault) ? settings.defaultEmulator
                                                      : romInfo.emulator;
 
-  std::shared_ptr<LibplHandler> libplHandler = std::make_shared<LibplHandler>();
-  std::shared_ptr<ISViewer> isViewer = std::make_shared<ISViewer>();
-  std::shared_ptr<IsViewerWindow> isViewerWindow;
-
-  GfxPlugin gfxPlugin;
-  AsyncProcess *emulator = new AsyncProcess();
-
   if (testLayout || !settings.hideWhenPlaying) {
     NowPlayingWindow::open(romFile.path, romInfo.sha1,
                            romInfo.playTime, testLayout);
-  }
-
-  if (settings.enableIsViewer && emulatorCore == EmulatorCore::ParallelN64) {
-    isViewerWindow->show();
   }
 
   return true;

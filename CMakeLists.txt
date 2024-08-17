@@ -1,11 +1,14 @@
 # Currently officially support Windows 11 X64
 cmake_minimum_required(VERSION 3.5.0)
 project(parallel-launcher-only-star-display VERSION 0.1.0 LANGUAGES C CXX)
+
 set(RESOURCE_FILE "${CMAKE_SOURCE_DIR}/data/resources.qrc")
+
 # Set the build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
+
 # Rechercher Qt 5
 find_package(Qt5 COMPONENTS Widgets Network Core LinguistTools REQUIRED)
 
@@ -35,25 +38,35 @@ qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
 # Définir les fichiers de traduction
 set(TRANSLATIONS
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_en_us.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_en_gb.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_it.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_es.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_fr.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_fr_ca.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_de.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_ar.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_pt.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_en_us.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_en_gb.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_it.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_es.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_fr.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_fr_ca.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_de.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_ar.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_pt.ts
 )
 
 # Définir le répertoire où les fichiers .qm seront placés
 set(QM_OUTPUT_DIR "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/translations")
-set(BUILD_DIR "${CMAKE_BINARY_DIR}")
+file(MAKE_DIRECTORY ${QM_OUTPUT_DIR})
 
-# Créer les fichiers .qm à partir des fichiers .ts
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
+# Commande pour générer les fichiers .qm
+foreach(TS_FILE ${TRANSLATIONS})
+    get_filename_component(TS_FILENAME ${TS_FILE} NAME_WE)
+    set(QM_FILE "${QM_OUTPUT_DIR}/${TS_FILENAME}.qm")
+    add_custom_command(
+        OUTPUT ${QM_FILE}
+        COMMAND ${Qt5_LRELEASE_EXECUTABLE} ${TS_FILE} -qm ${QM_FILE}
+        DEPENDS ${TS_FILE}
+        COMMENT "Generating ${QM_FILE} from ${TS_FILE}"
+    )
+    list(APPEND QM_FILES ${QM_FILE})
+endforeach()
 
-# Add the generated headers to the list of sources
+# Ajouter les fichiers .qm générés à la liste des sources
 set(SOURCES ${SOURCES} ${UI_HEADERS} ${QM_FILES})
 
 # Define the executable target
@@ -64,9 +77,6 @@ file(GLOB_RECURSE MOC_HEADERS
 # Générer les fichiers MOC
 qt5_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
 add_executable(parallel-launcher-only-star-display WIN32 ${SOURCES} ${MOC_SOURCES} ${RESOURCE_FILE})
-
-# Créer une liste de fichiers .qma
-file(GLOB QM_FILES "${CMAKE_BINARY_DIR}/parallel-launcher-only-star-display_*.qm")
 
 # Créer le répertoire de sortie s'il n'existe pas
 add_custom_command(

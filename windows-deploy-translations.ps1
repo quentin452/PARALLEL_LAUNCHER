@@ -36,8 +36,9 @@ C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\bin\lrelease.exe parallel-launcher_ar.ts
 C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\bin\lrelease.exe parallel-launcher_pt.ts
 
 rm *.ts
-rm build\release\translations\parallel-launcher_*.qm -ErrorAction SilentlyContinue
-cp *.qm build\release\translations
+rm ..\build\release\translations\parallel-launcher_*.qm -ErrorAction SilentlyContinue
+cp *.qm ..\build\release\translations
+cp *.qm ..\build\release\translations
 rm *.qm
 cd ..
 rm templang

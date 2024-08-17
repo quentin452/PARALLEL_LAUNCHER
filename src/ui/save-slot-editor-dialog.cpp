@@ -259,8 +259,6 @@ SaveSlotEditorDialog::SaveSlotEditorDialog(const fs::path &saveFilePath,
   UiUtil::scaleWindow(this);
   UiUtil::fixDialogButtonsOnWindows(this);
 
-  m_starIcons.reserve(26 * 8);
-  m_unusedStars.reserve(77);
 
   InputFile file(saveFilePath, true);
   const SM64::SaveFile saveFile = SM64::SaveFile::read(file);
@@ -309,24 +307,6 @@ SaveSlotEditorDialog::SaveSlotEditorDialog(const fs::path &saveFilePath,
     for (ubyte j = 0; j < 8; j++) {
       if (i == 25 && j == 7)
         continue;
-
-      StarIcon *icon = new StarIcon(m_ui->starGrid, i, j,
-                                    saveSlot.starFlags[i - 1] & (1 << j));
-      m_starIcons.push_back(icon);
-      if (j == 7) {
-        if (!s_vanillaCannons[i]) {
-          m_unusedStars.push_back(icon);
-        }
-      } else {
-        const char *starName = s_starNames[i][j];
-        if (starName == nullptr) {
-          m_unusedStars.push_back(icon);
-        } else {
-          icon->setToolTip(tr(starName));
-        }
-      }
-
-      m_ui->gridLayout->addWidget(icon, i, j + 1);
     }
 
     if (i <= 15) {
@@ -343,19 +323,6 @@ SaveSlotEditorDialog::SaveSlotEditorDialog(const fs::path &saveFilePath,
       m_ui->gridLayout->addLayout(layout, i, 9);
     }
   }
-
-  for (ubyte j = 0; j < 7; j++) {
-    StarIcon *icon =
-        new StarIcon(m_ui->starGrid, 0, j, saveSlot.castleStars & (1 << j));
-    m_starIcons.push_back(icon);
-    if (j < 5) {
-      icon->setToolTip(tr(s_starNames[0][j]));
-    } else {
-      m_unusedStars.push_back(icon);
-    }
-
-    m_ui->gridLayout->addWidget(icon, 26, j + 1);
-  }
 }
 
 SaveSlotEditorDialog::~SaveSlotEditorDialog() {
@@ -365,9 +332,7 @@ SaveSlotEditorDialog::~SaveSlotEditorDialog() {
 
 void SaveSlotEditorDialog::setShowUnused(bool showUnused) {
   m_ui->unusedFlagsGroup->setVisible(showUnused);
-  for (StarIcon *icon : m_unusedStars) {
-    icon->setVisible(showUnused);
-  }
+ 
 }
 
 void SaveSlotEditorDialog::accept() {
@@ -394,17 +359,6 @@ void SaveSlotEditorDialog::accept() {
 
   std::memset(slot.starFlags, 0, sizeof(slot.starFlags));
   slot.castleStars = 0;
-
-  for (const StarIcon *icon : m_starIcons) {
-    if (!icon->isCollected())
-      continue;
-
-    if (icon->courseId() == 0) {
-      slot.castleStars |= 1 << icon->starId();
-    } else {
-      slot.starFlags[icon->courseId() - 1] |= 1 << icon->starId();
-    }
-  }
 
   for (int i = 0; i < 15; i++) {
     slot.coinScores[i] = (ubyte)m_coinInputs[i]->value();

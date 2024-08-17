@@ -2,7 +2,6 @@
 #define SRC_UI_SAVE_SLOT_EDITOR_DIALOG_HPP_
 
 #include "src/core/filesystem.hpp"
-#include "src/ui/star-icon.hpp"
 #include <QDialog>
 #include <QLabel>
 #include <QSpinBox>
@@ -18,8 +17,6 @@ private:
   Ui::SaveSlotEditorDialog *m_ui;
   const fs::path m_filePath;
   const int m_slot;
-  std::vector<StarIcon *> m_starIcons;
-  std::vector<StarIcon *> m_unusedStars;
   QSpinBox *m_coinInputs[15];
 
 public:

@@ -148,35 +148,6 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
 
   GfxPlugin gfxPlugin;
   AsyncProcess *emulator = new AsyncProcess();
-  try {
-    if (settings.enableIsViewer && emulatorCore == EmulatorCore::ParallelN64) {
-      isViewerWindow = std::make_shared<IsViewerWindow>();
-      QObject::connect(isViewer.get(), &ISViewer::messageReceived,
-                       isViewerWindow.get(), &IsViewerWindow::logMessage);
-      QObject::connect(isViewer.get(), &ISViewer::error, isViewerWindow.get(),
-                       &IsViewerWindow::error);
-      isViewer->start();
-    }
-
-    const int libplStatus =
-        libplHandler->initialize(); // FIXME: only do this for ParallelN64
-    if (libplStatus == 0)
-      libplHandler->connect(romInfo);
-    *emulator = RetroArch::launchRom(
-        romFile.path, settings, players, romInfo, bindSavestate,
-        syncSaves ? groupId : ""s, &gfxPlugin, isViewer->getPipeFilePath(),
-        libplStatus ? ""s : libplHandler->inputPipePath(),
-        libplStatus ? ""s : libplHandler->outputPipePath(), inputBindingError);
-  } catch (...) {
-    QMessageBox::critical(
-        nullptr, QCoreApplication::translate("Game", "Emulator Missing"),
-        QCoreApplication::translate(
-            "Game",
-            "Failed to launch emulator. It does not appear to be installed."));
-    isViewer->stop();
-    callback();
-    return false;
-  }
 
   if (testLayout || !settings.hideWhenPlaying) {
     NowPlayingWindow::open(romFile.path, romInfo.sha1,

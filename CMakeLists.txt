@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(parallel-launcher VERSION 0.1.0 LANGUAGES C CXX)
+set(RESOURCE_FILE "${CMAKE_SOURCE_DIR}/data/resources.qrc")
 # Set the build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -61,7 +62,7 @@ file(GLOB_RECURSE MOC_HEADERS
 
 # Générer les fichiers MOC
 qt5_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
-add_executable(parallel-launcher WIN32 ${SOURCES} ${MOC_SOURCES})
+add_executable(parallel-launcher WIN32 ${SOURCES} ${MOC_SOURCES} ${RESOURCE_FILE})
 
 # Créer une liste de fichiers .qma
 file(GLOB QM_FILES "${CMAKE_BINARY_DIR}/parallel-launcher_*.qm")

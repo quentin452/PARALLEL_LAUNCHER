@@ -171,8 +171,8 @@ static void onWindowSized() {
   s_window->setGeometry(geo);
 }
 
-void NowPlayingWindow::open(AsyncProcess *process, const fs::path &romPath,
-                            const string &sha1, int64 pastPlayTime,
+void NowPlayingWindow::open(const fs::path &romPath, const string &sha1,
+                            int64 pastPlayTime,
                             const StarLayout *layoutOverride) {
   s_reload = false;
 
@@ -189,7 +189,7 @@ void NowPlayingWindow::open(AsyncProcess *process, const fs::path &romPath,
   }
 
   NowPlayingWidget *widget =
-      new NowPlayingWidget(s_window, process, romPath, sha1, pastPlayTime,
+      new NowPlayingWidget(s_window, romPath, sha1, pastPlayTime,
                            layoutOverride, &s_reload);
 
   if (SteamDeck::isSteamDeck() && widget->starDisplay() == nullptr) {

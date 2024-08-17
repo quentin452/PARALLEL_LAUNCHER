@@ -17,16 +17,14 @@ class NowPlayingWidget : public QWidget {
 
 private:
   Ui::NowPlayingWidget *const m_ui;
-  AsyncProcess *const m_process;
   StarDisplayWidget *m_starDisplay;
   QTimer m_timer;
   const int64 m_pastPlayTime;
   const int64 m_startTime;
 
 public:
-  explicit NowPlayingWidget(QWidget *parent, AsyncProcess *process,
-                            const fs::path &romPath, const string &sha1,
-                            int64 pastPlayTime,
+  explicit NowPlayingWidget(QWidget *parent, const fs::path &romPath,
+                            const string &sha1, int64 pastPlayTime,
                             const StarLayout *layoutOverride = nullptr,
                             bool *shouldReloadPtr = nullptr);
   virtual ~NowPlayingWidget();
@@ -35,7 +33,6 @@ public:
   inline StarDisplayWidget *starDisplay() noexcept { return m_starDisplay; }
 
 private slots:
-  void killEmulator();
   void updateTimers();
 };
 

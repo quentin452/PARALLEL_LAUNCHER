@@ -276,7 +276,7 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
   }
 
   if (testLayout || !settings.hideWhenPlaying) {
-    NowPlayingWindow::open(emulator, romFile.path, romInfo.sha1,
+    NowPlayingWindow::open(romFile.path, romInfo.sha1,
                            romInfo.playTime, testLayout);
   }
 

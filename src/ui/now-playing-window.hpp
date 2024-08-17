@@ -7,7 +7,7 @@
 
 namespace NowPlayingWindow {
 
-extern void open(AsyncProcess *process, const fs::path &romPath,
+extern void open(const fs::path &romPath,
                  const string &sha1, int64 pastPlayTime,
                  const StarLayout *layoutOverride);
 

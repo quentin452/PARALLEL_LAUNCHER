@@ -28,14 +28,12 @@ static inline QLabel *makeLayoutWarning(QWidget *parent) {
   return warning;
 }
 
-NowPlayingWidget::NowPlayingWidget(QWidget *parent, AsyncProcess *process,
-                                   const fs::path &romPath, const string &sha1,
-                                   int64 pastPlayTime,
+NowPlayingWidget::NowPlayingWidget(QWidget *parent, const fs::path &romPath,
+                                   const string &sha1, int64 pastPlayTime,
                                    const StarLayout *layoutOverride,
                                    bool *shouldReloadPtr)
-    : QWidget(parent), m_ui(new Ui::NowPlayingWidget), m_process(process),
-      m_starDisplay(nullptr), m_timer(this), m_pastPlayTime(pastPlayTime),
-      m_startTime(Time::nowMs()) {
+    : QWidget(parent), m_ui(new Ui::NowPlayingWidget), m_starDisplay(nullptr),
+      m_timer(this), m_pastPlayTime(pastPlayTime), m_startTime(Time::nowMs()) {
   m_ui->setupUi(this);
 
   RhdcHack hack;
@@ -76,10 +74,6 @@ NowPlayingWidget::NowPlayingWidget(QWidget *parent, AsyncProcess *process,
   m_ui->killButton->setIcon(Icon::pkill());
 
   m_ui->reloadButton->setIcon(Icon::refresh());
-  connect(m_ui->reloadButton, &QPushButton::clicked, [=]() {
-    *shouldReloadPtr = true;
-    this->killEmulator();
-  });
 
   updateTimers();
 }
@@ -110,8 +104,6 @@ static string formatTime(int64 ms) {
     return string(mss);
   }
 }
-
-void NowPlayingWidget::killEmulator() { m_process->kill(); }
 
 void NowPlayingWidget::updateTimers() {
   const int64 sessionTime = getSessionTime();

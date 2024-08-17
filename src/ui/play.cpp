@@ -23,7 +23,6 @@
 #include "src/ui/multiplayer-controller-select-dialog.hpp"
 #include "src/ui/now-playing-window.hpp"
 #include "src/ui/process-awaiter.hpp"
-#include "src/ui/singleplayer-controller-select-dialog.hpp"
 #include <QCheckBox>
 #include <QCoreApplication>
 #include <QFile>
@@ -475,36 +474,6 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
 #pragma GCC diagnostic pop
 #endif
 
-static inline ConnectedGamepad
-getActiveController(bool &inputBindingError) noexcept {
-  try {
-    std::vector<ConnectedGamepad> connectedControllers =
-        GamepadController::instance().getConnected();
-    if (connectedControllers.empty()) {
-      return ConnectedGamepad{-1, ControllerInfo()};
-    } else if (connectedControllers.size() == 1) {
-      return connectedControllers[0];
-    }
-
-    const AppSettings settings = FileController::loadAppSettings();
-    if (settings.preferredController.has_value()) {
-      for (const ConnectedGamepad &controller : connectedControllers) {
-        if (controller.info.uuid == settings.preferredController.value()) {
-          return controller;
-        }
-      }
-    }
-
-    SingleplayerControllerSelectDialog dialog;
-    dialog.exec();
-    return dialog.getSelectedController();
-  } catch (const std::exception &ex) {
-    logError("Failed to fetch connected controllers: "s + ex.what());
-    inputBindingError = true;
-    return ConnectedGamepad{-1, ControllerInfo()};
-  }
-}
-
 static inline bool usesTwoPorts(const Uuid &inputModeId) {
   const std::map<Uuid, InputMode> inputModes = FileController::loadInputModes();
   if (inputModes.count(inputModeId) > 0) {
@@ -581,47 +550,7 @@ bool Game::play(const RomFile &romFile, const RomInfo &romInfo,
           {FileController::loadLastControllerProfile(inputDriver), Uuid()});
     }
   } else {
-    const ConnectedGamepad activeController =
-        getActiveController(inputBindingError);
-    ControllerProfile profile =
-        getControllerProfile(inputDriver, activeController);
-    if (activeController.id >= 0) {
-      FileController::saveLastControllerProfile(inputDriver, profile.name);
 
-      if (!FileController::loadAppSettings().ignoreGamecubeWarnings &&
-          (romInfo.inputTypes[0] == N64InputType::Gamecube ||
-           romInfo.inputTypes[1] == N64InputType::GamecubeKeyboard)) {
-        if (profile.bindings[(ubyte)ControllerAction::ButtonX].type ==
-                BindingType::None ||
-            profile.bindings[(ubyte)ControllerAction::ButtonY].type ==
-                BindingType::None) {
-          if (!showGamecubeWarning(QCoreApplication::translate(
-                  "Game",
-                  "This game uses an emulated Gamecube controller, but you "
-                  "have not bound any inputs to the X and Y buttons."))) {
-            callback();
-            return false;
-          }
-        } else if (profile.bindings[(ubyte)ControllerAction::CUp].type ==
-                       BindingType::Button ||
-                   profile.bindings[(ubyte)ControllerAction::CLeft].type ==
-                       BindingType::Button ||
-                   profile.bindings[(ubyte)ControllerAction::CRight].type ==
-                       BindingType::Button ||
-                   profile.bindings[(ubyte)ControllerAction::CDown].type ==
-                       BindingType::Button) {
-          if (!showGamecubeWarning(QCoreApplication::translate(
-                  "Game", "This game uses an emulated Gamecube controller, but "
-                          "you do not have an analog stick bound to the C "
-                          "buttons (C stick)."))) {
-            callback();
-            return false;
-          }
-        }
-      }
-    }
-    players.push_back({std::move(profile), activeController.info.uuid});
-    bindSavestate = true;
   }
 
   size_t highestMousePort = 0;

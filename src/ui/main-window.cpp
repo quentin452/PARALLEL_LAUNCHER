@@ -21,7 +21,6 @@
 #include "src/rhdc/ui/rhdc-login-dialog.hpp"
 #include "src/rhdc/ui/rhdc-view-bubble.hpp"
 #include "src/rhdc/web/api.hpp"
-#include "src/ui/controller-select-dialog.hpp"
 #include "src/ui/core-installer.hpp"
 #include "src/ui/icons.hpp"
 #include "src/ui/keyboard-config-dialog.hpp"
@@ -143,7 +142,6 @@ margin-bottom: 2px;
   m_ui->actionSettings->setIcon(Icon::configure());
   m_ui->actionManageSources->setIcon(Icon::search());
   m_ui->actionAddRom->setIcon(Icon::add());
-  m_ui->actionConfigureControllers->setIcon(Icon::gamepad());
   m_ui->actionConfigureKeyboard->setIcon(Icon::keyboard());
   m_ui->rhdcLoginAction->setIcon(Icon::login());
   m_ui->rhdcLogoutAction->setIcon(Icon::logout());
@@ -620,11 +618,6 @@ void MainWindow::play(bool multiplayer) {
 void MainWindow::playSingleplayer() { play(false); }
 
 void MainWindow::playMultiplayer() { play(true); }
-
-void MainWindow::configureController() {
-  ControllerSelectDialog dialog;
-  dialog.exec();
-}
 
 void MainWindow::configureKeyboard() {
   KeyboardConfigDialog dialog;

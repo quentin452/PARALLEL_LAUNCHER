@@ -44,7 +44,6 @@ private slots:
   void editSave(fs::path saveFilePath);
   void playSingleplayer();
   void playMultiplayer();
-  void configureController();
   void configureKeyboard();
   void manageRomSources();
   void addRom();

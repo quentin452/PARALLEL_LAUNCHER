@@ -1,3 +1,4 @@
+# Currently officially support Windows 11 X64
 cmake_minimum_required(VERSION 3.5.0)
 project(parallel-launcher VERSION 0.1.0 LANGUAGES C CXX)
 set(RESOURCE_FILE "${CMAKE_SOURCE_DIR}/data/resources.qrc")

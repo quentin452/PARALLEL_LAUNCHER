@@ -28,7 +28,6 @@ private:
   RomSettingsWidget *m_romSettingsWidget;
 
   void play(bool multiplayer);
-  void updateRhdcActions();
   RomInfo *getSelectedRomInfo();
   void setView(int view, bool keepSize = false);
 
@@ -44,7 +43,6 @@ private slots:
   void playMultiplayer();
   void configureKeyboard();
   void manageRomSources();
-  void addRom();
   void editSettings();
 
   void rhdcLogin();
@@ -63,7 +61,6 @@ public:
   virtual ~MainWindow();
 
 protected:
-  virtual void paintEvent(QPaintEvent *event) override;
   virtual void closeEvent(QCloseEvent *event) override;
   virtual void keyPressEvent(QKeyEvent *event) override;
 };

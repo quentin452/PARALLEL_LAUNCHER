@@ -156,7 +156,6 @@ margin-bottom: 2px;
   reloadSettings();
 
   refreshRomList();
-  updateRhdcActions();
 
   if (uiState.rhdcView) {
     setView(VIEW_RHDC, true);
@@ -256,7 +255,6 @@ void MainWindow::refreshRomList() {
 
         RHDC::sync([this, windowExists](bool refetch) {
           this->m_ui->searchIndicator->setVisible(false);
-          updateRhdcActions();
           if (refetch)
             this->refetchAll();
         });
@@ -332,86 +330,6 @@ void MainWindow::manageRomSources() {
   refreshRomList();
 }
 
-void MainWindow::addRom() {
-  fs::path romPath =
-      FileDialog::getFile(tr("Select a ROM").toStdString().c_str(),
-                          {{tr("ROM or Patch File").toStdString().c_str(),
-                            "*.z64;*.n64;*.v64;*.bps"}});
-  if (romPath.empty())
-    return;
-
-  static const std::set<string> s_allowedExtensions = std::set<string>{
-      ".z64", ".n64", ".v64", ".Z64", ".N64", ".V64", ".bps", ".BPS", ".Bps"};
-
-  static const std::set<string> s_patchExtensions =
-      std::set<string>{".bps", ".BPS", ".Bps"};
-
-  if (s_allowedExtensions.count(romPath.extension().u8string()) <= 0) {
-    return;
-  }
-
-  if (!RomUtil::coveredBySearchPath(romPath)) {
-    DataProvider::addManualRomPath(romPath);
-  }
-
-  string firstGroup = SpecialGroups::Uncategorized;
-  if (DataProvider::tryFetchRomFile(romPath, nullptr)) {
-    RomInfo romInfo;
-    if (DataProvider::tryFetchRomByPath(romPath, true, &romInfo, nullptr) &&
-        !romInfo.groups.empty()) {
-      firstGroup = *romInfo.groups.begin();
-    }
-  } else {
-    const string sha1 = Sha1::compute(romPath);
-
-    DataProvider::addRomFile(
-        RomFile{romPath, RomUtil::getLastModified(romPath), sha1, true});
-
-    const AppSettings &settings = FileController::loadAppSettings();
-    DataProvider::addRomInfo(RomInfo{// does nothing if the sha1 already exists
-                                     sha1,
-                                     "",
-                                     RomUtil::getInternalName(romPath),
-                                     EmulatorCore::UseDefault,
-                                     GfxPlugin::UseDefault,
-                                     GfxPlugin::UseDefault,
-                                     settings.parallelTexRectUpscaling,
-                                     settings.parallelRemoveBorders,
-                                     settings.glidenFramebufferEmulation,
-                                     settings.glidenCorrectDepthCompare,
-                                     false,
-                                     0,
-                                     0,
-                                     std::set<string>(),
-                                     true,
-                                     false,
-                                     RomUtil::getCrc32(romPath),
-                                     DefaultInputModes::Normal.id,
-                                     WidescreenMode::Off,
-                                     false,
-                                     false,
-                                     RomUtil::readControllerTypes(romPath),
-                                     ""});
-  }
-
-  setView(VIEW_CLASSIC);
-  refetchAll();
-  m_ui->romList->selectRom(SpecialGroups::Uncategorized, romPath);
-}
-
-void MainWindow::paintEvent(QPaintEvent *event) {
-  QMainWindow::paintEvent(event);
-  if (!m_windowSizingComplete) {
-    const UiState uiState = FileController::loadUiState();
-    if (m_ui->romView->currentIndex() == VIEW_RHDC) {
-      resize(uiState.rhdcViewSize.width, uiState.rhdcViewSize.height);
-    } else {
-      resize(uiState.classicViewSize.width, uiState.classicViewSize.height);
-    }
-    m_windowSizingComplete = true;
-  }
-}
-
 void MainWindow::closeEvent(QCloseEvent *event) {
   const UiState &oldState = FileController::loadUiState();
 
@@ -452,37 +370,10 @@ void MainWindow::editSave(fs::path saveFilePath) {
   }
 }
 
-void MainWindow::updateRhdcActions() {
-  const bool integrationEnabled =
-      RhdcCredentials::exists() || DataProvider::hasRhdcData();
-  const bool loggedIn = RhdcApi::isAuthenticated();
-
-  m_ui->rhdcLoginAction->setText(integrationEnabled
-                                     ? tr("Login to romhacking.com")
-                                     : tr("Enable romhacking.com integration"));
-  m_ui->rhdcLoginAction->setIcon(integrationEnabled ? Icon::login()
-                                                    : Icon::plugin());
-  m_ui->rhdcLoginAction->setVisible(!loggedIn);
-  m_ui->rhdcLogoutAction->setVisible(loggedIn);
-  m_ui->rhdcDisableAction->setVisible(integrationEnabled);
-  m_ui->rhdcViewToggleButton->setVisible(integrationEnabled && loggedIn);
-
-  if (m_ui->romView->currentIndex() == VIEW_RHDC &&
-      (!integrationEnabled || !loggedIn)) {
-    setView(m_ui->romList->hasRoms() ? VIEW_CLASSIC : VIEW_NO_ROMS);
-    if (palette().buttonText().color().valueF() > 0.5) {
-      m_ui->rhdcViewToggleButton->setIcon(Icon::rhdcLight());
-    } else {
-      m_ui->rhdcViewToggleButton->setIcon(Icon::rhdcDark());
-    }
-  }
-}
-
 void MainWindow::rhdcLogin() {
   RhdcLoginDialog dialog;
   if (dialog.exec() == QDialog::Accepted) {
     m_ui->searchIndicator->setVisible(true);
-    updateRhdcActions();
 
     std::shared_ptr<bool> windowExists = m_exists;
     RHDC::sync([this, windowExists](bool refetch) {
@@ -498,7 +389,6 @@ void MainWindow::rhdcLogin() {
 void MainWindow::rhdcLogout() {
   RhdcApi::logout();
   RhdcCredentials::forget();
-  updateRhdcActions();
 }
 
 void MainWindow::rhdcDisable() {
@@ -511,7 +401,6 @@ void MainWindow::rhdcDisable() {
     RhdcApi::logout();
     RhdcCredentials::forget();
     DataProvider::clearAllRhdcData();
-    updateRhdcActions();
   }
 }
 

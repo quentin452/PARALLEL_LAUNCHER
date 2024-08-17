@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.5.0)
 project(parallel-launcher VERSION 0.1.0 LANGUAGES C CXX)
-
+# Set the build type
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
 # Rechercher Qt 5
 find_package(Qt5 COMPONENTS Widgets Network Core LinguistTools REQUIRED)
 
@@ -41,7 +44,11 @@ set(TRANSLATIONS
     ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_pt.ts
 )
 
-# Créer des fichiers .qm à partir des fichiers .ts
+# Définir le répertoire où les fichiers .qm seront placés
+set(QM_OUTPUT_DIR "${CMAKE_BINARY_DIR}/${CMAKE_BUILD_TYPE}/translations")
+set(BUILD_DIR "${CMAKE_BINARY_DIR}")
+
+# Créer les fichiers .qm à partir des fichiers .ts
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TRANSLATIONS})
 
 # Add the generated headers to the list of sources
@@ -56,10 +63,21 @@ file(GLOB_RECURSE MOC_HEADERS
 qt5_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
 add_executable(parallel-launcher WIN32 ${SOURCES} ${MOC_SOURCES})
 
+file(GLOB QM_FILES "${CMAKE_BINARY_DIR}/parallel-launcher_*.qm")
+foreach(QM_FILE ${QM_FILES})
+    add_custom_command(
+        TARGET parallel-launcher POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E echo "Copying ${QM_FILE} to ${QM_OUTPUT_DIR}"
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different ${QM_FILE} ${QM_OUTPUT_DIR}
+        COMMENT "Moving .qm files"
+    )
+endforeach()
+
 # Assurez-vous que le projet utilise Qt pour les traductions
- set_target_properties(parallel-launcher PROPERTIES
+set_target_properties(parallel-launcher PROPERTIES
     AUTOMOC ON
     AUTORCC ON
+    # AUTOUIC ON
 )
 
 if (MSVC)

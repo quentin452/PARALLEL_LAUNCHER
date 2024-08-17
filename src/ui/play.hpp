@@ -6,12 +6,6 @@
 #include <functional>
 
 namespace Game {
-
-extern bool tryLoadRom(fs::path romPath,
-                       /* out */ RomInfo &romInfo,
-                       /* out */ RomFile &romFile,
-                       /* out */ bool &firstRun);
-
 extern bool play(const RomFile &romFile, const RomInfo &romInfo,
                  bool multiplayer, bool waitForRhdcSync,
                  const std::function<void()> &callback,

@@ -429,50 +429,11 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
       }
     }
 
-    if (runtimeMs < ((testLayout != nullptr) ? 500 : 2000)) {
-      const char *errorMessage;
-      switch (gfxPlugin) {
-      case GfxPlugin::ParaLLEl:
-        errorMessage = s_crashMessageParallel;
-        break;
-      case GfxPlugin::Angrylion:
-        errorMessage = s_crashMessageAngrylion;
-        break;
-      default:
-        errorMessage = s_crashMessageDefault;
-        break;
-      }
-
-      QMessageBox errorDialog(
-          QMessageBox::Critical,
-          QCoreApplication::translate("Game", "Possible ROM Error"),
-          QCoreApplication::translate("Game", errorMessage), QMessageBox::Ok);
-
-#ifdef _WIN32
-      QFile retroLogs(QString::fromUtf16(
-          (RetroArch::getBasePath() / L"retroarch.log").u16string().c_str()));
-#else
-				QFile retroLogs( QString::fromUtf8( (RetroArch::getBasePath() / "retroarch.log").u8string().c_str() ) );
-#endif
-      if (retroLogs.exists() && retroLogs.open(QIODevice::ReadOnly)) {
-        const QString logText =
-            QString::fromUtf8(retroLogs.readAll()).trimmed();
-        if (!logText.isNull() && !logText.isEmpty()) {
-          errorDialog.setDetailedText(logText);
-        }
-      }
-
-      errorDialog.exec();
-    }
-
     callback();
   });
 
   return true;
 }
-#if defined(__linux__) && __GNUC__ >= 12
-#pragma GCC diagnostic pop
-#endif
 
 static inline bool usesTwoPorts(const Uuid &inputModeId) {
   const std::map<Uuid, InputMode> inputModes = FileController::loadInputModes();
@@ -481,28 +442,6 @@ static inline bool usesTwoPorts(const Uuid &inputModeId) {
   }
 
   return false;
-}
-
-static bool showGamecubeWarning(const QString &message) {
-  QMessageBox warning(QMessageBox::Information,
-                      QCoreApplication::translate("Game", "Warning"), message,
-                      QMessageBox::Ignore | QMessageBox::Cancel);
-
-  QCheckBox checkbox(
-      QCoreApplication::translate("Game", "Do not warn me again"), &warning);
-
-  warning.setCheckBox(&checkbox);
-  if (warning.exec() != QMessageBox::Ignore) {
-    return false;
-  }
-
-  if (checkbox.isChecked()) {
-    AppSettings settings = FileController::loadAppSettings();
-    settings.ignoreGamecubeWarnings = true;
-    FileController::saveAppSettings(settings);
-  }
-
-  return true;
 }
 
 bool Game::play(const RomFile &romFile, const RomInfo &romInfo,
@@ -567,37 +506,4 @@ bool Game::play(const RomFile &romFile, const RomInfo &romInfo,
 
   return playGame(romFile, romInfo, players, bindSavestate, callback,
                   testLayout, waitForRhdcSync, inputBindingError);
-}
-
-static inline bool hasBpsExtension(const fs::path &path) {
-  const string extension = path.extension().u8string();
-  return (extension.length() == 4 && extension[0] == '.' &&
-          (extension[1] == 'b' || extension[1] == 'B') &&
-          (extension[2] == 'p' || extension[2] == 'P') &&
-          (extension[3] == 's' || extension[3] == 'S'));
-}
-
-bool Game::tryLoadRom(fs::path romPath,
-                      /* out */ RomInfo &romInfo,
-                      /* out */ RomFile &romFile,
-                      /* out */ bool &firstRun) {
-  if (!fs::existsSafe(romPath)) {
-    return false;
-  }
-
-  firstRun = false;
-  if (DataProvider::tryFetchRomByPath(romPath, false, &romInfo, &romFile)) {
-    return true;
-  }
-
-  romFile = RomFile{romPath, RomUtil::getLastModified(romPath),
-                    Sha1::compute(romPath), true};
-
-  if (DataProvider::tryFetchRomByHash(romFile.sha1, false, &romInfo)) {
-    DataProvider::addRomFile(romFile);
-    return true;
-  }
-
-  firstRun = true;
-  return true;
 }

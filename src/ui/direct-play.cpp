@@ -57,11 +57,6 @@ int DirectPlay::start(QApplication &app, fs::path romPath) {
   RomInfo romInfo;
   RomFile romFile;
   bool firstRun;
-
-  if (!Game::tryLoadRom(romPath, romInfo, romFile, firstRun)) {
-    return runWithoutRom(app);
-  }
-
   romPath = romFile.path;
   if (firstRun || DataProvider::hasPendingPluginCheck(romFile.sha1)) {
     bool pluginChecked = false;

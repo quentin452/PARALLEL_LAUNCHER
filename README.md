@@ -40,7 +40,23 @@ If you are editing the UI, you will also want to install either Qt Designer or Q
 
 ### Building on Windows
 
-#### Setup
+### EASY SETUP (OFFICIALLY SUPPORT ONLY WINDOWS X64)
+
+- Install Visual Studio 2019+
+- Install "Desktop development with C++" from the Visual Studio installer
+- Install Visual Studio Code
+- Download Qt from https://download.qt.io/archive/qt/5.12/5.12.12/qt-opensource-windows-x86-5.12.12.exe
+- Run the installer and select a custom install
+  - Select the following options from Qt 5.15.2 to install:
+    - MSVC 2017 32-bit
+    - MSVC 2017 64-bit
+    - Qt Network Authorization
+- Add Qt (64 bit) path that point to Qt5Config.cmake to Path environment variable in windows system properties ,here is an example of the QT path : C:\Qt\Qt5.12.12\5.12.12\msvc2017_64\lib\cmake\Qt5
+- Open Visual Studio Code 
+- use shortcut : ctrl + shift + b
+- and choose a build or run taks and all should be okay
+ 
+#### HARD Setup (SUPPORT MANY WINDOWS SYSTEMS)
 Note: if you plan on building both 64-bit and 32-bit builds, I recommend that you create both a `release64` and `release32` folder, then copy the appropriate one to the mentioned `release` folder when you want to build.  
 
 - Install Visual Studio 2019

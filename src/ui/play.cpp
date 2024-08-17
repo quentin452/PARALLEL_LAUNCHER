@@ -186,39 +186,6 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
   if (settings.enableIsViewer && emulatorCore == EmulatorCore::ParallelN64) {
     isViewerWindow->show();
   }
-  ProcessAwaiter::QtSafeAwait(emulator, [=]([[maybe_unused]] int64 exitCode,
-                                            int64 runtimeMs) {
-    libplHandler->disconnect();
-    if (settings.enableIsViewer && emulatorCore == EmulatorCore::ParallelN64) {
-      isViewer->stop();
-      isViewerWindow->close();
-    }
-
-    delete emulator;
-    NowPlayingWindow::close();
-
-    if (syncSaves && !groupId.empty()) {
-      fs::error_code err;
-      fs::path tempRomPath = RetroArch::getTemporaryRomPath() / groupId;
-      tempRomPath.replace_extension(romFile.path.extension());
-      fs::remove(tempRomPath, err);
-    }
-
-    int64 newPlayTime = romInfo.playTime + runtimeMs;
-
-    if (NowPlayingWindow::shouldReload()) {
-      RomFile newRomFile;
-      RomInfo newRomInfo;
-      if (DataProvider::tryFetchRomByPath(romFile.path, true, &newRomInfo,
-                                          &newRomFile)) {
-        playGame(newRomFile, newRomInfo, players, bindSavestate, callback,
-                 testLayout, waitForRhdcSync, inputBindingError);
-        return;
-      }
-    }
-
-    callback();
-  });
 
   return true;
 }

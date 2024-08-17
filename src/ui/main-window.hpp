@@ -35,34 +35,18 @@ public:
   void refetchAll();
 
 private slots:
-  void reloadSettings();
   void refreshRomList();
 
   void editSave(fs::path saveFilePath);
   void playSingleplayer();
   void playMultiplayer();
-  void configureKeyboard();
-  void manageRomSources();
-  void editSettings();
 
   void rhdcLogin();
   void rhdcLogout();
   void rhdcDisable();
-
-  void openSaveFileDirectory() const;
-  void openSavestateDirectory() const;
-  void openSdCardDirectory() const;
-  void openDataDirectory() const;
-  void openConfigDirectory() const;
-  void openCacheDirectory() const;
-
 public:
   MainWindow();
   virtual ~MainWindow();
-
-protected:
-  virtual void closeEvent(QCloseEvent *event) override;
-  virtual void keyPressEvent(QKeyEvent *event) override;
 };
 
 #endif /* SRC_UI_MAIN_WINDOW_HPP_ */

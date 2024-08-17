@@ -152,9 +152,6 @@ margin-bottom: 2px;
   connect(m_ui->rhdcPage, SIGNAL(editSave(fs::path)), this,
           SLOT(editSave(fs::path)));
   connect(m_ui->romList, SIGNAL(launchRom()), this, SLOT(playSingleplayer()));
-
-  reloadSettings();
-
   refreshRomList();
 
   if (uiState.rhdcView) {
@@ -227,20 +224,6 @@ RomInfo *MainWindow::getSelectedRomInfo() {
   }
 }
 
-void MainWindow::reloadSettings() {
-  m_settings = FileController::loadAppSettings();
-
-  m_ui->romList->setColumnHidden(0, false);
-  m_ui->romList->setColumnHidden(
-      1, !Flags::has(m_settings.visibleColumns, RomInfoColumn::InternalName));
-  m_ui->romList->setColumnHidden(
-      2, !Flags::has(m_settings.visibleColumns, RomInfoColumn::Path));
-  m_ui->romList->setColumnHidden(
-      3, !Flags::has(m_settings.visibleColumns, RomInfoColumn::LastPlayed));
-  m_ui->romList->setColumnHidden(
-      4, !Flags::has(m_settings.visibleColumns, RomInfoColumn::PlayTime));
-}
-
 void MainWindow::refreshRomList() {
   m_romSearch.cancel();
   m_ui->searchIndicator->setVisible(true);
@@ -299,66 +282,12 @@ void MainWindow::playSingleplayer() { play(false); }
 
 void MainWindow::playMultiplayer() { play(true); }
 
-void MainWindow::configureKeyboard() {
-  KeyboardConfigDialog dialog;
-  dialog.exec();
-  m_romSettingsWidget->reloadHotkeyInfo();
-}
-
 void MainWindow::refetchAll() {
   m_ui->romList->refetchAll();
   if (m_ui->romView->currentIndex() == VIEW_RHDC) {
     m_ui->rhdcPage->reload();
   } else {
     setView(m_ui->romList->hasRoms() ? VIEW_CLASSIC : VIEW_NO_ROMS);
-  }
-}
-
-void MainWindow::editSettings() {
-  SettingsDialog *dialog = new SettingsDialog();
-  dialog->exec();
-  delete dialog;
-  reloadSettings();
-  refetchAll();
-}
-
-void MainWindow::manageRomSources() {
-  RomSourceDialog *dialog = new RomSourceDialog();
-  dialog->exec();
-  delete dialog;
-  refetchAll();
-  refreshRomList();
-}
-
-void MainWindow::closeEvent(QCloseEvent *event) {
-  const UiState &oldState = FileController::loadUiState();
-
-  UiState uiState = {m_ui->romList->saveTreeState(),
-                     m_ui->rhdcPage->uiState(),
-                     oldState.classicViewSize,
-                     oldState.rhdcViewSize,
-                     m_showAllPlugins,
-                     m_ui->romView->currentIndex() == VIEW_RHDC};
-
-  if (uiState.rhdcView) {
-    uiState.rhdcViewSize.width = width();
-    uiState.rhdcViewSize.height = height();
-  } else {
-    uiState.classicViewSize.width = width();
-    uiState.classicViewSize.height = height();
-  }
-
-  FileController::saveUiState(uiState);
-  NowPlayingWindow::free();
-  QMainWindow::closeEvent(event);
-  QCoreApplication::quit();
-}
-
-void MainWindow::keyPressEvent(QKeyEvent *event) {
-  if (event->key() == Qt::Key_F7) {
-    event->accept();
-  } else {
-    QMainWindow::keyPressEvent(event);
   }
 }
 
@@ -402,30 +331,4 @@ void MainWindow::rhdcDisable() {
     RhdcCredentials::forget();
     DataProvider::clearAllRhdcData();
   }
-}
-
-void MainWindow::openSaveFileDirectory() const {
-  FileExplorer::showFolder(BaseDir::data() / _NFS("retro-data") /
-                           _NFS("saves"));
-}
-
-void MainWindow::openSavestateDirectory() const {
-  FileExplorer::showFolder(BaseDir::data() / _NFS("retro-data") /
-                           _NFS("states"));
-}
-
-void MainWindow::openSdCardDirectory() const {
-  FileExplorer::showFolder(BaseDir::data() / _NFS("sdcard"));
-}
-
-void MainWindow::openDataDirectory() const {
-  FileExplorer::showFolder(BaseDir::data());
-}
-
-void MainWindow::openConfigDirectory() const {
-  FileExplorer::showFolder(BaseDir::config());
-}
-
-void MainWindow::openCacheDirectory() const {
-  FileExplorer::showFolder(BaseDir::cache());
 }

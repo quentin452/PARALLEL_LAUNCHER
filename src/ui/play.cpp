@@ -239,10 +239,6 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
   const EmulatorCore emulatorCore =
       (romInfo.emulator == EmulatorCore::UseDefault) ? settings.defaultEmulator
                                                      : romInfo.emulator;
-  if (!CoreInstaller::requireCore(emulatorCore)) {
-    callback();
-    return false;
-  }
 
   std::shared_ptr<LibplHandler> libplHandler = std::make_shared<LibplHandler>();
   std::shared_ptr<ISViewer> isViewer = std::make_shared<ISViewer>();

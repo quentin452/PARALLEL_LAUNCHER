@@ -1,6 +1,6 @@
 # Currently officially support Windows 11 X64
 cmake_minimum_required(VERSION 3.5.0)
-project(parallel-launcher VERSION 0.1.0 LANGUAGES C CXX)
+project(parallel-launcher-only-star-display VERSION 0.1.0 LANGUAGES C CXX)
 set(RESOURCE_FILE "${CMAKE_SOURCE_DIR}/data/resources.qrc")
 # Set the build type
 if(NOT CMAKE_BUILD_TYPE)
@@ -35,15 +35,15 @@ qt5_wrap_ui(UI_HEADERS ${UI_FILES})
 
 # Définir les fichiers de traduction
 set(TRANSLATIONS
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_en_us.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_en_gb.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_it.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_es.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_fr.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_fr_ca.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_de.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_ar.ts
-    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher_pt.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_en_us.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_en_gb.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_it.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_es.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_fr.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_fr_ca.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_de.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_ar.ts
+    ${PROJECT_SOURCE_DIR}/lang/parallel-launcher-only-star-display_pt.ts
 )
 
 # Définir le répertoire où les fichiers .qm seront placés
@@ -63,14 +63,14 @@ file(GLOB_RECURSE MOC_HEADERS
 
 # Générer les fichiers MOC
 qt5_wrap_cpp(MOC_SOURCES ${MOC_HEADERS})
-add_executable(parallel-launcher WIN32 ${SOURCES} ${MOC_SOURCES} ${RESOURCE_FILE})
+add_executable(parallel-launcher-only-star-display WIN32 ${SOURCES} ${MOC_SOURCES} ${RESOURCE_FILE})
 
 # Créer une liste de fichiers .qma
-file(GLOB QM_FILES "${CMAKE_BINARY_DIR}/parallel-launcher_*.qm")
+file(GLOB QM_FILES "${CMAKE_BINARY_DIR}/parallel-launcher-only-star-display_*.qm")
 
 # Créer le répertoire de sortie s'il n'existe pas
 add_custom_command(
-    TARGET parallel-launcher POST_BUILD
+    TARGET parallel-launcher-only-star-display POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory ${QM_OUTPUT_DIR}
     COMMENT "Creating output directory if it doesn't exist"
 )
@@ -78,34 +78,34 @@ add_custom_command(
 # Copier les fichiers .qm
 foreach(QM_FILE ${QM_FILES})
     add_custom_command(
-        TARGET parallel-launcher POST_BUILD
+        TARGET parallel-launcher-only-star-display POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different ${QM_FILE} ${QM_OUTPUT_DIR}
         COMMENT "Copying ${QM_FILE} to ${QM_OUTPUT_DIR}"
     )
 endforeach()
 
 # Assurez-vous que le projet utilise Qt pour les traductions
-set_target_properties(parallel-launcher PROPERTIES
+set_target_properties(parallel-launcher-only-star-display PROPERTIES
     AUTOMOC ON
     AUTORCC ON
     # AUTOUIC ON
 )
 
 if (MSVC)
-    set_target_properties(parallel-launcher PROPERTIES
+    set_target_properties(parallel-launcher-only-star-display PROPERTIES
         WIN32_EXECUTABLE ON
     )
 endif()
 
 # Inclure les répertoires d'en-têtes Qt et SQLite3
-target_include_directories(parallel-launcher PUBLIC ${Qt5Widgets_INCLUDE_DIRS} ${Qt5Core_INCLUDE_DIRS} ${Qt5Network_INCLUDE_DIRS} ${SQLITE3_INCLUDE_DIR} ${CMAKE_AUTOUIC_OUTPUT_DIRECTORY})
+target_include_directories(parallel-launcher-only-star-display PUBLIC ${Qt5Widgets_INCLUDE_DIRS} ${Qt5Core_INCLUDE_DIRS} ${Qt5Network_INCLUDE_DIRS} ${SQLITE3_INCLUDE_DIR} ${CMAKE_AUTOUIC_OUTPUT_DIRECTORY})
 
 # Lier les bibliothèques Qt
-target_link_libraries(parallel-launcher Qt5::Widgets Qt5::Network Qt5::Core bcrypt winmm)
+target_link_libraries(parallel-launcher-only-star-display Qt5::Widgets Qt5::Network Qt5::Core bcrypt winmm)
 
 # Ajouter l'option /FS pour éviter les conflits de fichiers .PDB
 if (MSVC)
-    target_compile_options(parallel-launcher PRIVATE /FS)
+    target_compile_options(parallel-launcher-only-star-display PRIVATE /FS)
 endif()
 
 # Additional include directories
@@ -114,30 +114,30 @@ set(ALL_INCLUDE_DIR
     "${CMAKE_SOURCE_DIR}/build/"
 )
 include_directories("${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/include" "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/include")
-target_include_directories(parallel-launcher PUBLIC ${ALL_INCLUDE_DIR})
+target_include_directories(parallel-launcher-only-star-display PUBLIC ${ALL_INCLUDE_DIR})
 
 # Include .lib files from a directory
 file(GLOB LIBS "${CMAKE_SOURCE_DIR}/!dlls_and_libs/windows_x64/libs/*.lib")
-target_link_libraries(parallel-launcher ${LIBS} "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/lib/*.lib" "${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/build/Release/SDL2.lib")
+target_link_libraries(parallel-launcher-only-star-display ${LIBS} "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/lib/*.lib" "${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/build/Release/SDL2.lib")
 
 # Custom command to copy Qt DLLs
-add_custom_command(TARGET parallel-launcher POST_BUILD
+add_custom_command(TARGET parallel-launcher-only-star-display POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E echo "Copying Qt DLLs..."
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
         "${Qt5Widgets_DIR}/../../../bin/Qt5Widgets.dll"
         "${Qt5Core_DIR}/../../../bin/Qt5Core.dll"
         "${Qt5Network_DIR}/../../../bin/Qt5Network.dll"
         "${Qt5Network_DIR}/../../../bin/Qt5Gui.dll"
-        "$<TARGET_FILE_DIR:parallel-launcher>"
+        "$<TARGET_FILE_DIR:parallel-launcher-only-star-display>"
 )
 
 file(GLOB DLL_FILES "${CMAKE_SOURCE_DIR}/!third_party_libs/OpenSSL-Win64-1.1.1a/x64/bin/*.dll" "${CMAKE_SOURCE_DIR}/!third_party_libs/SDL2-2.30.6/build/Release/*.dll")
 foreach(DLL ${DLL_FILES})
-    add_custom_command(TARGET parallel-launcher POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E echo "Copying ${DLL} to $<TARGET_FILE_DIR:parallel-launcher>"
+    add_custom_command(TARGET parallel-launcher-only-star-display POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E echo "Copying ${DLL} to $<TARGET_FILE_DIR:parallel-launcher-only-star-display>"
         COMMAND ${CMAKE_COMMAND} -E copy_if_different
             "${DLL}"
-            "$<TARGET_FILE_DIR:parallel-launcher>"
+            "$<TARGET_FILE_DIR:parallel-launcher-only-star-display>"
     )
 endforeach()
 
@@ -145,9 +145,9 @@ endforeach()
 find_program(WINDEPLOYQT_EXECUTABLE windeployqt HINTS "${Qt5_DIR}/../../../bin")
 
 # Custom command to run windeployqt
-add_custom_command(TARGET parallel-launcher POST_BUILD
+add_custom_command(TARGET parallel-launcher-only-star-display POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E echo "Running windeployqt..."
-    COMMAND ${WINDEPLOYQT_EXECUTABLE} $<TARGET_FILE:parallel-launcher>
+    COMMAND ${WINDEPLOYQT_EXECUTABLE} $<TARGET_FILE:parallel-launcher-only-star-display>
 )
 
 include(CTest)

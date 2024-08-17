@@ -32,11 +32,6 @@ private:
                     const PluginAndLayoutInfo &hackInfo,
                     std::shared_ptr<bool> dialogExists);
 
-  static void patchRom(RhdcDownloadDialog *dialog, string hackId,
-                       fs::path patchPath, fs::path baseRomPath,
-                       PluginAndLayoutInfo hackInfo,
-                       std::shared_ptr<bool> dialogExists);
-
 public:
   static fs::path run(const string &hackId, const string &downloadUrl,
                       const string &versionName);

@@ -1,7 +1,6 @@
 #include "src/ui/main-window.hpp"
 #include "ui_main-window.h"
 
-#include "src/core/bps.hpp"
 #include "src/core/file-controller.hpp"
 #include "src/core/preset-controllers.hpp"
 #include "src/core/retroarch.hpp"
@@ -676,37 +675,6 @@ void MainWindow::addRom() {
 
   if (s_allowedExtensions.count(romPath.extension().u8string()) <= 0) {
     return;
-  }
-
-  if (s_patchExtensions.count(romPath.extension().u8string()) > 0) {
-    fs::path destinationPath;
-    switch (Bps::tryApplyBps(romPath, destinationPath)) {
-    case Bps::BpsApplyError::None:
-      romPath = destinationPath;
-      break;
-    case Bps::BpsApplyError::InvalidBps:
-      QMessageBox::critical(
-          this, tr("Patch Failed"),
-          tr("Failed to patch ROM. The .bps patch appears to be invalid."));
-      return;
-    case Bps::BpsApplyError::PatchFailed:
-      QMessageBox::critical(this, tr("Patch Failed"),
-                            tr("Failed to patch ROM. The base ROM does not "
-                               "match what the patch expects."));
-      return;
-    case Bps::BpsApplyError::NoBaseRom:
-      QMessageBox::critical(this, tr("Patch Failed"),
-                            tr("Failed to patch ROM. The base rom required to "
-                               "patch is not known to Parallel Launcher."));
-      return;
-    case Bps::BpsApplyError::WriteError:
-      QMessageBox::critical(this, tr("Patch Failed"),
-                            tr("Failed to patch ROM. An error occurred while "
-                               "writing the patched ROM to disk."));
-      return;
-    default:
-      return;
-    }
   }
 
   if (!RomUtil::coveredBySearchPath(romPath)) {

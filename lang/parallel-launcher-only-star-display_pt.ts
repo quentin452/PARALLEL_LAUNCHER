@@ -536,37 +536,6 @@
     </message>
 </context>
 <context>
-    <name>DirectPlay</name>
-    <message>
-        <location filename="../src/ui/play.cpp" line="673"/>
-        <location filename="../src/ui/play.cpp" line="680"/>
-        <location filename="../src/ui/play.cpp" line="687"/>
-        <location filename="../src/ui/play.cpp" line="694"/>
-        <source>Patch Failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/play.cpp" line="674"/>
-        <source>Failed to patch ROM. The .bps patch appears to be invalid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/play.cpp" line="681"/>
-        <source>Failed to patch ROM. The base ROM does not match what the patch expects..</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/play.cpp" line="688"/>
-        <source>Failed to patch ROM. The base rom required to patch is not known to Parallel Launcher.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/play.cpp" line="695"/>
-        <source>Failed to patch ROM. An error occurred while writing the patched ROM to disk.</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>DirectPlayWindow</name>
     <message>
         <location filename="../src/ui/designer/direct-play-window.ui" line="14"/>
@@ -645,52 +614,52 @@
 <context>
     <name>Game</name>
     <message>
-        <location filename="../src/ui/play.cpp" line="41"/>
+        <location filename="../src/ui/play.cpp" line="40"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM may contain invalid or unsafe RSP microcode that cannot be run on console accurate graphics plugins. Alternatively, if you have a very old onboard graphics card, it is possible that Vulkan is not supported on your system. In either case, using another graphics plugin might resolve the issue.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="52"/>
+        <location filename="../src/ui/play.cpp" line="51"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM may contain invalid or unsafe RSP microcode that cannot be run on console accurate graphics plugins. If this is the case, try running the ROM with another graphics plugin instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="61"/>
+        <location filename="../src/ui/play.cpp" line="60"/>
         <source>The emulator exited shortly after launching. If you are able to launch other ROMs without issues, then this ROM is most likely corrupt.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="275"/>
+        <location filename="../src/ui/play.cpp" line="274"/>
         <source>Emulator Missing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="276"/>
+        <location filename="../src/ui/play.cpp" line="275"/>
         <source>Failed to launch emulator. It does not appear to be installed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="454"/>
+        <location filename="../src/ui/play.cpp" line="453"/>
         <source>Possible ROM Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="524"/>
+        <location filename="../src/ui/play.cpp" line="523"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="528"/>
+        <location filename="../src/ui/play.cpp" line="527"/>
         <source>Do not warn me again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="603"/>
+        <location filename="../src/ui/play.cpp" line="602"/>
         <source>This game uses an emulated Gamecube controller, but you have not bound any inputs to the X and Y buttons.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/play.cpp" line="618"/>
+        <location filename="../src/ui/play.cpp" line="617"/>
         <source>This game uses an emulated Gamecube controller, but you do not have an analog stick bound to the C buttons (C stick).</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1302,7 +1271,7 @@
     <message>
         <location filename="../src/ui/designer/main-window.ui" line="351"/>
         <location filename="../build/ui_main-window.h" line="395"/>
-        <location filename="../src/ui/main-window.cpp" line="824"/>
+        <location filename="../src/ui/main-window.cpp" line="792"/>
         <source>Login to romhacking.com</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1367,60 +1336,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/main-window.cpp" line="157"/>
+        <location filename="../src/ui/main-window.cpp" line="156"/>
         <source>Data Directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/main-window.cpp" line="665"/>
+        <location filename="../src/ui/main-window.cpp" line="664"/>
         <source>Select a ROM</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/main-window.cpp" line="666"/>
+        <location filename="../src/ui/main-window.cpp" line="665"/>
         <source>ROM or Patch File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/main-window.cpp" line="689"/>
-        <location filename="../src/ui/main-window.cpp" line="693"/>
-        <location filename="../src/ui/main-window.cpp" line="698"/>
-        <location filename="../src/ui/main-window.cpp" line="703"/>
-        <source>Patch Failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/main-window.cpp" line="690"/>
-        <source>Failed to patch ROM. The .bps patch appears to be invalid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/main-window.cpp" line="694"/>
-        <source>Failed to patch ROM. The base ROM does not match what the patch expects.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/main-window.cpp" line="699"/>
-        <source>Failed to patch ROM. The base rom required to patch is not known to Parallel Launcher.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/main-window.cpp" line="704"/>
-        <source>Failed to patch ROM. An error occurred while writing the patched ROM to disk.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/main-window.cpp" line="825"/>
+        <location filename="../src/ui/main-window.cpp" line="793"/>
         <source>Enable romhacking.com integration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/main-window.cpp" line="869"/>
+        <location filename="../src/ui/main-window.cpp" line="837"/>
         <source>Confirm Disable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/main-window.cpp" line="870"/>
+        <location filename="../src/ui/main-window.cpp" line="838"/>
         <source>Are you sure you want to disable romhacking.com integration?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1823,55 +1764,35 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="154"/>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="242"/>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="412"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="153"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="241"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="408"/>
         <source>Failed to download patch from RHDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="303"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="302"/>
         <source>Downloading star layout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="335"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="334"/>
         <source>Failed to download star layout from RHDC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="353"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="352"/>
         <source>Downloading patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="378"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="377"/>
         <source>Applying patch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="391"/>
+        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="387"/>
         <source>The rom could not be installed because you do not have an unmodified copy of the US version of Super Mario 64 in your known roms list.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="452"/>
-        <source>The rom could not be installed because no bps patch was found.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="471"/>
-        <source>Could not install &apos;%1&apos; because of an unexpected error while applying the patch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="486"/>
-        <source>Computing checksum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/rhdc/ui/rhdc-download-dialog.cpp" line="515"/>
-        <source>Romhack installed successfully</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2561,7 +2482,7 @@
 <context>
     <name>RhdcSync</name>
     <message>
-        <location filename="../src/rhdc/core/sync.cpp" line="248"/>
+        <location filename="../src/rhdc/core/sync.cpp" line="216"/>
         <source>Failed to connect to romhacking.com</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2989,7 +2910,7 @@
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="82"/>
         <location filename="../build/ui_rom-source-dialog.h" line="530"/>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="69"/>
+        <location filename="../src/ui/rom-source-dialog.cpp" line="68"/>
         <source>New Source</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3096,7 +3017,7 @@
     <message>
         <location filename="../src/ui/designer/rom-source-dialog.ui" line="417"/>
         <location filename="../build/ui_rom-source-dialog.h" line="553"/>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="298"/>
+        <location filename="../src/ui/rom-source-dialog.cpp" line="297"/>
         <source>Patch File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3125,62 +3046,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="274"/>
+        <location filename="../src/ui/rom-source-dialog.cpp" line="273"/>
         <source>Select one or more ROMs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="297"/>
+        <location filename="../src/ui/rom-source-dialog.cpp" line="296"/>
         <source>Select a .bps patch file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="308"/>
+        <location filename="../src/ui/rom-source-dialog.cpp" line="307"/>
         <source>Select a ROM</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="333"/>
-        <source>Patch Applied</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="334"/>
-        <source>Saved patched rom to %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="350"/>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="354"/>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="360"/>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="365"/>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="370"/>
-        <source>Patch Failed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="351"/>
-        <source>Failed to patch ROM. The .bps patch appears to be invalid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="355"/>
-        <source>Failed to patch ROM. The base ROM does not match what the patch expects.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="361"/>
-        <source>Failed to patch ROM. The base rom required to patch is not known to Parallel Launcher.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="366"/>
-        <source>Failed to patch ROM. The base ROM is missing or invalid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../src/ui/rom-source-dialog.cpp" line="371"/>
-        <source>Failed to patch ROM. An error occurred while writing the patched ROM to disk.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

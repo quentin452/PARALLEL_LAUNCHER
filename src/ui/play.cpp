@@ -1,6 +1,5 @@
 #include "src/ui/play.hpp"
 
-#include "src/core/bps.hpp"
 #include "src/core/controller.hpp"
 #include "src/core/file-controller.hpp"
 #include "src/core/filesystem.hpp"
@@ -659,44 +658,6 @@ bool Game::tryLoadRom(fs::path romPath,
                       /* out */ bool &firstRun) {
   if (!fs::existsSafe(romPath)) {
     return false;
-  }
-
-  if (hasBpsExtension(romPath)) {
-    fs::path patchedRomPath;
-    Bps::BpsApplyError patchResult = Bps::tryApplyBps(romPath, patchedRomPath);
-    switch (patchResult) {
-    case Bps::BpsApplyError::None:
-      romPath = patchedRomPath;
-      break;
-    case Bps::BpsApplyError::InvalidBps:
-      QMessageBox::critical(
-          nullptr, QCoreApplication::translate("DirectPlay", "Patch Failed"),
-          QCoreApplication::translate(
-              "DirectPlay",
-              "Failed to patch ROM. The .bps patch appears to be invalid."));
-      return false;
-    case Bps::BpsApplyError::PatchFailed:
-      QMessageBox::critical(
-          nullptr, QCoreApplication::translate("DirectPlay", "Patch Failed"),
-          QCoreApplication::translate("DirectPlay",
-                                      "Failed to patch ROM. The base ROM does "
-                                      "not match what the patch expects.."));
-      return false;
-    case Bps::BpsApplyError::NoBaseRom:
-      QMessageBox::critical(
-          nullptr, QCoreApplication::translate("DirectPlay", "Patch Failed"),
-          QCoreApplication::translate(
-              "DirectPlay", "Failed to patch ROM. The base rom required to "
-                            "patch is not known to Parallel Launcher."));
-      return false;
-    case Bps::BpsApplyError::WriteError:
-      QMessageBox::critical(
-          nullptr, QCoreApplication::translate("DirectPlay", "Patch Failed"),
-          QCoreApplication::translate(
-              "DirectPlay", "Failed to patch ROM. An error occurred while "
-                            "writing the patched ROM to disk."));
-      return false;
-    }
   }
 
   firstRun = false;

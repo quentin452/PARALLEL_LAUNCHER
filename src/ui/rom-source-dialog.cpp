@@ -1,7 +1,6 @@
 #include "src/ui/rom-source-dialog.hpp"
 #include "ui_rom-source-dialog.h"
 
-#include "src/core/bps.hpp"
 #include "src/core/file-controller.hpp"
 #include "src/core/special-groups.hpp"
 #include "src/db/data-provider.hpp"
@@ -312,66 +311,6 @@ void RomSourceDialog::browseForBaseRom() {
     return;
   m_ui->baseRomPath->setText(path.u8string().c_str());
   refreshApplyPatchButton();
-}
-
-void RomSourceDialog::applyPatch() {
-  Bps::BpsApplyError result;
-  fs::path romPath;
-  if (m_ui->autoBaseRomRadio->isChecked()) {
-    result = Bps::tryApplyBps(
-        fs::to_path(m_ui->patchFilePath->text().toStdString()), romPath);
-  } else {
-    result = Bps::tryApplyBps(
-        fs::to_path(m_ui->patchFilePath->text().toStdString()),
-        fs::to_path(m_ui->baseRomPath->text().toStdString()), romPath);
-  }
-
-  switch (result) {
-  case Bps::BpsApplyError::None: {
-    const QString path = QString(romPath.u8string().c_str());
-
-    QMessageBox::information(this, tr("Patch Applied"),
-                             tr("Saved patched rom to %1").arg(path));
-
-    if (!RomUtil::coveredBySearchPath(fs::to_path(path.toStdString()))) {
-      addRomToList(path);
-      m_ui->additionalRomsList->sortItems();
-      romSelected();
-    }
-
-    m_ui->patchFilePath->clear();
-    m_ui->baseRomPath->clear();
-    m_ui->autoBaseRomRadio->setChecked(true);
-    m_ui->applyPatchButton->setEnabled(false);
-    break;
-  }
-  case Bps::BpsApplyError::InvalidBps:
-    QMessageBox::critical(
-        this, tr("Patch Failed"),
-        tr("Failed to patch ROM. The .bps patch appears to be invalid."));
-    break;
-  case Bps::BpsApplyError::PatchFailed:
-    QMessageBox::critical(this, tr("Patch Failed"),
-                          tr("Failed to patch ROM. The base ROM does not match "
-                             "what the patch expects."));
-    break;
-  case Bps::BpsApplyError::NoBaseRom:
-    if (m_ui->autoBaseRomRadio->isChecked()) {
-      QMessageBox::critical(this, tr("Patch Failed"),
-                            tr("Failed to patch ROM. The base rom required to "
-                               "patch is not known to Parallel Launcher."));
-    } else {
-      QMessageBox::critical(
-          this, tr("Patch Failed"),
-          tr("Failed to patch ROM. The base ROM is missing or invalid."));
-    }
-    break;
-  case Bps::BpsApplyError::WriteError:
-    QMessageBox::critical(this, tr("Patch Failed"),
-                          tr("Failed to patch ROM. An error occurred while "
-                             "writing the patched ROM to disk."));
-    break;
-  }
 }
 
 void RomSourceDialog::baseRomModeChanged() {

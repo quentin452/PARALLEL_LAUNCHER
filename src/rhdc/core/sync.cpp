@@ -73,17 +73,6 @@ static void addHackVersion(const FollowedHack &hack,
        Flags::has(version.hackFlags, RhdcHackFlag::SupportsSD) ? "?" : ""});
 }
 
-static inline bool shouldDownloadLayout(const FollowedHack &hack) {
-  if (hack.layoutUrl.empty())
-    return false;
-  if (!StarLayout::hasLayout(hack.info.hackId))
-    return true;
-  if (hack.layoutLastModified <= 0)
-    return false;
-  return hack.layoutLastModified >
-         RomUtil::getLastModified(StarLayout::layoutPath(hack.info.hackId));
-}
-
 static inline const RhdcHackVersionExt &
 getLatestVersion(const std::vector<RhdcHackVersionExt> &versions) {
   for (const RhdcHackVersionExt &version : versions) {
@@ -148,27 +137,6 @@ void RHDC::sync(const std::function<void(bool)> &callback) {
               if (group == SpecialGroups::Uncategorized)
                 continue;
               DataProvider::removeRhdcHackFromGroup(hack.info.hackId, group);
-            }
-
-            if (shouldDownloadLayout(hack)) {
-              QFile *layoutFile =
-                  new QFile((BaseDir::temp() / Uuid::Random().toString())
-                                .u8string()
-                                .c_str());
-              layoutFile->open(QIODevice::WriteOnly | QIODevice::Truncate);
-              const string hackId = hack.info.hackId;
-              RhdcApi::downloadFile(
-                  hack.layoutUrl, layoutFile, [](int64, int64) {},
-                  [hackId, layoutFile]() {
-                    const QString layoutPath =
-                        StarLayout::layoutPath(hackId).u8string().c_str();
-                    layoutFile->flush();
-                    layoutFile->close();
-                    QFile::remove(layoutPath);
-                    layoutFile->rename(layoutPath);
-                    layoutFile->deleteLater();
-                  },
-                  RhdcApi::logApiError("Failed to download star layout"));
             }
           }
         }

@@ -1,7 +1,6 @@
 #include "src/rhdc/ui/rhdc-download-dialog.hpp"
 #include <ui_rhdc-download-dialog.h>
 
-#include "src/core/bps.hpp"
 #include "src/core/file-controller.hpp"
 #include "src/core/preset-controllers.hpp"
 #include "src/core/qthread.hpp"
@@ -382,9 +381,6 @@ void RhdcDownloadDialog::downloadHack(const string &hackId,
 
           fs::path sm64path;
           if (SM64::tryGetPath(sm64path)) {
-            std::thread(RhdcDownloadDialog::patchRom, this, hackId,
-                        tempDownloadPath, sm64path, hackInfo, dialogExists)
-                .detach();
           } else {
             ToastMessageManager::display(
                 ToastType::Error,
@@ -415,106 +411,4 @@ void RhdcDownloadDialog::downloadHack(const string &hackId,
         if (*dialogExists)
           this->close();
       });
-}
-
-void RhdcDownloadDialog::patchRom(RhdcDownloadDialog *dialog, string hackId,
-                                  fs::path patchPath, fs::path baseRomPath,
-                                  PluginAndLayoutInfo hackInfo,
-                                  std::shared_ptr<bool> dialogExists) {
-  fs::error_code err;
-  if (getExtensionLowerCase(patchPath) == ".zip") {
-    const fs::path zipDir = BaseDir::temp() / _NFS("rhdc-extracted");
-    fs::remove_all(zipDir, err);
-    fs::create_directories(zipDir, err);
-    Zip::unzip(patchPath, zipDir);
-    bool foundPatch = false;
-    for (const auto &i : fs::recursive_directory_iterator(zipDir)) {
-      if (fs::isDirectorySafe(i.path()))
-        continue;
-      if (getExtensionLowerCase(i.path()) != ".bps")
-        continue;
-      patchPath = patchPath.parent_path() / i.path().filename();
-      fs::rename(i.path(), patchPath, err);
-      if (fs::isRegularFileSafe(patchPath)) {
-        foundPatch = true;
-        break;
-      }
-    }
-    fs::remove_all(zipDir, err);
-    if (!foundPatch)
-      patchPath = fs::path();
-  }
-
-  if (getExtensionLowerCase(patchPath) != ".bps") {
-    QtThread::safeAsync([=]() {
-      ToastMessageManager::display(
-          ToastType::Error,
-          tr("The rom could not be installed because no bps patch was found."));
-      logWarn("Could not install rom because no bps patch was found");
-      if (*dialogExists)
-        dialog->close();
-    });
-    return;
-  }
-
-  const string romFilename =
-      patchPath.stem().u8string() + ' ' + hackId + ".z64";
-  fs::path romPath = FileController::loadRhdcSettings().downloadDirectory /
-                     fs::to_path(romFilename);
-
-  const Bps::BpsApplyError bpsErr =
-      Bps::tryApplyBps(patchPath, baseRomPath, romPath);
-  if (bpsErr != Bps::BpsApplyError::None) {
-    fs::remove(patchPath, err);
-    QtThread::safeAsync([=]() {
-      ToastMessageManager::display(
-          ToastType::Error, tr("Could not install '%1' because of an "
-                               "unexpected error while applying the patch")
-                                .arg(patchPath.stem().u8string().c_str()));
-      logWarn("Could not install '"s + patchPath.stem().u8string() +
-              "' because of an unexpected error while applying the patch");
-      if (*dialogExists)
-        dialog->close();
-    });
-    return;
-  }
-
-  fs::remove(patchPath, err);
-  QtThread::safeAsync([=]() {
-    if (!*dialogExists)
-      return;
-    dialog->m_ui->statusLabel->setText(tr("Computing checksum"));
-  });
-
-  const string sha1 = Sha1::compute(romPath);
-  QtThread::safeAsync([=]() {
-    const AutoPlugin autoPlugin =
-        AutoPlugin::detect(romPath, hackInfo.plugin, hackInfo.pluginFlags);
-    const string internalName = RomUtil::getInternalName(romPath);
-
-    SqlTransaction transaction;
-    DataProvider::removeOnlineRom(hackId);
-    DataProvider::addRomFile(
-        {romPath, RomUtil::getLastModified(romPath), sha1, true});
-    DataProvider::updatePluginSettings(
-        sha1, autoPlugin.emulator, autoPlugin.parallelPlugin,
-        autoPlugin.mupenPlugin, autoPlugin.upscaleTexrects, true,
-        autoPlugin.emulateFramebuffer, autoPlugin.accurateDepthCompare,
-        autoPlugin.emulateRsp);
-    DataProvider::updateRomHeaderInfo(sha1, internalName,
-                                      RomUtil::getCrc32(romPath),
-                                      RomUtil::readControllerTypes(romPath));
-    transaction.commit();
-
-#ifdef _WIN32
-    SaveConverter::autoImportFromProject64(RetroArch::getSaveFilePath(romPath),
-                                           internalName);
-#endif
-
-    ToastMessageManager::display(ToastType::Info,
-                                 tr("Romhack installed successfully"));
-
-    if (*dialogExists)
-      dialog->close();
-  });
 }

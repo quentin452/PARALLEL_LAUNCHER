@@ -48,7 +48,6 @@ private slots:
   void save();
   void browseForPatch();
   void browseForBaseRom();
-  void applyPatch();
   void baseRomModeChanged();
 };
 

@@ -213,17 +213,6 @@ void MainWindow::setView(int view, bool keepSize) {
     resize(newSize);
 }
 
-RomInfo *MainWindow::getSelectedRomInfo() {
-  switch (m_ui->romView->currentIndex()) {
-  case VIEW_CLASSIC:
-    return m_ui->romList->tryGetSelectedRom().info;
-  case VIEW_RHDC:
-    return m_ui->romList->tryGetRomInfo(m_ui->rhdcPage->getSelectedVersion());
-  default:
-    return nullptr;
-  }
-}
-
 void MainWindow::refreshRomList() {
   m_romSearch.cancel();
   m_ui->searchIndicator->setVisible(true);
@@ -288,47 +277,5 @@ void MainWindow::refetchAll() {
     m_ui->rhdcPage->reload();
   } else {
     setView(m_ui->romList->hasRoms() ? VIEW_CLASSIC : VIEW_NO_ROMS);
-  }
-}
-
-void MainWindow::editSave(fs::path saveFilePath) {
-  SaveFileEditorDialog dialog(saveFilePath);
-  if (dialog.exec() == QDialog::Accepted) {
-    SaveSlotEditorDialog dialog2(saveFilePath, dialog.getSaveSlot());
-    dialog2.exec();
-  }
-}
-
-void MainWindow::rhdcLogin() {
-  RhdcLoginDialog dialog;
-  if (dialog.exec() == QDialog::Accepted) {
-    m_ui->searchIndicator->setVisible(true);
-
-    std::shared_ptr<bool> windowExists = m_exists;
-    RHDC::sync([this, windowExists](bool refetch) {
-      if (!*windowExists)
-        return;
-      this->m_ui->searchIndicator->setVisible(false);
-      if (refetch)
-        this->refetchAll();
-    });
-  }
-}
-
-void MainWindow::rhdcLogout() {
-  RhdcApi::logout();
-  RhdcCredentials::forget();
-}
-
-void MainWindow::rhdcDisable() {
-  if (QMessageBox::question(
-          this, tr("Confirm Disable"),
-          tr("Are you sure you want to disable romhacking.com integration?")) ==
-      QMessageBox::Yes) {
-    m_romSearch.cancel();
-    m_ui->searchIndicator->setVisible(false);
-    RhdcApi::logout();
-    RhdcCredentials::forget();
-    DataProvider::clearAllRhdcData();
   }
 }

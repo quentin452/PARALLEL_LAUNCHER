@@ -28,7 +28,6 @@ private:
   RomSettingsWidget *m_romSettingsWidget;
 
   void play(bool multiplayer);
-  RomInfo *getSelectedRomInfo();
   void setView(int view, bool keepSize = false);
 
 public:
@@ -37,13 +36,8 @@ public:
 private slots:
   void refreshRomList();
 
-  void editSave(fs::path saveFilePath);
   void playSingleplayer();
   void playMultiplayer();
-
-  void rhdcLogin();
-  void rhdcLogout();
-  void rhdcDisable();
 public:
   MainWindow();
   virtual ~MainWindow();

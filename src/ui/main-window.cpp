@@ -23,7 +23,6 @@
 #include "src/rhdc/web/api.hpp"
 #include "src/ui/controller-select-dialog.hpp"
 #include "src/ui/core-installer.hpp"
-#include "src/ui/crash-report-dialog.hpp"
 #include "src/ui/icons.hpp"
 #include "src/ui/keyboard-config-dialog.hpp"
 #include "src/ui/log-viewer-dialog.hpp"
@@ -767,9 +766,6 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
   if (event->key() == Qt::Key_F7) {
     event->accept();
     LogViewerDialog().exec();
-  } else if (event->key() == Qt::Key_F8) {
-    event->accept();
-    CrashReportDialog().exec();
   } else {
     QMainWindow::keyPressEvent(event);
   }

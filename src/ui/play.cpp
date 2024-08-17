@@ -134,9 +134,6 @@ static bool playGame(const RomFile &romFile, const RomInfo &romInfo,
                      const std::function<void(void)> &callback,
                      const StarLayout *testLayout, bool waitForRhdcSync,
                      bool inputBindingError) {
-  string groupId;
-  bool syncSaves = false;
-
   const AppSettings &settings = FileController::loadAppSettings();
   const EmulatorCore emulatorCore =
       (romInfo.emulator == EmulatorCore::UseDefault) ? settings.defaultEmulator
@@ -165,59 +162,8 @@ bool Game::play(const RomFile &romFile, const RomInfo &romInfo,
                 const StarLayout *testLayout) {
   const InputDriver inputDriver = FileController::loadAppSettings().inputDriver;
   std::vector<PlayerController> players;
-  players.reserve(multiplayer ? 4 : 1);
-
   bool inputBindingError = false;
   bool bindSavestate;
-  if (multiplayer) {
-    try {
-      MultiplayerControllerSelectDialog dialog(
-          usesTwoPorts(romInfo.inputModeId));
-      if (dialog.exec() != QDialog::Accepted) {
-        callback();
-        return false;
-      }
-
-      const std::array<ConnectedGamepad, 4> controllers =
-          dialog.getControllers();
-      for (size_t i = 0; i < 4; i++) {
-        if (controllers[i].id < 0)
-          continue;
-
-        while (i > players.size())
-          players.push_back({DefaultProfile::get(inputDriver), Uuid()});
-        players.push_back({getControllerProfile(inputDriver, controllers[i]),
-                           controllers[i].info.uuid});
-      }
-
-      if (players.empty()) {
-        players.push_back(
-            {FileController::loadLastControllerProfile(inputDriver), Uuid()});
-      }
-
-      bindSavestate = dialog.canBindSavestates();
-    } catch (const std::exception &ex) {
-      logError("Failed to fetch connected controllers: "s + ex.what());
-      inputBindingError = true;
-      bindSavestate = true;
-      players.push_back(
-          {FileController::loadLastControllerProfile(inputDriver), Uuid()});
-    }
-  } else {
-  }
-
-  size_t highestMousePort = 0;
-  for (size_t i = 3; i > 0; i--) {
-    if (romInfo.inputTypes[i] == N64InputType::Mouse) {
-      highestMousePort = i;
-      break;
-    }
-  }
-
-  while (players.size() <= highestMousePort) {
-    players.push_back({DefaultProfile::get(inputDriver), Uuid()});
-  }
-
   return playGame(romFile, romInfo, players, bindSavestate, callback,
                   testLayout, waitForRhdcSync, inputBindingError);
 }

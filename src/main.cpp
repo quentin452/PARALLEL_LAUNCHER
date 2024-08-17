@@ -180,7 +180,6 @@ int main(int argc, char **argv) {
   storeCrashLog();
 
   QApplication app(argc, argv);
-  RhdcApi::sendCrashReports();
 
 #ifdef __linux__
   QGuiApplication::setDesktopFileName(
@@ -234,7 +233,6 @@ int main(int argc, char **argv) {
     app.setLayoutDirection(Qt::RightToLeft);
   }
 
-  RhdcApi::sendTelemetryDatum();
   createEmulatorCoreInfoFiles();
 
 #ifndef FLATPAK_VERSION

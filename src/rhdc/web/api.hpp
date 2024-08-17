@@ -168,12 +168,6 @@ submitPlayTimeAsync(const string &hackId, int64 playTime,
                     const std::function<void(void)> &onSuccess,
                     const std::function<void(ApiErrorType)> &onFailure);
 
-/* Telemetry */
-
-extern void sendTelemetryDatum();
-
-extern void sendCrashReports();
-
 /* Misc */
 
 extern void
